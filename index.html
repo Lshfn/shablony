@@ -91,7 +91,7 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
   <div class="tl"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
   <div class="nav-arrows"><button class="nav-btn" onclick="history.back()">‹</button><button class="nav-btn" onclick="history.forward()">›</button></div>
   <div class="breadcrumb">photoshop-ru_psd <em>/</em> 00s-10s</div>
-  <div class="hdr-actions"><button class="hdr-btn" onclick="shuffle()">shuffle order</button><button class="hdr-btn" onclick="toggleLang(this)">read in rus</button></div>
+  <div class="hdr-actions"><button class="hdr-btn" onclick="window.location.href='about.html'">about this archive</button><button class="hdr-btn" onclick="shuffle()">shuffle order</button><button class="hdr-btn" id="lang-btn" onclick="toggleLang(this)">read in rus</button></div>
 </header>
 <div class="layout">
   <aside id="sidebar">
@@ -106,13 +106,13 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
     <div class="tag" data-filter="tag" data-value="ac"><span class="dash"></span><span data-en="angels & computers" data-ru="ангелы и компьютеры">angels & computers</span></div>
     <div class="spacer"></div>
     <div class="sec-label" data-en="colors" data-ru="цвета">colors</div>
-    <div class="tag" data-filter="color" data-value="glamour"><span class="cdot" style="background:var(--glamour)"></span><span>glamour magenta</span></div>
-    <div class="tag" data-filter="color" data-value="lilac"><span class="cdot" style="background:var(--lilac)"></span><span>forgotten lilac</span></div>
-    <div class="tag" data-filter="color" data-value="turquoise"><span class="cdot" style="background:var(--turquoise)"></span><span>runet turquoise</span></div>
-    <div class="tag" data-filter="color" data-value="gold"><span class="cdot" style="background:var(--gold)"></span><span>wedding gold</span></div>
-    <div class="tag" data-filter="color" data-value="meadow"><span class="cdot" style="background:var(--meadow)"></span><span>meadow screensaver</span></div>
-    <div class="tag" data-filter="color" data-value="rose"><span class="cdot" style="background:var(--rose)"></span><span>balcony rose</span></div>
-    <div class="tag" data-filter="color" data-value="deep"><span class="cdot" style="background:var(--deep)"></span><span>deep desktop</span></div>
+    <div class="tag" data-filter="color" data-value="glamour"><span class="cdot" style="background:var(--glamour)"></span><span data-en="glamour magenta" data-ru="гламурная магента">glamour magenta</span></div>
+    <div class="tag" data-filter="color" data-value="lilac"><span class="cdot" style="background:var(--lilac)"></span><span data-en="forgotten lilac" data-ru="забытая сирень">forgotten lilac</span></div>
+    <div class="tag" data-filter="color" data-value="turquoise"><span class="cdot" style="background:var(--turquoise)"></span><span data-en="runet turquoise" data-ru="рунет бирюза">runet turquoise</span></div>
+    <div class="tag" data-filter="color" data-value="gold"><span class="cdot" style="background:var(--gold)"></span><span data-en="wedding gold" data-ru="свадебное золото">wedding gold</span></div>
+    <div class="tag" data-filter="color" data-value="meadow"><span class="cdot" style="background:var(--meadow)"></span><span data-en="meadow screensaver" data-ru="луг-скринсейвер">meadow screensaver</span></div>
+    <div class="tag" data-filter="color" data-value="rose"><span class="cdot" style="background:var(--rose)"></span><span data-en="balcony rose" data-ru="балконная роза">balcony rose</span></div>
+    <div class="tag" data-filter="color" data-value="deep"><span class="cdot" style="background:var(--deep)"></span><span data-en="deep desktop" data-ru="глубокий рабочий стол">deep desktop</span></div>
   </aside>
   <main id="main">
     <div class="content-hdr">
@@ -141,26 +141,69 @@ const RAW_FILES = [
 
 const BASE_URL = "https://raw.githubusercontent.com/Lshfn/shablony/main/";
 
-// Функция для определения цвета на основе имени файла
-// (magenta/glamour, green/meadow, blue/deep, pink/rose, gold, turquoise, lilac)
+// Color detection: dominant color of image sampled via canvas,
+// then nearest match to palette by Euclidean distance in RGB space.
+// Palette targets (from spec):
+//   glamour  → magenta   #ff00ff
+//   meadow   → green     #1e7800
+//   deep     → blue      #0000ff
+//   rose     → pink      #ff3366
+//   gold     → yellow    #b38600
+//   turquoise→ cyan      #00ffbf
+//   lilac    → purple    #8600b3
+
+const COLOR_PALETTE = [
+  { name: 'glamour',   r: 255, g:   0, b: 255 },
+  { name: 'meadow',    r:  30, g: 120, b:   0 },
+  { name: 'deep',      r:   0, g:   0, b: 255 },
+  { name: 'rose',      r: 255, g:  51, b: 102 },
+  { name: 'gold',      r: 179, g: 134, b:   0 },
+  { name: 'turquoise', r:   0, g: 255, b: 191 },
+  { name: 'lilac',     r: 134, g:   0, b: 179 },
+];
+
+function hexToRgb(hex) {
+  const n = parseInt(hex.replace('#',''), 16);
+  return { r: (n>>16)&255, g: (n>>8)&255, b: n&255 };
+}
+
+function rgbDist(a, b) {
+  return Math.sqrt((a.r-b.r)**2 + (a.g-b.g)**2 + (a.b-b.b)**2);
+}
+
+function nearestColor(r, g, b) {
+  let best = COLOR_PALETTE[0], bestD = Infinity;
+  for (const c of COLOR_PALETTE) {
+    const d = rgbDist({r,g,b}, c);
+    if (d < bestD) { bestD = d; best = c; }
+  }
+  return best.name;
+}
+
+// Sample dominant color from image via offscreen canvas
+function sampleImageColor(imgEl, callback) {
+  try {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 16;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(imgEl, 0, 0, 16, 16);
+    const data = ctx.getImageData(0, 0, 16, 16).data;
+    let R=0, G=0, B=0, count=0;
+    for (let i=0; i<data.length; i+=4) {
+      if (data[i+3] < 128) continue; // skip transparent
+      R += data[i]; G += data[i+1]; B += data[i+2]; count++;
+    }
+    if (count === 0) { callback(null); return; }
+    callback(nearestColor(R/count, G/count, B/count));
+  } catch(e) { callback(null); }
+}
+
+// Fallback: deterministic hash on filename (same as before)
 function detectColor(filename) {
-  const lower = filename.toLowerCase();
-  if (lower.includes('glamour') || lower.includes('magenta')) return 'glamour';
-  if (lower.includes('meadow') || lower.includes('green')) return 'meadow';
-  if (lower.includes('deep') || lower.includes('blue') || lower.includes('dark')) return 'deep';
-  if (lower.includes('rose') || lower.includes('pink')) return 'rose';
-  if (lower.includes('gold') || lower.includes('yellow')) return 'gold';
-  if (lower.includes('turquoise') || lower.includes('cyan')) return 'turquoise';
-  if (lower.includes('lilac') || lower.includes('purple')) return 'lilac';
-  
-  // Если цвет не определён по имени, назначаем по первому тегу
-  if (lower.includes('mp')) return Math.random() > 0.5 ? 'glamour' : 'deep';
-  if (lower.includes('ff')) return 'rose';
-  if (lower.includes('bp')) return 'turquoise';
-  if (lower.includes('fd')) return 'lilac';
-  if (lower.includes('qc')) return 'gold';
-  if (lower.includes('ac')) return 'meadow';
-  return 'deep';
+  const NAMES = ['glamour','lilac','turquoise','gold','meadow','rose','deep'];
+  let h = 0;
+  for (let i=0; i<filename.length; i++) { h = ((h<<5)-h) + filename.charCodeAt(i); h|=0; }
+  return NAMES[Math.abs(h) % NAMES.length];
 }
 
 // Функция для извлечения тегов из имени файла
@@ -216,6 +259,16 @@ function buildGrid() {
     img.onload = () => {
       img.classList.add('loaded');
       skel.style.display = 'none';
+      // Sample real dominant color and update card + pill
+      sampleImageColor(img, function(detectedColor) {
+        if (detectedColor && detectedColor !== card.dataset.color) {
+          card.dataset.color = detectedColor;
+          const cpill = card.querySelector('.color-pill');
+          if (cpill) cpill.textContent = detectedColor.slice(0,3);
+          // Re-apply filter if a color filter is active
+          if (activeColor) applyFilter();
+        }
+      });
     };
     img.onerror = () => {
       skel.style.display = 'none';
@@ -229,6 +282,10 @@ function buildGrid() {
       pill.textContent = tag;
       ov.appendChild(pill);
     });
+    const cpill = document.createElement('span');
+    cpill.className = 'pill color-pill';
+    cpill.textContent = im.c.slice(0,3);
+    ov.appendChild(cpill);
     
     card.appendChild(img);
     card.appendChild(skel);
