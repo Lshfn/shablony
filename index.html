@@ -129,7 +129,6 @@ main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
   background:linear-gradient(90deg,#cac4da 25%,#d4cee4 50%,#cac4da 75%);
   background-size:200% 100%;animation:shimmer 1.5s infinite;
 }
-.card img.loaded~.skel,.card .skel.done{display:none}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 .ov{
   position:absolute;bottom:3px;left:3px;display:flex;
@@ -312,26 +311,26 @@ function buildGrid() {
     card.dataset.tags = im.t.join(',');
     card.dataset.color = im.c;
 
-    const img = document.createElement('img');
-    img.src = im.u;
-    img.alt = im.f;
-    img.loading = 'lazy';
-    img.onload = function(){ this.classList.add('loaded'); };
-    img.onerror = function(){ this.parentNode.querySelector('.skel').classList.add('done'); };
+   const img = document.createElement('img');
+img.src = im.u;
+img.alt = im.f;
+img.loading = 'lazy';
 
-    const skel = document.createElement('div');
-    skel.className = 'skel';
+const skel = document.createElement('div');
+skel.className = 'skel';
 
-    const ov = document.createElement('div');
-    ov.className = 'ov';
-    ov.innerHTML = im.t.map(t=>`<span class="pill">${t}</span>`).join('') +
-      `<span class="pill">${im.c.slice(0,3)}</span>`;
+img.onload = function () {
+  this.classList.add('loaded');
+  skel.style.display = 'none';
+};
 
-    card.appendChild(skel);
-    card.appendChild(img);
-    card.appendChild(ov);
-    card.addEventListener('click', () => openLb(im.u, im.f));
-    grid.appendChild(card);
+img.onerror = function () {
+  skel.style.display = 'none';
+};
+
+   card.appendChild(img);
+card.appendChild(skel);
+card.appendChild(ov);
   });
   applyFilter();
 }
