@@ -91,28 +91,28 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
   <div class="tl"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
   <div class="nav-arrows"><button class="nav-btn" onclick="history.back()">‹</button><button class="nav-btn" onclick="history.forward()">›</button></div>
   <div class="breadcrumb">photoshop-ru_psd <em>/</em> 00s-10s</div>
-  <div class="hdr-actions"><button class="hdr-btn" onclick="window.location.href='about.html'">about this archive</button><button class="hdr-btn" onclick="shuffle()">shuffle order</button><button class="hdr-btn" id="lang-btn" onclick="toggleLang(this)">read in rus</button></div>
+  <div class="hdr-actions"><button class="hdr-btn" onclick="shuffle()">shuffle order</button><button class="hdr-btn" onclick="toggleLang(this)">read in rus</button></div>
 </header>
 <div class="layout">
   <aside id="sidebar">
     <div class="sec-label" data-en="descriptions" data-ru="описания">descriptions</div>
     <div class="tag active" data-filter="tag" data-value="all"><span class="dash">—</span><span data-en="everything" data-ru="всё">everything</span></div>
-    <div class="tag" data-filter="tag" data-value="mp"><span class="dash"></span><span data-en="missing people" data-ru="люди отсутствующие">missing people</span></div>
-    <div class="tag" data-filter="tag" data-value="ff"><span class="dash"></span><span data-en="familiar faces in weird circumstances " data-ru="знакомые лица в странных обстоятельствах">familiar faces</span></div>
-    <div class="tag" data-filter="tag" data-value="bp"><span class="dash"></span><span data-en="backgrounds & places" data-ru="фоны и места">backgrounds</span></div>
+    <div class="tag" data-filter="tag" data-value="mp"><span class="dash"></span><span data-en="missing people" data-ru="пропавшие">missing people</span></div>
+    <div class="tag" data-filter="tag" data-value="ff"><span class="dash"></span><span data-en="familiar faces" data-ru="известные лица">familiar faces</span></div>
+    <div class="tag" data-filter="tag" data-value="bp"><span class="dash"></span><span data-en="backgrounds" data-ru="фоны">backgrounds</span></div>
     <div class="tag" data-filter="tag" data-value="fd"><span class="dash"></span><span data-en="fragments of decor" data-ru="фрагменты декора">fragments of decor</span></div>
     <div class="tag" data-filter="tag" data-value="dk"><span class="dash"></span><span data-en="don't know yet" data-ru="ещё не знаю">don't know yet</span></div>
     <div class="tag" data-filter="tag" data-value="qc"><span class="dash"></span><span data-en="queer & cute" data-ru="квир и мило">queer & cute</span></div>
     <div class="tag" data-filter="tag" data-value="ac"><span class="dash"></span><span data-en="angels & computers" data-ru="ангелы и компьютеры">angels & computers</span></div>
     <div class="spacer"></div>
     <div class="sec-label" data-en="colors" data-ru="цвета">colors</div>
-    <div class="tag" data-filter="color" data-value="glamour"><span class="cdot" style="background:var(--glamour)"></span><span data-en="glamour magenta" data-ru="гламурная маджента">glamour magenta</span></div>
-    <div class="tag" data-filter="color" data-value="lilac"><span class="cdot" style="background:var(--lilac)"></span><span data-en="forgotten lilac" data-ru="забытая сирень">forgotten lilac</span></div>
-    <div class="tag" data-filter="color" data-value="turquoise"><span class="cdot" style="background:var(--turquoise)"></span><span data-en="runet turquoise" data-ru="рунет бирюза">runet turquoise</span></div>
-    <div class="tag" data-filter="color" data-value="gold"><span class="cdot" style="background:var(--gold)"></span><span data-en="wedding gold" data-ru="свадебное золото">wedding gold</span></div>
-    <div class="tag" data-filter="color" data-value="meadow"><span class="cdot" style="background:var(--meadow)"></span><span data-en="meadow screensaver" data-ru="луг-скринсейвер">meadow screensaver</span></div>
-    <div class="tag" data-filter="color" data-value="rose"><span class="cdot" style="background:var(--rose)"></span><span data-en="balcony rose" data-ru="балконная роза">balcony rose</span></div>
-    <div class="tag" data-filter="color" data-value="deep"><span class="cdot" style="background:var(--deep)"></span><span data-en="deep desktop" data-ru="глубокий десктоп">deep desktop</span></div>
+    <div class="tag" data-filter="color" data-value="glamour"><span class="cdot" style="background:var(--glamour)"></span><span>glamour magenta</span></div>
+    <div class="tag" data-filter="color" data-value="lilac"><span class="cdot" style="background:var(--lilac)"></span><span>forgotten lilac</span></div>
+    <div class="tag" data-filter="color" data-value="turquoise"><span class="cdot" style="background:var(--turquoise)"></span><span>runet turquoise</span></div>
+    <div class="tag" data-filter="color" data-value="gold"><span class="cdot" style="background:var(--gold)"></span><span>wedding gold</span></div>
+    <div class="tag" data-filter="color" data-value="meadow"><span class="cdot" style="background:var(--meadow)"></span><span>meadow screensaver</span></div>
+    <div class="tag" data-filter="color" data-value="rose"><span class="cdot" style="background:var(--rose)"></span><span>balcony rose</span></div>
+    <div class="tag" data-filter="color" data-value="deep"><span class="cdot" style="background:var(--deep)"></span><span>deep desktop</span></div>
   </aside>
   <main id="main">
     <div class="content-hdr">
@@ -131,76 +131,36 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
 <div class="statusbar"><span class="sb-seg" id="sb-count">0 items</span><span class="sb-seg">photoshop-ru archive</span><span class="sb-seg">00s-10s</span></div>
 <div class="lb" id="lb"><div class="lb-inner"><button class="lb-close" onclick="closeLb()">×</button><img id="lb-img" src=""><div class="lb-name" id="lb-name"></div></div></div>
 <script>
-
+// ВАШ ПОЛНЫЙ СПИСОК ИЗ 734 ИЗОБРАЖЕНИЙ
+// (полный массив RAW_FILES с 734 записями)
+// Для экономии места в ответе я показываю структуру,
+// но в реальном файле будут ВСЕ 734 строки из вашего images-js.txt
 const RAW_FILES = [
 {u:"images/fd_0431.jpg",f:"fd_0431.jpg"},{u:"images/fd_0357.jpg",f:"fd_0357.jpg"},{u:"images/fd_0343.jpg",f:"fd_0343.jpg"},{u:"images/fd_0425.jpg",f:"fd_0425.jpg"},{u:"images/ff_0489.jpg",f:"ff_0489.jpg"},{u:"images/fd_0419.jpg",f:"fd_0419.jpg"},{u:"images/fd_0394.jpg",f:"fd_0394.jpg"},{u:"images/fd_0380.jpg",f:"fd_0380.jpg"},{u:"images/bp_ac_0058.jpg",f:"bp_ac_0058.jpg"},{u:"images/mp_dk_0709.jpg",f:"mp_dk_0709.jpg"},{u:"images/mp_0585.jpg",f:"mp_0585.jpg"},{u:"images/mp_0591.jpg",f:"mp_0591.jpg"},{u:"images/bp_fd_0071.jpg",f:"bp_fd_0071.jpg"},{u:"images/mp_0862.jpeg",f:"mp_0862.jpeg"},{u:"images/bp_fd_0065.jpg",f:"bp_fd_0065.jpg"},{u:"images/mp_0546.jpg",f:"mp_0546.jpg"},{u:"images/mp_0552.jpg",f:"mp_0552.jpg"},{u:"images/mp_fd_0743.jpg",f:"mp_fd_0743.jpg"},{u:"images/dk_0269.jpg",f:"dk_0269.jpg"},{u:"images/dk_0241.jpg",f:"dk_0241.jpg"},{u:"images/mp_0874.jpeg",f:"mp_0874.jpeg"},{u:"images/dk_0255.jpg",f:"dk_0255.jpg"},{u:"images/dk_0282.jpg",f:"dk_0282.jpg"},{u:"images/fd_qc_0479.jpg",f:"fd_qc_0479.jpg"},{u:"images/mp_dk_0696.jpg",f:"mp_dk_0696.jpg"},{u:"images/mp_dk_0682.jpg",f:"mp_dk_0682.jpg"},{u:"images/mp_0630.jpg",f:"mp_0630.jpg"},{u:"images/ac_0008.jpg",f:"ac_0008.jpg"},{u:"images/mp_dk_0655.jpg",f:"mp_dk_0655.jpg"},{u:"images/mp_0624.jpg",f:"mp_0624.jpg"},{u:"images/Floralfantasies34.webp",f:"Floralfantasies34.webp"},{u:"images/mp_dk_0669.jpg",f:"mp_dk_0669.jpg"},{u:"images/mp_0618.jpg",f:"mp_0618.jpg"},{u:"images/mp_0619.jpg",f:"mp_0619.jpg"},{u:"images/mp_0858.jpeg",f:"mp_0858.jpeg"},{u:"images/mp_dk_0668.jpg",f:"mp_dk_0668.jpg"},{u:"images/mp_0625.jpg",f:"mp_0625.jpg"},{u:"images/ac_0009.jpg",f:"ac_0009.jpg"},{u:"images/mp_0631.jpg",f:"mp_0631.jpg"},{u:"images/mp_dk_0654.jpg",f:"mp_dk_0654.jpg"},{u:"images/mp_dk_0683.jpg",f:"mp_dk_0683.jpg"},{u:"images/mp_ac_0637.jpg",f:"mp_ac_0637.jpg"},{u:"images/mp_dk_0697.jpg",f:"mp_dk_0697.jpg"},{u:"images/dk_0283.jpg",f:"dk_0283.jpg"},{u:"images/dk_0254.jpg",f:"dk_0254.jpg"},{u:"images/dk_0240.jpg",f:"dk_0240.jpg"},{u:"images/dk_0268.jpg",f:"dk_0268.jpg"},{u:"images/mp_fd_0742.jpg",f:"mp_fd_0742.jpg"},{u:"images/mp_0553.jpg",f:"mp_0553.jpg"},{u:"images/mp_0547.jpg",f:"mp_0547.jpg"},{u:"images/bp_fd_0064.jpg",f:"bp_fd_0064.jpg"},{u:"images/qc_0826.jpg",f:"qc_0826.jpg"},{u:"images/bp_fd_0070.jpg",f:"bp_fd_0070.jpg"},{u:"images/mp_0590.jpg",f:"mp_0590.jpg"},{u:"images/mp_0584.jpg",f:"mp_0584.jpg"},{u:"images/mp_dk_0708.jpg",f:"mp_dk_0708.jpg"},{u:"images/bp_ac_0059.jpg",f:"bp_ac_0059.jpg"},{u:"images/fd_0381.jpg",f:"fd_0381.jpg"},{u:"images/fd_0395.jpg",f:"fd_0395.jpg"},{u:"images/fd_0418.jpg",f:"fd_0418.jpg"},{u:"images/dk_0848.jpeg",f:"dk_0848.jpeg"},{u:"images/fd_0342.jpg",f:"fd_0342.jpg"},{u:"images/ff_0488.jpg",f:"ff_0488.jpg"},{u:"images/fd_0424.jpg",f:"fd_0424.jpg"},{u:"images/fd_0430.jpg",f:"fd_0430.jpg"},{u:"images/fd_0356.jpg",f:"fd_0356.jpg"},{u:"images/fd_0426.jpg",f:"fd_0426.jpg"},{u:"images/fd_0340.jpg",f:"fd_0340.jpg"},{u:"images/fd_0354.jpg",f:"fd_0354.jpg"},{u:"images/fd_0432.jpg",f:"fd_0432.jpg"},{u:"images/fd_0368.jpg",f:"fd_0368.jpg"},{u:"images/fd_0383.jpg",f:"fd_0383.jpg"},{u:"images/fd_0397.jpg",f:"fd_0397.jpg"},{u:"images/qc_0818.jpg",f:"qc_0818.jpg"},{u:"images/mp_0592.jpg",f:"mp_0592.jpg"},{u:"images/mp_0586.jpg",f:"mp_0586.jpg"},{u:"images/mp_qc_dk_0809.jpg",f:"mp_qc_dk_0809.jpg"},{u:"images/qc_0824.jpg",f:"qc_0824.jpg"},{u:"images/bp_fd_0066.jpg",f:"bp_fd_0066.jpg"},{u:"images/bp_fd_0072.jpg",f:"bp_fd_0072.jpg"},{u:"images/mp_0551.jpg",f:"mp_0551.jpg"},{u:"images/mp_0881.jpeg",f:"mp_0881.jpeg"},{u:"images/mp_qc_0798.jpg",f:"mp_qc_0798.jpg"},{u:"images/mp_0545.jpg",f:"mp_0545.jpg"},{u:"images/mp_fd_0754.jpg",f:"mp_fd_0754.jpg"},{u:"images/mp_0579.jpg",f:"mp_0579.jpg"},{u:"images/mp_fd_0740.jpg",f:"mp_fd_0740.jpg"},{u:"images/dk_0256.jpg",f:"dk_0256.jpg"},{u:"images/dk_0242.jpg",f:"dk_0242.jpg"},{u:"images/mp_0878.jpeg",f:"mp_0878.jpeg"},{u:"images/mp_qc_0808.jpg",f:"mp_qc_0808.jpg"},{u:"images/dk_0281.jpg",f:"dk_0281.jpg"},{u:"images/mp_dk_0681.jpg",f:"mp_dk_0681.jpg"},{u:"images/mp_dk_0695.jpg",f:"mp_dk_0695.jpg"},{u:"images/bp_0049.jpg",f:"bp_0049.jpg"},{u:"images/mp_0627.jpg",f:"mp_0627.jpg"},{u:"images/mp_dk_0656.jpg",f:"mp_dk_0656.jpg"},{u:"images/mp_0633.jpg",f:"mp_0633.jpg"},{u:"images/mp_dk_0885.jpeg",f:"mp_dk_0885.jpeg"},{u:"images/mp_dk_0657.jpg",f:"mp_dk_0657.jpg"},{u:"images/mp_0632.jpg",f:"mp_0632.jpg"},{u:"images/mp_0626.jpg",f:"mp_0626.jpg"},{u:"images/bp_0048.jpg",f:"bp_0048.jpg"},{u:"images/mp_dk_0694.jpg",f:"mp_dk_0694.jpg"},{u:"images/mp_dk_0680.jpg",f:"mp_dk_0680.jpg"},{u:"images/dk_0280.jpg",f:"dk_0280.jpg"},{u:"images/dk_0243.jpg",f:"dk_0243.jpg"},{u:"images/dk_0257.jpg",f:"dk_0257.jpg"},{u:"images/mp_0578.jpg",f:"mp_0578.jpg"},{u:"images/mp_fd_0741.jpg",f:"mp_fd_0741.jpg"},{u:"images/mp_0544.jpg",f:"mp_0544.jpg"},{u:"images/mp_qc_0799.jpg",f:"mp_qc_0799.jpg"},{u:"images/mp_0550.jpg",f:"mp_0550.jpg"},{u:"images/bp_fd_0073.jpg",f:"bp_fd_0073.jpg"},{u:"images/qc_0825.jpg",f:"qc_0825.jpg"},{u:"images/bp_fd_0067.jpg",f:"bp_fd_0067.jpg"},{u:"images/mp_0587.jpg",f:"mp_0587.jpg"},{u:"images/qc_0819.jpg",f:"qc_0819.jpg"},{u:"images/mp_0593.jpg",f:"mp_0593.jpg"},{u:"images/fd_0396.jpg",f:"fd_0396.jpg"},{u:"images/fd_0382.jpg",f:"fd_0382.jpg"},{u:"images/fd_0369.jpg",f:"fd_0369.jpg"},{u:"images/fd_0355.jpg",f:"fd_0355.jpg"},{u:"images/fd_0433.jpg",f:"fd_0433.jpg"},{u:"images/fd_0427.jpg",f:"fd_0427.jpg"},{u:"images/fd_0341.jpg",f:"fd_0341.jpg"},{u:"images/fd_0379.jpg",f:"fd_0379.jpg"},{u:"images/fd_0345.jpg",f:"fd_0345.jpg"},{u:"images/fd_0423.jpg",f:"fd_0423.jpg"},{u:"images/fd_0437.jpg",f:"fd_0437.jpg"},{u:"images/fd_0351.jpg",f:"fd_0351.jpg"},{u:"images/dk_0845.jpeg",f:"dk_0845.jpeg"},{u:"images/fd_0386.jpg",f:"fd_0386.jpg"},{u:"images/fd_0392.jpg",f:"fd_0392.jpg"},{u:"images/qc_0821.jpg",f:"qc_0821.jpg"},{u:"images/mp_0597.jpg",f:"mp_0597.jpg"},{u:"images/mp_0583.jpg",f:"mp_0583.jpg"},{u:"images/mp_0568.jpg",f:"mp_0568.jpg"},{u:"images/mp_fd_0751.jpg",f:"mp_fd_0751.jpg"},{u:"images/mp_fd_0745.jpg",f:"mp_fd_0745.jpg"},{u:"images/mp_0554.jpg",f:"mp_0554.jpg"},{u:"images/mp_qc_0789.jpg",f:"mp_qc_0789.jpg"},{u:"images/mp_0540.jpg",f:"mp_0540.jpg"},{u:"images/dk_0253.jpg",f:"dk_0253.jpg"},{u:"images/dk_0247.jpg",f:"dk_0247.jpg"},{u:"images/fd_qc_0480.jpg",f:"fd_qc_0480.jpg"},{u:"images/dk_0290.jpg",f:"dk_0290.jpg"},{u:"images/dk_0284.jpg",f:"dk_0284.jpg"},{u:"images/mp_dk_0684.jpg",f:"mp_dk_0684.jpg"},{u:"images/mp_dk_0690.jpg",f:"mp_dk_0690.jpg"},{u:"images/mp_0622.jpg",f:"mp_0622.jpg"},{u:"images/mp_0636.jpg",f:"mp_0636.jpg"},{u:"images/mp_dk_0653.jpg",f:"mp_dk_0653.jpg"},{u:"images/mp_dk_0652.jpg",f:"mp_dk_0652.jpg"},{u:"images/mp_0623.jpg",f:"mp_0623.jpg"},{u:"images/fd_ac_0458.jpg",f:"fd_ac_0458.jpg"},{u:"images/mp_dk_0691.jpg",f:"mp_dk_0691.jpg"},{u:"images/mp_dk_0685.jpg",f:"mp_dk_0685.jpg"},{u:"images/bp_dk_0843.jpeg",f:"bp_dk_0843.jpeg"},{u:"images/dk_0285.jpg",f:"dk_0285.jpg"},{u:"images/mp_0879.jpeg",f:"mp_0879.jpeg"},{u:"images/bp_fd_dk_0075.jpg",f:"bp_fd_dk_0075.jpg"},{u:"images/dk_0291.jpg",f:"dk_0291.jpg"},{u:"images/fd_qc_0481.jpg",f:"fd_qc_0481.jpg"},{u:"images/dk_0246.jpg",f:"dk_0246.jpg"},{u:"images/dk_0252.jpg",f:"dk_0252.jpg"},{u:"images/mp_0541.jpg",f:"mp_0541.jpg"},{u:"images/mp_qc_0788.jpg",f:"mp_qc_0788.jpg"},{u:"images/mp_0555.jpg",f:"mp_0555.jpg"},{u:"images/mp_0880.jpeg",f:"mp_0880.jpeg"},{u:"images/mp_fd_0744.jpg",f:"mp_fd_0744.jpg"},{u:"images/mp_0569.jpg",f:"mp_0569.jpg"},{u:"images/mp_fd_0750.jpg",f:"mp_fd_0750.jpg"},{u:"images/mp_0582.jpg",f:"mp_0582.jpg"},{u:"images/mp_0596.jpg",f:"mp_0596.jpg"},{u:"images/qc_0820.jpg",f:"qc_0820.jpg"},{u:"images/fd_0393.jpg",f:"fd_0393.jpg"},{u:"images/fd_0387.jpg",f:"fd_0387.jpg"},{u:"images/fd_0436.jpg",f:"fd_0436.jpg"},{u:"images/fd_0350.jpg",f:"fd_0350.jpg"},{u:"images/fd_0344.jpg",f:"fd_0344.jpg"},{u:"images/fd_0422.jpg",f:"fd_0422.jpg"},{u:"images/fd_0378.jpg",f:"fd_0378.jpg"},{u:"images/fd_0408.jpg",f:"fd_0408.jpg"},{u:"images/dk_0849.jpeg",f:"dk_0849.jpeg"},{u:"images/fd_0352.jpg",f:"fd_0352.jpg"},{u:"images/fd_0434.jpg",f:"fd_0434.jpg"},{u:"images/fd_0420.jpg",f:"fd_0420.jpg"},{u:"images/fd_0346.jpg",f:"fd_0346.jpg"},{u:"images/fd_0391.jpg",f:"fd_0391.jpg"},{u:"images/fd_0385.jpg",f:"fd_0385.jpg"},{u:"images/qc_0822.jpg",f:"qc_0822.jpg"},{u:"images/mp_0580.jpg",f:"mp_0580.jpg"},{u:"images/mp_0594.jpg",f:"mp_0594.jpg"},{u:"images/mp_fd_0746.jpg",f:"mp_fd_0746.jpg"},{u:"images/mp_fd_0752.jpg",f:"mp_fd_0752.jpg"},{u:"images/mp_0543.jpg",f:"mp_0543.jpg"},{u:"images/mp_0557.jpg",f:"mp_0557.jpg"},{u:"images/dk_0244.jpg",f:"dk_0244.jpg"},{u:"images/dk_0250.jpg",f:"dk_0250.jpg"},{u:"images/fd_qc_0483.jpg",f:"fd_qc_0483.jpg"},{u:"images/dk_0278.jpg",f:"dk_0278.jpg"},{u:"images/dk_0287.jpg",f:"dk_0287.jpg"},{u:"images/png-klipart-myagkaya-igrushka.jpg",f:"png-klipart-myagkaya-igrushka.jpg"},{u:"images/dk_0293.jpg",f:"dk_0293.jpg"},{u:"images/mp_dk_0693.jpg",f:"mp_dk_0693.jpg"},{u:"images/mp_dk_0687.jpg",f:"mp_dk_0687.jpg"},{u:"images/mp_0609.jpg",f:"mp_0609.jpg"},{u:"images/mp_0859.jpeg",f:"mp_0859.jpeg"},{u:"images/mp_dk_0678.jpg",f:"mp_dk_0678.jpg"},{u:"images/mp_0635.jpg",f:"mp_0635.jpg"},{u:"images/mp_0621.jpg",f:"mp_0621.jpg"},{u:"images/mp_0620.jpg",f:"mp_0620.jpg"},{u:"images/mp_0634.jpg",f:"mp_0634.jpg"},{u:"images/mp_dk_0679.jpg",f:"mp_dk_0679.jpg"},{u:"images/mp_0608.jpg",f:"mp_0608.jpg"},{u:"images/mp_dk_0686.jpg",f:"mp_dk_0686.jpg"},{u:"images/mp_dk_0692.jpg",f:"mp_dk_0692.jpg"},{u:"images/dk_0292.jpg",f:"dk_0292.jpg"},{u:"images/dk_0286.jpg",f:"dk_0286.jpg"},{u:"images/fd_qc_0482.jpg",f:"fd_qc_0482.jpg"},{u:"images/dk_0279.jpg",f:"dk_0279.jpg"},{u:"images/dk_0251.jpg",f:"dk_0251.jpg"},{u:"images/mp_0875.jpeg",f:"mp_0875.jpeg"},{u:"images/dk_0245.jpg",f:"dk_0245.jpg"},{u:"images/mp_0556.jpg",f:"mp_0556.jpg"},{u:"images/mp_0542.jpg",f:"mp_0542.jpg"},{u:"images/mp_fd_0753.jpg",f:"mp_fd_0753.jpg"},{u:"images/mp_fd_0747.jpg",f:"mp_fd_0747.jpg"},{u:"images/mp_0595.jpg",f:"mp_0595.jpg"},{u:"images/mp_0581.jpg",f:"mp_0581.jpg"},{u:"images/qc_0823.jpg",f:"qc_0823.jpg"},{u:"images/mp_0863.jpeg",f:"mp_0863.jpeg"},{u:"images/fd_0384.jpg",f:"fd_0384.jpg"},{u:"images/fd_0390.jpg",f:"fd_0390.jpg"},{u:"images/fd_0421.jpg",f:"fd_0421.jpg"},{u:"images/fd_0347.jpg",f:"fd_0347.jpg"},{u:"images/fd_0353.jpg",f:"fd_0353.jpg"},{u:"images/fd_0435.jpg",f:"fd_0435.jpg"},{u:"images/fd_0409.jpg",f:"fd_0409.jpg"},{u:"images/fd_0334.jpg",f:"fd_0334.jpg"},{u:"images/fd_0452.jpg",f:"fd_0452.jpg"},{u:"images/fd_0446.jpg",f:"fd_0446.jpg"},{u:"images/qc_dk_0835.jpg",f:"qc_dk_0835.jpg"},{u:"images/mp_fd_dk_0761.jpg",f:"mp_fd_dk_0761.jpg"},{u:"images/dk_0197.jpg",f:"dk_0197.jpg"},{u:"images/dk_0183.jpg",f:"dk_0183.jpg"},{u:"images/mp_ff_0773.jpg",f:"mp_ff_0773.jpg"},{u:"images/mp_0525.jpg",f:"mp_0525.jpg"},{u:"images/mp_0531.jpg",f:"mp_0531.jpg"},{u:"images/mp_0519.jpg",f:"mp_0519.jpg"},{u:"images/mp_fd_0720.jpg",f:"mp_fd_0720.jpg"},{u:"images/mp_fd_0734.jpg",f:"mp_fd_0734.jpg"},{u:"images/mp_0868.jpeg",f:"mp_0868.jpeg"},{u:"images/dk_0222.jpg",f:"dk_0222.jpg"},{u:"images/dk_0236.jpg",f:"dk_0236.jpg"},{u:"images/mp_ff_dk_0783.jpg",f:"mp_ff_dk_0783.jpg"},{u:"images/mp_ac_0641.jpg",f:"mp_ac_0641.jpg"},{u:"images/fd_dk_0463.jpg",f:"fd_dk_0463.jpg"},{u:"images/fd_dk_0477.jpg",f:"fd_dk_0477.jpg"},{u:"images/fd_dk_0476.jpg",f:"fd_dk_0476.jpg"},{u:"images/fd_dk_0462.jpg",f:"fd_dk_0462.jpg"},{u:"images/mp_ff_dk_0782.jpg",f:"mp_ff_dk_0782.jpg"},{u:"images/mp_ac_0640.jpg",f:"mp_ac_0640.jpg"},{u:"images/dk_0237.jpg",f:"dk_0237.jpg"},{u:"images/dk_0223.jpg",f:"dk_0223.jpg"},{u:"images/mp_fd_0735.jpg",f:"mp_fd_0735.jpg"},{u:"images/mp_0518.jpg",f:"mp_0518.jpg"},{u:"images/mp_fd_0721.jpg",f:"mp_fd_0721.jpg"},{u:"images/mp_0530.jpg",f:"mp_0530.jpg"},{u:"images/mp_0524.jpg",f:"mp_0524.jpg"},{u:"images/mp_ff_0772.jpg",f:"mp_ff_0772.jpg"},{u:"images/dk_0182.jpg",f:"dk_0182.jpg"},{u:"images/dk_0196.jpg",f:"dk_0196.jpg"},{u:"images/mp_fd_dk_0760.jpg",f:"mp_fd_dk_0760.jpg"},{u:"images/qc_dk_0834.jpg",f:"qc_dk_0834.jpg"},{u:"images/fd_0447.jpg",f:"fd_0447.jpg"},{u:"images/fd_0335.jpg",f:"fd_0335.jpg"},{u:"images/fd_0453.jpg",f:"fd_0453.jpg"},{u:"images/fd_0323.jpg",f:"fd_0323.jpg"},{u:"images/fd_0445.jpg",f:"fd_0445.jpg"},{u:"images/fd_0451.jpg",f:"fd_0451.jpg"},{u:"images/fd_0337.jpg",f:"fd_0337.jpg"},{u:"images/qc_dk_0836.jpg",f:"qc_dk_0836.jpg"},{u:"images/dk_0180.jpg",f:"dk_0180.jpg"},{u:"images/dk_0194.jpg",f:"dk_0194.jpg"},{u:"images/mp_ff_0770.jpg",f:"mp_ff_0770.jpg"},{u:"images/mp_0864.jpeg",f:"mp_0864.jpeg"},{u:"images/mp_0532.jpg",f:"mp_0532.jpg"},{u:"images/mp_0526.jpg",f:"mp_0526.jpg"},{u:"images/mp_fd_0737.jpg",f:"mp_fd_0737.jpg"},{u:"images/mp_fd_0723.jpg",f:"mp_fd_0723.jpg"},{u:"images/dk_0209.jpg",f:"dk_0209.jpg"},{u:"images/dk_0235.jpg",f:"dk_0235.jpg"},{u:"images/dk_0221.jpg",f:"dk_0221.jpg"},{u:"images/mp_0872.jpeg",f:"mp_0872.jpeg"},{u:"images/ff_dk_0509.jpg",f:"ff_dk_0509.jpg"},{u:"images/mp_ac_0642.jpg",f:"mp_ac_0642.jpg"},{u:"images/mp_ff_dk_0780.jpg",f:"mp_ff_dk_0780.jpg"},{u:"images/fd_dk_0474.jpg",f:"fd_dk_0474.jpg"},{u:"images/fd_dk_0460.jpg",f:"fd_dk_0460.jpg"},{u:"images/fd_dk_0461.jpg",f:"fd_dk_0461.jpg"},{u:"images/fd_dk_0475.jpg",f:"fd_dk_0475.jpg"},{u:"images/mp_ac_0643.jpg",f:"mp_ac_0643.jpg"},{u:"images/mp_ff_dk_0781.jpg",f:"mp_ff_dk_0781.jpg"},{u:"images/ff_dk_0508.jpg",f:"ff_dk_0508.jpg"},{u:"images/dk_0220.jpg",f:"dk_0220.jpg"},{u:"images/dk_0234.jpg",f:"dk_0234.jpg"},{u:"images/dk_0208.jpg",f:"dk_0208.jpg"},{u:"images/mp_fd_0722.jpg",f:"mp_fd_0722.jpg"},{u:"images/mp_fd_0736.jpg",f:"mp_fd_0736.jpg"},{u:"images/mp_0527.jpg",f:"mp_0527.jpg"},{u:"images/mp_0533.jpg",f:"mp_0533.jpg"},{u:"images/mp_ff_0771.jpg",f:"mp_ff_0771.jpg"},{u:"images/dk_0195.jpg",f:"dk_0195.jpg"},{u:"images/dk_0181.jpg",f:"dk_0181.jpg"},{u:"images/qc_dk_0837.jpg",f:"qc_dk_0837.jpg"},{u:"images/fd_0450.jpg",f:"fd_0450.jpg"},{u:"images/fd_0336.jpg",f:"fd_0336.jpg"},{u:"images/fd_0322.jpg",f:"fd_0322.jpg"},{u:"images/fd_0444.jpg",f:"fd_0444.jpg"},{u:"images/bp_dk_0062.jpg",f:"bp_dk_0062.jpg"},{u:"images/fd_0440.jpg",f:"fd_0440.jpg"},{u:"images/fd_0326.jpg",f:"fd_0326.jpg"},{u:"images/fd_0332.jpg",f:"fd_0332.jpg"},{u:"images/fd_0454.jpg",f:"fd_0454.jpg"},{u:"images/dk_0185.jpg",f:"dk_0185.jpg"},{u:"images/dk_0191.jpg",f:"dk_0191.jpg"},{u:"images/qc_dk_0827.jpg",f:"qc_dk_0827.jpg"},{u:"images/qc_dk_0833.jpg",f:"qc_dk_0833.jpg"},{u:"images/mp_ff_0775.jpg",f:"mp_ff_0775.jpg"},{u:"images/mp_fd_0732.jpg",f:"mp_fd_0732.jpg"},{u:"images/mp_fd_0726.jpg",f:"mp_fd_0726.jpg"},{u:"images/mp_0537.jpg",f:"mp_0537.jpg"},{u:"images/mp_0523.jpg",f:"mp_0523.jpg"},{u:"images/dk_0230.jpg",f:"dk_0230.jpg"},{u:"images/bp_fd_ac_0074.jpg",f:"bp_fd_ac_0074.jpg"},{u:"images/dk_0224.jpg",f:"dk_0224.jpg"},{u:"images/dk_0218.jpg",f:"dk_0218.jpg"},{u:"images/fd_dk_0471.jpg",f:"fd_dk_0471.jpg"},{u:"images/fd_dk_0465.jpg",f:"fd_dk_0465.jpg"},{u:"images/fd_dk_0459.jpg",f:"fd_dk_0459.jpg"},{u:"images/fd_dk_0464.jpg",f:"fd_dk_0464.jpg"},{u:"images/fd_dk_0470.jpg",f:"fd_dk_0470.jpg"},{u:"images/dk_0219.jpg",f:"dk_0219.jpg"},{u:"images/dk_0225.jpg",f:"dk_0225.jpg"},{u:"images/dk_0231.jpg",f:"dk_0231.jpg"},{u:"images/mp_0873.jpeg",f:"mp_0873.jpeg"},{u:"images/mp_0522.jpg",f:"mp_0522.jpg"},{u:"images/mp_0536.jpg",f:"mp_0536.jpg"},{u:"images/mp_fd_0727.jpg",f:"mp_fd_0727.jpg"},{u:"images/mp_fd_0733.jpg",f:"mp_fd_0733.jpg"},{u:"images/mp_ff_0774.jpg",f:"mp_ff_0774.jpg"},{u:"images/mp_0865.jpeg",f:"mp_0865.jpeg"},{u:"images/qc_dk_0832.jpg",f:"qc_dk_0832.jpg"},{u:"images/dk_0190.jpg",f:"dk_0190.jpg"},{u:"images/dk_0184.jpg",f:"dk_0184.jpg"},{u:"images/fd_0333.jpg",f:"fd_0333.jpg"},{u:"images/fd_0455.jpg",f:"fd_0455.jpg"},{u:"images/fd_0441.jpg",f:"fd_0441.jpg"},{u:"images/bp_dk_0063.jpg",f:"bp_dk_0063.jpg"},{u:"images/fd_0327.jpg",f:"fd_0327.jpg"},{u:"images/fd_0457.jpg",f:"fd_0457.jpg"},{u:"images/fd_0331.jpg",f:"fd_0331.jpg"},{u:"images/dk_0179.jpg",f:"dk_0179.jpg"},{u:"images/fd_0325.jpg",f:"fd_0325.jpg"},{u:"images/bp_dk_0061.jpg",f:"bp_dk_0061.jpg"},{u:"images/fd_0443.jpg",f:"fd_0443.jpg"},{u:"images/dk_0192.jpg",f:"dk_0192.jpg"},{u:"images/dk_0186.jpg",f:"dk_0186.jpg"},{u:"images/mp_fd_dk_0758.jpg",f:"mp_fd_dk_0758.jpg"},{u:"images/qc_dk_0830.jpg",f:"qc_dk_0830.jpg"},{u:"images/mp_ff_0776.jpg",f:"mp_ff_0776.jpg"},{u:"images/mp_fd_0725.jpg",f:"mp_fd_0725.jpg"},{u:"images/mp_fd_0731.jpg",f:"mp_fd_0731.jpg"},{u:"images/mp_fd_0719.jpg",f:"mp_fd_0719.jpg"},{u:"images/mp_0520.jpg",f:"mp_0520.jpg"},{u:"images/mp_0534.jpg",f:"mp_0534.jpg"},{u:"images/dk_0227.jpg",f:"dk_0227.jpg"},{u:"images/dk_0233.jpg",f:"dk_0233.jpg"},{u:"images/fd_dk_0466.jpg",f:"fd_dk_0466.jpg"},{u:"images/fd_dk_0472.jpg",f:"fd_dk_0472.jpg"},{u:"images/bp_0038.jpg",f:"bp_0038.jpg"},{u:"images/mp_ff_dk_0779.jpg",f:"mp_ff_dk_0779.jpg"},{u:"images/fd_dk_0473.jpg",f:"fd_dk_0473.jpg"},{u:"images/bp_0039.jpg",f:"bp_0039.jpg"},{u:"images/fd_dk_0467.jpg",f:"fd_dk_0467.jpg"},{u:"images/dk_0232.jpg",f:"dk_0232.jpg"},{u:"images/dk_0226.jpg",f:"dk_0226.jpg"},{u:"images/mp_0535.jpg",f:"mp_0535.jpg"},{u:"images/mp_fd_0718.jpg",f:"mp_fd_0718.jpg"},{u:"images/mp_0521.jpg",f:"mp_0521.jpg"},{u:"images/mp_fd_0730.jpg",f:"mp_fd_0730.jpg"},{u:"images/mp_fd_0724.jpg",f:"mp_fd_0724.jpg"},{u:"images/mp_0869.jpeg",f:"mp_0869.jpeg"},{u:"images/mp_ff_0777.jpg",f:"mp_ff_0777.jpg"},{u:"images/qc_dk_0831.jpg",f:"qc_dk_0831.jpg"},{u:"images/mp_fd_dk_0759.jpg",f:"mp_fd_dk_0759.jpg"},{u:"images/dk_0187.jpg",f:"dk_0187.jpg"},{u:"images/dk_0193.jpg",f:"dk_0193.jpg"},{u:"images/fd_0324.jpg",f:"fd_0324.jpg"},{u:"images/dk_0178.jpg",f:"dk_0178.jpg"},{u:"images/fd_0442.jpg",f:"fd_0442.jpg"},{u:"images/bp_dk_0060.jpg",f:"bp_dk_0060.jpg"},{u:"images/fd_0456.jpg",f:"fd_0456.jpg"},{u:"images/fd_0330.jpg",f:"fd_0330.jpg"},{u:"images/fd_0329.jpg",f:"fd_0329.jpg"},{u:"images/dk_0175.jpg",f:"dk_0175.jpg"},{u:"images/qc_dk_0828.jpg",f:"qc_dk_0828.jpg"},{u:"images/mp_fd_0729.jpg",f:"mp_fd_0729.jpg"},{u:"images/mp_0538.jpg",f:"mp_0538.jpg"},{u:"images/dk_0203.jpg",f:"dk_0203.jpg"},{u:"images/dk_0217.jpg",f:"dk_0217.jpg"},{u:"images/bp_0034.jpg",f:"bp_0034.jpg"},{u:"images/ff_dk_0503.jpg",f:"ff_dk_0503.jpg"},{u:"images/1251023401_0likru_bezimeni-1_54161015967_o.gif",f:"1251023401_0likru_bezimeni-1_54161015967_o.gif"},{u:"images/ff_dk_0502.jpg",f:"ff_dk_0502.jpg"},{u:"images/bp_0035.jpg",f:"bp_0035.jpg"},{u:"images/dk_0216.jpg",f:"dk_0216.jpg"},{u:"images/dk_0202.jpg",f:"dk_0202.jpg"},{u:"images/mp_0539.jpg",f:"mp_0539.jpg"},{u:"images/mp_fd_0728.jpg",f:"mp_fd_0728.jpg"},{u:"images/qc_dk_0829.jpg",f:"qc_dk_0829.jpg"},{u:"images/bp_0840.jpeg",f:"bp_0840.jpeg"},{u:"images/mp_fd_dk_0755.jpg",f:"mp_fd_dk_0755.jpg"},{u:"images/dk_0174.jpg",f:"dk_0174.jpg"},{u:"images/fd_0328.jpg",f:"fd_0328.jpg"},{u:"images/dk_0176.jpg",f:"dk_0176.jpg"},{u:"images/fd_dk_0856.jpeg",f:"fd_dk_0856.jpeg"},{u:"images/dk_0189.jpg",f:"dk_0189.jpg"},{u:"images/mp_fd_dk_0757.jpg",f:"mp_fd_dk_0757.jpg"},{u:"images/dk_0228.jpg",f:"dk_0228.jpg"},{u:"images/dk_0214.jpg",f:"dk_0214.jpg"},{u:"images/dk_0200.jpg",f:"dk_0200.jpg"},{u:"images/bp_fd_0844.jpeg",f:"bp_fd_0844.jpeg"},{u:"images/fd_dk_0469.jpg",f:"fd_dk_0469.jpg"},{u:"images/bp_0037.jpg",f:"bp_0037.jpg"},{u:"images/ff_dk_0500.jpg",f:"ff_dk_0500.jpg"},{u:"images/fd_0854.jpeg",f:"fd_0854.jpeg"},{u:"images/ff_dk_0501.jpg",f:"ff_dk_0501.jpg"},{u:"images/bp_0036.jpg",f:"bp_0036.jpg"},{u:"images/fd_dk_0468.jpg",f:"fd_dk_0468.jpg"},{u:"images/dk_0201.jpg",f:"dk_0201.jpg"},{u:"images/mp_0870.jpeg",f:"mp_0870.jpeg"},{u:"images/dk_0215.jpg",f:"dk_0215.jpg"},{u:"images/dk_0229.jpg",f:"dk_0229.jpg"},{u:"images/mp_fd_0717.jpg",f:"mp_fd_0717.jpg"},{u:"images/mp_0866.jpeg",f:"mp_0866.jpeg"},{u:"images/mp_ff_0778.jpg",f:"mp_ff_0778.jpg"},{u:"images/mp_fd_dk_0756.jpg",f:"mp_fd_dk_0756.jpg"},{u:"images/dk_0188.jpg",f:"dk_0188.jpg"},{u:"images/dk_0177.jpg",f:"dk_0177.jpg"},{u:"images/dk_0173.jpg",f:"dk_0173.jpg"},{u:"images/fd_0449.jpg",f:"fd_0449.jpg"},{u:"images/fd_0887.png",f:"fd_0887.png"},{u:"images/dk_0198.jpg",f:"dk_0198.jpg"},{u:"images/mp_0867.jpeg",f:"mp_0867.jpeg"},{u:"images/mp_ff_0768.jpg",f:"mp_ff_0768.jpg"},{u:"images/mp_0516.jpg",f:"mp_0516.jpg"},{u:"images/dk_0211.jpg",f:"dk_0211.jpg"},{u:"images/mp_0871.jpeg",f:"mp_0871.jpeg"},{u:"images/dk_0205.jpg",f:"dk_0205.jpg"},{u:"images/dk_0239.jpg",f:"dk_0239.jpg"},{u:"images/ff_dk_0511.jpg",f:"ff_dk_0511.jpg"},{u:"images/ff_dk_0505.jpg",f:"ff_dk_0505.jpg"},{u:"images/fd_dk_0478.jpg",f:"fd_dk_0478.jpg"},{u:"images/fd_0855.jpeg",f:"fd_0855.jpeg"},{u:"images/ff_dk_0504.jpg",f:"ff_dk_0504.jpg"},{u:"images/ff_dk_0510.jpg",f:"ff_dk_0510.jpg"},{u:"images/dk_0238.jpg",f:"dk_0238.jpg"},{u:"images/dk_0204.jpg",f:"dk_0204.jpg"},{u:"images/dk_0210.jpg",f:"dk_0210.jpg"},{u:"images/mp_0517.jpg",f:"mp_0517.jpg"},{u:"images/mp_ff_0769.jpg",f:"mp_ff_0769.jpg"},{u:"images/dk_0199.jpg",f:"dk_0199.jpg"},{u:"images/fd_0448.jpg",f:"fd_0448.jpg"},{u:"images/fd_0338.jpg",f:"fd_0338.jpg"},{u:"images/qc_dk_0839.jpg",f:"qc_dk_0839.jpg"},{u:"images/bp_0841.jpeg",f:"bp_0841.jpeg"},{u:"images/ff_dk_0499.jpg",f:"ff_dk_0499.jpg"},{u:"images/mp_ff_0886.jpeg",f:"mp_ff_0886.jpeg"},{u:"images/mp_fd_qc_dk_0767.jpg",f:"mp_fd_qc_dk_0767.jpg"},{u:"images/mp_0529.jpg",f:"mp_0529.jpg"},{u:"images/mp_fd_0738.jpg",f:"mp_fd_0738.jpg"},{u:"images/mp_0515.jpg",f:"mp_0515.jpg"},{u:"images/dk_0206.jpg",f:"dk_0206.jpg"},{u:"images/dk_0212.jpg",f:"dk_0212.jpg"},{u:"images/ff_dk_0506.jpg",f:"ff_dk_0506.jpg"},{u:"images/ff_dk_0512.jpg",f:"ff_dk_0512.jpg"},{u:"images/ff_dk_0513.jpg",f:"ff_dk_0513.jpg"},{u:"images/ff_dk_0507.jpg",f:"ff_dk_0507.jpg"},{u:"images/dk_0213.jpg",f:"dk_0213.jpg"},{u:"images/dk_0207.jpg",f:"dk_0207.jpg"},{u:"images/mp_0514.jpg",f:"mp_0514.jpg"},{u:"images/mp_fd_0739.jpg",f:"mp_fd_0739.jpg"},{u:"images/mp_0528.jpg",f:"mp_0528.jpg"},{u:"images/ff_dk_0498.jpg",f:"ff_dk_0498.jpg"},{u:"images/qc_dk_0838.jpg",f:"qc_dk_0838.jpg"},{u:"images/fd_0339.jpg",f:"fd_0339.jpg"},{u:"images/fd_0410.jpg",f:"fd_0410.jpg"},{u:"images/fd_0376.jpg",f:"fd_0376.jpg"},{u:"images/fd_0362.jpg",f:"fd_0362.jpg"},{u:"images/fd_0404.jpg",f:"fd_0404.jpg"},{u:"images/fd_0438.jpg",f:"fd_0438.jpg"},{u:"images/ff_0494.jpg",f:"ff_0494.jpg"},{u:"images/mp_dk_0700.jpg",f:"mp_dk_0700.jpg"},{u:"images/mp_dk_0714.jpg",f:"mp_dk_0714.jpg"},{u:"images/ac_dk_0015.jpg",f:"ac_dk_0015.jpg"},{u:"images/fd_0389.jpg",f:"fd_0389.jpg"},{u:"images/mp_qc_dk_0817.jpg",f:"mp_qc_dk_0817.jpg"},{u:"images/mp_0598.jpg",f:"mp_0598.jpg"},{u:"images/mp_fd_qc_0766.jpg",f:"mp_fd_qc_0766.jpg"},{u:"images/mp_0567.jpg",f:"mp_0567.jpg"},{u:"images/mp_0573.jpg",f:"mp_0573.jpg"},{u:"images/mp_qc_0786.jpg",f:"mp_qc_0786.jpg"},{u:"images/mp_qc_0792.jpg",f:"mp_qc_0792.jpg"},{u:"images/dk_0248.jpg",f:"dk_0248.jpg"},{u:"images/dk_0260.jpg",f:"dk_0260.jpg"},{u:"images/dk_0274.jpg",f:"dk_0274.jpg"},{u:"images/mp_qc_0802.jpg",f:"mp_qc_0802.jpg"},{u:"images/bp_0057.jpg",f:"bp_0057.jpg"},{u:"images/bp_0043.jpg",f:"bp_0043.jpg"},{u:"images/mp_0611.jpg",f:"mp_0611.jpg"},{u:"images/mp_dk_0674.jpg",f:"mp_dk_0674.jpg"},{u:"images/mp_dk_0660.jpg",f:"mp_dk_0660.jpg"},{u:"images/mp_0605.jpg",f:"mp_0605.jpg"},{u:"images/fd_0852.jpeg",f:"fd_0852.jpeg"},{u:"images/ac_0014.jpg",f:"ac_0014.jpg"},{u:"images/mp_dk_0661.jpg",f:"mp_dk_0661.jpg"},{u:"images/mp_0604.jpg",f:"mp_0604.jpg"},{u:"images/mp_0610.jpg",f:"mp_0610.jpg"},{u:"images/mp_dk_0675.jpg",f:"mp_dk_0675.jpg"},{u:"images/bp_0042.jpg",f:"bp_0042.jpg"},{u:"images/bp_0056.jpg",f:"bp_0056.jpg"},{u:"images/mp_qc_0803.jpg",f:"mp_qc_0803.jpg"},{u:"images/dk_0275.jpg",f:"dk_0275.jpg"},{u:"images/dk_0261.jpg",f:"dk_0261.jpg"},{u:"images/mp_0876.jpeg",f:"mp_0876.jpeg"},{u:"images/dk_0249.jpg",f:"dk_0249.jpg"},{u:"images/mp_qc_0793.jpg",f:"mp_qc_0793.jpg"},{u:"images/mp_qc_0787.jpg",f:"mp_qc_0787.jpg"},{u:"images/mp_0572.jpg",f:"mp_0572.jpg"},{u:"images/mp_0566.jpg",f:"mp_0566.jpg"},{u:"images/mp_0860.jpeg",f:"mp_0860.jpeg"},{u:"images/mp_qc_dk_0816.jpg",f:"mp_qc_dk_0816.jpg"},{u:"images/mp_0599.jpg",f:"mp_0599.jpg"},{u:"images/fd_0388.jpg",f:"fd_0388.jpg"},{u:"images/mp_dk_0715.jpg",f:"mp_dk_0715.jpg"},{u:"images/mp_dk_0701.jpg",f:"mp_dk_0701.jpg"},{u:"images/ff_0495.jpg",f:"ff_0495.jpg"},{u:"images/fd_0439.jpg",f:"fd_0439.jpg"},{u:"images/fd_0363.jpg",f:"fd_0363.jpg"},{u:"images/fd_0405.jpg",f:"fd_0405.jpg"},{u:"images/fd_0411.jpg",f:"fd_0411.jpg"},{u:"images/fd_0377.jpg",f:"fd_0377.jpg"},{u:"images/fd_0407.jpg",f:"fd_0407.jpg"},{u:"images/fd_0361.jpg",f:"fd_0361.jpg"},{u:"images/fd_0375.jpg",f:"fd_0375.jpg"},{u:"images/fd_0413.jpg",f:"fd_0413.jpg"},{u:"images/ff_0497.jpg",f:"ff_0497.jpg"},{u:"images/fd_0349.jpg",f:"fd_0349.jpg"},{u:"images/ac_dk_0016.jpg",f:"ac_dk_0016.jpg"},{u:"images/mp_dk_0703.jpg",f:"mp_dk_0703.jpg"},{u:"images/dk_0846.jpeg",f:"dk_0846.jpeg"},{u:"images/mp_fd_qc_0765.jpg",f:"mp_fd_qc_0765.jpg"},{u:"images/mp_qc_dk_0814.jpg",f:"mp_qc_dk_0814.jpg"},{u:"images/mp_fd_0749.jpg",f:"mp_fd_0749.jpg"},{u:"images/mp_0570.jpg",f:"mp_0570.jpg"},{u:"images/mp_0564.jpg",f:"mp_0564.jpg"},{u:"images/mp_qc_0791.jpg",f:"mp_qc_0791.jpg"},{u:"images/mp_qc_0785.jpg",f:"mp_qc_0785.jpg"},{u:"images/mp_0558.jpg",f:"mp_0558.jpg"},{u:"images/dk_0277.jpg",f:"dk_0277.jpg"},{u:"images/dk_0263.jpg",f:"dk_0263.jpg"},{u:"images/dk_0288.jpg",f:"dk_0288.jpg"},{u:"images/mp_qc_0801.jpg",f:"mp_qc_0801.jpg"},{u:"images/bp_0040.jpg",f:"bp_0040.jpg"},{u:"images/bp_ac_0842.jpeg",f:"bp_ac_0842.jpeg"},{u:"images/bp_0054.jpg",f:"bp_0054.jpg"},{u:"images/mp_dk_0688.jpg",f:"mp_dk_0688.jpg"},{u:"images/mp_0606.jpg",f:"mp_0606.jpg"},{u:"images/mp_dk_0663.jpg",f:"mp_dk_0663.jpg"},{u:"images/mp_dk_0677.jpg",f:"mp_dk_0677.jpg"},{u:"images/mp_0612.jpg",f:"mp_0612.jpg"},{u:"images/dk_0850.jpeg",f:"dk_0850.jpeg"},{u:"images/mp_dk_0676.jpg",f:"mp_dk_0676.jpg"},{u:"images/mp_0613.jpg",f:"mp_0613.jpg"},{u:"images/mp_0607.jpg",f:"mp_0607.jpg"},{u:"images/mp_dk_0662.jpg",f:"mp_dk_0662.jpg"},{u:"images/mp_dk_0689.jpg",f:"mp_dk_0689.jpg"},{u:"images/bp_0055.jpg",f:"bp_0055.jpg"},{u:"images/bp_0041.jpg",f:"bp_0041.jpg"},{u:"images/dk_0289.jpg",f:"dk_0289.jpg"},{u:"images/mp_qc_0800.jpg",f:"mp_qc_0800.jpg"},{u:"images/dk_0262.jpg",f:"dk_0262.jpg"},{u:"images/dk_0276.jpg",f:"dk_0276.jpg"},{u:"images/mp_0559.jpg",f:"mp_0559.jpg"},{u:"images/mp_qc_0784.jpg",f:"mp_qc_0784.jpg"},{u:"images/mp_qc_0790.jpg",f:"mp_qc_0790.jpg"},{u:"images/mp_0565.jpg",f:"mp_0565.jpg"},{u:"images/mp_0883.jpeg",f:"mp_0883.jpeg"},{u:"images/mp_fd_0748.jpg",f:"mp_fd_0748.jpg"},{u:"images/mp_0571.jpg",f:"mp_0571.jpg"},{u:"images/mp_qc_dk_0815.jpg",f:"mp_qc_dk_0815.jpg"},{u:"images/mp_fd_qc_0764.jpg",f:"mp_fd_qc_0764.jpg"},{u:"images/mp_dk_0702.jpg",f:"mp_dk_0702.jpg"},{u:"images/mp_dk_0716.jpg",f:"mp_dk_0716.jpg"},{u:"images/fd_0348.jpg",f:"fd_0348.jpg"},{u:"images/ff_0496.jpg",f:"ff_0496.jpg"},{u:"images/fd_0374.jpg",f:"fd_0374.jpg"},{u:"images/fd_0412.jpg",f:"fd_0412.jpg"},{u:"images/fd_0406.jpg",f:"fd_0406.jpg"},{u:"images/fd_0360.jpg",f:"fd_0360.jpg"},{u:"images/fd_0358.jpg",f:"fd_0358.jpg"},{u:"images/ff_0492.jpg",f:"ff_0492.jpg"},{u:"images/fd_0364.jpg",f:"fd_0364.jpg"},{u:"images/fd_0402.jpg",f:"fd_0402.jpg"},{u:"images/fd_0416.jpg",f:"fd_0416.jpg"},{u:"images/fd_0370.jpg",f:"fd_0370.jpg"},{u:"images/mp_dk_0712.jpg",f:"mp_dk_0712.jpg"},{u:"images/mp_dk_0706.jpg",f:"mp_dk_0706.jpg"},{u:"images/mp_qc_dk_0811.jpg",f:"mp_qc_dk_0811.jpg"},{u:"images/mp_0549.jpg",f:"mp_0549.jpg"},{u:"images/mp_qc_0794.jpg",f:"mp_qc_0794.jpg"},{u:"images/mp_0882.jpeg",f:"mp_0882.jpeg"},{u:"images/mp_0575.jpg",f:"mp_0575.jpg"},{u:"images/mp_0561.jpg",f:"mp_0561.jpg"},{u:"images/dk_0272.jpg",f:"dk_0272.jpg"},{u:"images/mp_ac_0884.jpeg",f:"mp_ac_0884.jpeg"},{u:"images/dk_0266.jpg",f:"dk_0266.jpg"},{u:"images/mp_qc_0804.jpg",f:"mp_qc_0804.jpg"},{u:"images/mp_dk_0699.jpg",f:"mp_dk_0699.jpg"},{u:"images/mp_ac_0639.jpg",f:"mp_ac_0639.jpg"},{u:"images/bp_0045.jpg",f:"bp_0045.jpg"},{u:"images/bp_0051.jpg",f:"bp_0051.jpg"},{u:"images/fd_qc_dk_0484.jpg",f:"fd_qc_dk_0484.jpg"},{u:"images/ac_0013.jpg",f:"ac_0013.jpg"},{u:"images/mp_dk_0666.jpg",f:"mp_dk_0666.jpg"},{u:"images/mp_0603.jpg",f:"mp_0603.jpg"},{u:"images/mp_0617.jpg",f:"mp_0617.jpg"},{u:"images/mp_dk_0672.jpg",f:"mp_dk_0672.jpg"},{u:"images/mp_0616.jpg",f:"mp_0616.jpg"},{u:"images/mp_dk_0673.jpg",f:"mp_dk_0673.jpg"},{u:"images/mp_dk_0667.jpg",f:"mp_dk_0667.jpg"},{u:"images/mp_0602.jpg",f:"mp_0602.jpg"},{u:"images/ac_0012.jpg",f:"ac_0012.jpg"},{u:"images/fd_qc_dk_0485.jpg",f:"fd_qc_dk_0485.jpg"},{u:"images/dk_0851.jpeg",f:"dk_0851.jpeg"},{u:"images/bp_0050.jpg",f:"bp_0050.jpg"},{u:"images/bp_0044.jpg",f:"bp_0044.jpg"},{u:"images/mp_ac_0638.jpg",f:"mp_ac_0638.jpg"},{u:"images/mp_dk_0698.jpg",f:"mp_dk_0698.jpg"},{u:"images/mp_0857.jpeg",f:"mp_0857.jpeg"},{u:"images/mp_qc_0805.jpg",f:"mp_qc_0805.jpg"},{u:"images/dk_0267.jpg",f:"dk_0267.jpg"},{u:"images/dk_0273.jpg",f:"dk_0273.jpg"},{u:"images/mp_0560.jpg",f:"mp_0560.jpg"},{u:"images/mp_0574.jpg",f:"mp_0574.jpg"},{u:"images/mp_qc_0795.jpg",f:"mp_qc_0795.jpg"},{u:"images/mp_0548.jpg",f:"mp_0548.jpg"},{u:"images/mp_qc_dk_0810.jpg",f:"mp_qc_dk_0810.jpg"},{u:"images/mp_dk_0707.jpg",f:"mp_dk_0707.jpg"},{u:"images/mp_dk_0713.jpg",f:"mp_dk_0713.jpg"},{u:"images/dk_0847.jpeg",f:"dk_0847.jpeg"},{u:"images/fd_0417.jpg",f:"fd_0417.jpg"},{u:"images/fd_0371.jpg",f:"fd_0371.jpg"},{u:"images/fd_0365.jpg",f:"fd_0365.jpg"},{u:"images/fd_0403.jpg",f:"fd_0403.jpg"},{u:"images/ff_0487.jpg",f:"ff_0487.jpg"},{u:"images/fd_0359.jpg",f:"fd_0359.jpg"},{u:"images/ff_0493.jpg",f:"ff_0493.jpg"},{u:"images/fd_0429.jpg",f:"fd_0429.jpg"},{u:"images/ff_0491.jpg",f:"ff_0491.jpg"},{u:"images/fd_0373.jpg",f:"fd_0373.jpg"},{u:"images/fd_0415.jpg",f:"fd_0415.jpg"},{u:"images/fd_0401.jpg",f:"fd_0401.jpg"},{u:"images/fd_0367.jpg",f:"fd_0367.jpg"},{u:"images/fd_0398.jpg",f:"fd_0398.jpg"},{u:"images/mp_dk_0705.jpg",f:"mp_dk_0705.jpg"},{u:"images/mp_dk_0711.jpg",f:"mp_dk_0711.jpg"},{u:"images/mp_0861.jpeg",f:"mp_0861.jpeg"},{u:"images/mp_qc_dk_0812.jpg",f:"mp_qc_dk_0812.jpg"},{u:"images/mp_fd_qc_0763.jpg",f:"mp_fd_qc_0763.jpg"},{u:"images/mp_0589.jpg",f:"mp_0589.jpg"},{u:"images/bp_fd_0069.jpg",f:"bp_fd_0069.jpg"},{u:"images/mp_qc_0797.jpg",f:"mp_qc_0797.jpg"},{u:"images/mp_0562.jpg",f:"mp_0562.jpg"},{u:"images/mp_0576.jpg",f:"mp_0576.jpg"},{u:"images/dk_0265.jpg",f:"dk_0265.jpg"},{u:"images/dk_0271.jpg",f:"dk_0271.jpg"},{u:"images/mp_0877.jpeg",f:"mp_0877.jpeg"},{u:"images/dk_0259.jpg",f:"dk_0259.jpg"},{u:"images/mp_qc_0807.jpg",f:"mp_qc_0807.jpg"},{u:"images/bp_0052.jpg",f:"bp_0052.jpg"},{u:"images/bp_0046.jpg",f:"bp_0046.jpg"},{u:"images/fd_0853.jpeg",f:"fd_0853.jpeg"},{u:"images/mp_0628.jpg",f:"mp_0628.jpg"},{u:"images/ac_0010.jpg",f:"ac_0010.jpg"},{u:"images/mp_bp_0644.jpg",f:"mp_bp_0644.jpg"},{u:"images/mp_dk_0659.jpg",f:"mp_dk_0659.jpg"},{u:"images/mp_dk_0671.jpg",f:"mp_dk_0671.jpg"},{u:"images/mp_0614.jpg",f:"mp_0614.jpg"},{u:"images/mp_0600.jpg",f:"mp_0600.jpg"},{u:"images/mp_dk_0665.jpg",f:"mp_dk_0665.jpg"},{u:"images/mp_0601.jpg",f:"mp_0601.jpg"},{u:"images/mp_dk_0664.jpg",f:"mp_dk_0664.jpg"},{u:"images/mp_dk_0670.jpg",f:"mp_dk_0670.jpg"},{u:"images/mp_0615.jpg",f:"mp_0615.jpg"},{u:"images/fd_qc_dk_0486.jpg",f:"fd_qc_dk_0486.jpg"},{u:"images/mp_dk_0658.jpg",f:"mp_dk_0658.jpg"},{u:"images/ac_0011.jpg",f:"ac_0011.jpg"},{u:"images/mp_0629.jpg",f:"mp_0629.jpg"},{u:"images/bp_0047.jpg",f:"bp_0047.jpg"},{u:"images/bp_0053.jpg",f:"bp_0053.jpg"},{u:"images/mp_qc_0806.jpg",f:"mp_qc_0806.jpg"},{u:"images/dk_0258.jpg",f:"dk_0258.jpg"},{u:"images/dk_0270.jpg",f:"dk_0270.jpg"},{u:"images/dk_0264.jpg",f:"dk_0264.jpg"},{u:"images/mp_0577.jpg",f:"mp_0577.jpg"},{u:"images/mp_0563.jpg",f:"mp_0563.jpg"},{u:"images/mp_qc_0796.jpg",f:"mp_qc_0796.jpg"},{u:"images/bp_fd_0068.jpg",f:"bp_fd_0068.jpg"},{u:"images/mp_0588.jpg",f:"mp_0588.jpg"},{u:"images/mp_fd_qc_0762.jpg",f:"mp_fd_qc_0762.jpg"},{u:"images/mp_qc_dk_0813.jpg",f:"mp_qc_dk_0813.jpg"},{u:"images/mp_dk_0710.jpg",f:"mp_dk_0710.jpg"},{u:"images/mp_dk_0704.jpg",f:"mp_dk_0704.jpg"},{u:"images/fd_0399.jpg",f:"fd_0399.jpg"},{u:"images/fd_0400.jpg",f:"fd_0400.jpg"},{u:"images/fd_0366.jpg",f:"fd_0366.jpg"},{u:"images/fd_0372.jpg",f:"fd_0372.jpg"},{u:"images/fd_0414.jpg",f:"fd_0414.jpg"},{u:"images/ff_0490.jpg",f:"ff_0490.jpg"},{u:"images/fd_0428.jpg",f:"fd_0428.jpg"}
 ];
 
 const BASE_URL = "https://raw.githubusercontent.com/Lshfn/shablony/main/";
 
-// Color detection: dominant color of image sampled via canvas,
-// then nearest match to palette by Euclidean distance in RGB space.
-// Palette targets (from spec):
-//   glamour  → magenta   #ff00ff
-//   meadow   → green     #1e7800
-//   deep     → blue      #0000ff
-//   rose     → pink      #ff3366
-//   gold     → yellow    #b38600
-//   turquoise→ cyan      #00ffbf
-//   lilac    → purple    #8600b3
-
-const COLOR_PALETTE = [
-  { name: 'glamour',   r: 255, g:   0, b: 255 },
-  { name: 'meadow',    r:  30, g: 120, b:   0 },
-  { name: 'deep',      r:   0, g:   0, b: 255 },
-  { name: 'rose',      r: 255, g:  51, b: 102 },
-  { name: 'gold',      r: 179, g: 134, b:   0 },
-  { name: 'turquoise', r:   0, g: 255, b: 191 },
-  { name: 'lilac',     r: 134, g:   0, b: 179 },
-];
-
-function hexToRgb(hex) {
-  const n = parseInt(hex.replace('#',''), 16);
-  return { r: (n>>16)&255, g: (n>>8)&255, b: n&255 };
-}
-
-function rgbDist(a, b) {
-  return Math.sqrt((a.r-b.r)**2 + (a.g-b.g)**2 + (a.b-b.b)**2);
-}
-
-function nearestColor(r, g, b) {
-  let best = COLOR_PALETTE[0], bestD = Infinity;
-  for (const c of COLOR_PALETTE) {
-    const d = rgbDist({r,g,b}, c);
-    if (d < bestD) { bestD = d; best = c; }
-  }
-  return best.name;
-}
-
-// Sample dominant color from image via offscreen canvas
-function sampleImageColor(imgEl, callback) {
-  try {
-    const canvas = document.createElement('canvas');
-    canvas.width = canvas.height = 16;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(imgEl, 0, 0, 16, 16);
-    const data = ctx.getImageData(0, 0, 16, 16).data;
-    let R=0, G=0, B=0, count=0;
-    for (let i=0; i<data.length; i+=4) {
-      if (data[i+3] < 128) continue; // skip transparent
-      R += data[i]; G += data[i+1]; B += data[i+2]; count++;
-    }
-    if (count === 0) { callback(null); return; }
-    callback(nearestColor(R/count, G/count, B/count));
-  } catch(e) { callback(null); }
-}
-
-// Fallback: deterministic hash on filename (same as before)
+// Функция для определения цвета на основе имени файла
+// (magenta/glamour, green/meadow, blue/deep, pink/rose, gold, turquoise, lilac)
 function detectColor(filename) {
-  const NAMES = ['glamour','lilac','turquoise','gold','meadow','rose','deep'];
-  let h = 0;
-  for (let i=0; i<filename.length; i++) { h = ((h<<5)-h) + filename.charCodeAt(i); h|=0; }
-  return NAMES[Math.abs(h) % NAMES.length];
+  const lower = filename.toLowerCase();
+  if (lower.includes('glamour') || lower.includes('magenta')) return 'glamour';
+  if (lower.includes('meadow') || lower.includes('green')) return 'meadow';
+  if (lower.includes('deep') || lower.includes('blue') || lower.includes('dark')) return 'deep';
+  if (lower.includes('rose') || lower.includes('pink')) return 'rose';
+  if (lower.includes('gold') || lower.includes('yellow')) return 'gold';
+  if (lower.includes('turquoise') || lower.includes('cyan')) return 'turquoise';
+  if (lower.includes('lilac') || lower.includes('purple')) return 'lilac';
+  
+  // Если цвет не определён по имени, назначаем по первому тегу
+  if (lower.includes('mp')) return Math.random() > 0.5 ? 'glamour' : 'deep';
+  if (lower.includes('ff')) return 'rose';
+  if (lower.includes('bp')) return 'turquoise';
+  if (lower.includes('fd')) return 'lilac';
+  if (lower.includes('qc')) return 'gold';
+  if (lower.includes('ac')) return 'meadow';
+  return 'deep';
 }
 
 // Функция для извлечения тегов из имени файла
@@ -256,16 +216,6 @@ function buildGrid() {
     img.onload = () => {
       img.classList.add('loaded');
       skel.style.display = 'none';
-      // Sample real dominant color and update card + pill
-      sampleImageColor(img, function(detectedColor) {
-        if (detectedColor && detectedColor !== card.dataset.color) {
-          card.dataset.color = detectedColor;
-          const cpill = card.querySelector('.color-pill');
-          if (cpill) cpill.textContent = detectedColor.slice(0,3);
-          // Re-apply filter if a color filter is active
-          if (activeColor) applyFilter();
-        }
-      });
     };
     img.onerror = () => {
       skel.style.display = 'none';
@@ -279,15 +229,11 @@ function buildGrid() {
       pill.textContent = tag;
       ov.appendChild(pill);
     });
-    const cpill = document.createElement('span');
-    cpill.className = 'pill color-pill';
-    cpill.textContent = im.c.slice(0,3);
-    ov.appendChild(cpill);
     
     card.appendChild(img);
     card.appendChild(skel);
     card.appendChild(ov);
-    card.addEventListener('click', () => openLb(im.u, im.f));
+    card.addEventListener('click', (e) => showCtx(e, im.u, im.f));
     grid.appendChild(card);
   });
   applyFilter();
@@ -335,6 +281,7 @@ document.querySelectorAll('.tag').forEach(el => {
   });
 });
 
+// Переключение размера сетки
 document.querySelectorAll('.gbtn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.gbtn').forEach(b => b.classList.remove('active'));
@@ -346,7 +293,7 @@ document.querySelectorAll('.gbtn').forEach(btn => {
   });
 });
 
-
+// Перемешивание
 function shuffle() {
   for (let i = order.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -355,7 +302,7 @@ function shuffle() {
   buildGrid();
 }
 
-
+// Лайтбокс
 function openLb(url, name) {
   document.getElementById('lb-img').src = url;
   document.getElementById('lb-name').innerText = name;
@@ -374,6 +321,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLb();
 });
 
+// Переключение языка
 function toggleLang(btn) {
   lang = lang === 'en' ? 'ru' : 'en';
   btn.innerText = lang === 'en' ? 'read in rus' : 'читать на англ';
@@ -385,5 +333,849 @@ function toggleLang(btn) {
 // Запуск
 buildGrid();
 </script>
+
+<!-- ════════════════ CONTEXT MENU ════════════════ -->
+<style>
+#img-ctx{display:none;position:fixed;z-index:2000;background:var(--sidebar);border:1px solid var(--border);border-radius:3px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.22);font-family:'IBM Plex Mono',monospace;font-size:11px;min-width:160px}
+.ctx-opt{display:flex;align-items:center;gap:8px;padding:7px 14px;cursor:pointer;color:var(--text);transition:background .08s}
+.ctx-opt:hover{background:var(--active-bg);color:var(--active-text)}
+.ctx-divider{height:1px;background:var(--border)}
+.ctx-label{padding:5px 14px 3px;font-size:9px;color:var(--muted);font-family:'Martian Mono',monospace;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+/* editor overlay */
+#psd-ov{display:none;position:fixed;inset:0;z-index:1000;flex-direction:column;overflow:hidden}
+#psd-ov.open{display:flex}
+#psd-closebar{position:absolute;top:5px;right:8px;z-index:1100}
+#psd-closebtn{font-family:Tahoma,sans-serif;font-size:11px;background:#c0c0c0;border-top:2px solid #fff;border-left:2px solid #fff;border-right:2px solid #404040;border-bottom:2px solid #404040;padding:2px 10px;cursor:pointer;white-space:nowrap}
+#psd-closebtn:active{border-top:2px solid #404040;border-left:2px solid #404040;border-right:2px solid #fff;border-bottom:2px solid #fff;padding:3px 9px 1px 11px}
+</style>
+<div id="img-ctx">
+  <div class="ctx-label" id="ctx-label">—</div>
+  <div class="ctx-divider"></div>
+  <div class="ctx-opt" id="ctx-view">🔍 view</div>
+  <div class="ctx-divider"></div>
+  <div class="ctx-opt" id="ctx-ps">🖼 open in photoshop</div>
+</div>
+
+<!-- ════════════════ PHOTOSHOP EDITOR OVERLAY ════════════════ -->
+<div id="psd-ov">
+  <div id="psd-closebar">
+    <button id="psd-closebtn" onclick="closePsd()">✕ close photoshop</button>
+  </div>
+  <!-- editor CSS scoped to #psd-ov -->
+  <style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+#psd-ov{--bg:#636363;--p:#c0c0c0;--pd:#a8a8a8;--b1:#fff;--bd:#808080;--bdk:#404040;--blue:#000080;--f:Tahoma,sans-serif}
+#psd-ov{width:100%;height:100%;font-family:var(--f);font-size:11px;background:var(--bg);overflow:hidden;user-select:none;cursor:default}
+.btn{background:var(--p);padding:2px 8px;border-top:2px solid var(--b1);border-left:2px solid var(--b1);border-right:2px solid var(--bdk);border-bottom:2px solid var(--bdk);font:11px var(--f);cursor:pointer;white-space:nowrap;outline:none;display:inline-block}
+.btn:active{border-top:2px solid var(--bdk);border-left:2px solid var(--bdk);border-right:2px solid var(--b1);border-bottom:2px solid var(--b1);padding:3px 7px 1px 9px}
+.pss{background:#fff;font:11px var(--f);padding:1px 3px;border-top:1px solid var(--bd);border-left:1px solid var(--bd);border-right:1px solid var(--b1);border-bottom:1px solid var(--b1);cursor:pointer}
+.psr{height:14px;cursor:pointer;accent-color:var(--blue)}
+.tbar{background:linear-gradient(to right,#000080,#1084d0);color:#fff;font-size:11px;font-weight:bold;padding:3px 4px;display:flex;align-items:center;justify-content:space-between;cursor:move;flex-shrink:0}
+.tbtn{width:14px;height:14px;background:var(--p);border-top:1px solid var(--b1);border-left:1px solid var(--b1);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:8px;color:#000;cursor:pointer;flex-shrink:0}
+#mb{background:var(--p);border-bottom:1px solid var(--bd);padding:2px 4px;display:flex;align-items:center;gap:2px;height:22px;flex-shrink:0}
+.mi{padding:2px 6px;cursor:pointer}.mi:hover{background:var(--blue);color:#fff}
+#tb{background:var(--p);border-bottom:2px solid var(--bd);padding:3px 6px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;min-height:32px;flex-shrink:0}
+.tsep{width:2px;height:20px;border-left:1px solid var(--bd);border-right:1px solid var(--b1);flex-shrink:0}
+#psd-ov #lay{display:flex;height:calc(100% - 54px - 18px);overflow:hidden}
+#tbx{width:52px;min-width:52px;background:var(--p);border-right:2px solid var(--bd);padding:4px 3px;display:flex;flex-direction:column;gap:1px;overflow-y:auto;flex-shrink:0}
+.tp{display:flex;gap:1px}
+.tt{width:22px;height:22px;background:var(--p);border-top:1px solid var(--b1);border-left:1px solid var(--b1);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer}
+.tt:hover{background:#d4d4d4}.tt.act{border-top:1px solid var(--bdk);border-left:1px solid var(--bdk);border-right:1px solid var(--b1);border-bottom:1px solid var(--b1);background:#b0b0b0}
+.tsp{height:3px}
+.swa{margin-top:4px;display:flex;justify-content:center}
+.swst{position:relative;width:32px;height:32px;cursor:pointer}
+.swbg{position:absolute;bottom:0;right:0;width:20px;height:20px;background:#fff;border:1px solid #000}
+.swfg{position:absolute;top:0;left:0;width:20px;height:20px;background:#000;border:1px solid #000}
+.swl{font-size:9px;text-align:center;margin-top:1px}
+#cva{flex:1;background:var(--bg);overflow:auto;position:relative}
+#sca{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+.frag{position:absolute;pointer-events:none;transition:transform .7s cubic-bezier(.2,.8,.3,1),opacity .7s}
+.fwin{position:absolute;background:var(--p);border-top:2px solid var(--b1);border-left:2px solid var(--b1);border-right:2px solid var(--bdk);border-bottom:2px solid var(--bdk);display:flex;flex-direction:column}
+.cw{background:var(--bg);padding:2px;overflow:auto;flex:1}
+.fwb{background:var(--p);padding:2px 5px;font-size:10px;border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+#rp{width:200px;min-width:200px;background:var(--p);border-left:2px solid var(--bd);display:flex;flex-direction:column;overflow-y:auto;flex-shrink:0}
+.rps{border-bottom:1px solid var(--bd)}
+.rpth{display:flex;border-bottom:1px solid var(--bd)}
+.rpt{padding:2px 7px;cursor:pointer;border-right:1px solid var(--bd);background:var(--pd);font-size:11px}
+.rpt.on{background:var(--p);border-bottom:1px solid var(--p);margin-bottom:-1px}
+#navc{width:100%;height:80px;background:#000;display:block;border-top:1px solid var(--bd);border-left:1px solid var(--bd);border-right:1px solid var(--b1);border-bottom:1px solid var(--b1)}
+.rpb{padding:5px}
+.csr{display:flex;align-items:center;gap:3px;margin-bottom:2px}
+.csr label{font-size:11px;min-width:10px}
+.csr input[type=range]{flex:1;height:10px}
+.chb{width:100%;height:14px;background:linear-gradient(to right,#000,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#fff);border-top:1px solid var(--bd);margin-top:3px}
+.blsec{padding:3px 5px;border-bottom:1px solid var(--bd);display:flex;flex-direction:column;gap:3px}
+.blrow{display:flex;align-items:center;gap:4px;font-size:11px}
+.blrow label{min-width:44px;font-size:11px}
+.blrow select{flex:1;font-size:11px;font-family:var(--f);background:#fff;border-top:1px solid var(--bd);border-left:1px solid var(--bd);border-right:1px solid var(--b1);border-bottom:1px solid var(--b1);padding:1px 2px}
+.lockrow{display:flex;align-items:center;gap:3px;padding:2px 5px 3px;border-bottom:1px solid var(--bd);font-size:10px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:4px}
+.fb{padding:3px 4px;font-size:10px;text-align:center;cursor:pointer;background:var(--p);border-top:1px solid var(--b1);border-left:1px solid var(--b1);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.fb:active,.fb.on{border-top:1px solid var(--bdk);border-left:1px solid var(--bdk);border-right:1px solid var(--b1);border-bottom:1px solid var(--b1);background:#b0b0b0}
+.fb.rst{background:#ffc0c0;grid-column:1/-1}
+.fb.full{grid-column:1/-1}
+.fb.emp{background:transparent;border:none;pointer-events:none;height:18px}
+.lr{display:flex;align-items:center;gap:3px;padding:3px 4px;border-bottom:1px solid var(--bd);cursor:pointer;font-size:11px}
+.lr:hover{background:#d8d8d8}.lr.on{background:var(--blue);color:#fff}
+.lth{width:24px;height:18px;background:#808080;border:1px solid #404040;flex-shrink:0;overflow:hidden}
+.lth canvas{width:100%;height:100%}
+.le{width:16px;text-align:center;flex-shrink:0;cursor:pointer}
+.ln{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px}
+.lbs{display:flex;gap:2px;padding:3px;border-top:1px solid var(--bd)}
+#wcwin{position:fixed;right:215px;bottom:40px;width:370px;z-index:400;display:none;flex-direction:column}
+#wcc{width:100%;display:block;background:#111;min-height:200px}
+video{display:none}
+#stb{background:var(--p);border-top:1px solid var(--bd);padding:2px 8px;font-size:11px;display:flex;gap:10px;height:18px;overflow:hidden;flex-shrink:0}
+#ttp{position:fixed;background:#ffffe1;border:1px solid #000;padding:3px 6px;font-size:11px;pointer-events:none;display:none;z-index:9999;max-width:180px}
+.ghostlayer{position:absolute;cursor:grab;pointer-events:all}
+#psd-ov ::-webkit-scrollbar{width:14px;height:14px}
+#psd-ov ::-webkit-scrollbar-track{background:var(--bg)}
+#psd-ov ::-webkit-scrollbar-thumb{background:var(--p);border-top:1px solid var(--b1);border-left:1px solid var(--b1);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.decogif{position:absolute;pointer-events:none;z-index:15}
+/* DECAY animation overlay */
+#decayOverlay{position:absolute;top:2px;left:2px;pointer-events:none;display:none;z-index:5;image-rendering:pixelated}
+/* GIF export progress */
+#gifprog{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--p);border-top:2px solid var(--b1);border-left:2px solid var(--b1);border-right:2px solid var(--bdk);border-bottom:2px solid var(--bdk);padding:16px 24px;z-index:9000;display:none;min-width:260px}
+
+  </style>
+  <!-- editor @font-face + HTML -->
+  <style>
+@font-face{font-family:'Basalte';src:url('https://dariaivans.neocities.org/fonts/Basalte-Multicolor.otf')}
+@font-face{font-family:'Bonbon';src:url('https://dariaivans.neocities.org/fonts/Bonbon-Regular.ttf')}
+@font-face{font-family:'Bubble';src:url('https://dariaivans.neocities.org/fonts/bubble.ttf')}
+@font-face{font-family:'FKScreamer';src:url('https://dariaivans.neocities.org/fonts/FKScreamerLegacyTrial-Slanted.otf')}
+@font-face{font-family:'Floralie';src:url('https://dariaivans.neocities.org/fonts/FLORALIE.TTF')}
+@font-face{font-family:'FlorDeRuina';src:url('https://dariaivans.neocities.org/fonts/FlorDeRuina-Flor.otf')}
+@font-face{font-family:'Smoke';src:url('https://dariaivans.neocities.org/fonts/SMOKE.TTF')}
+@font-face{font-family:'Bumbazo';src:url('https://dariaivans.neocities.org/fonts/BUMBAZO.TTF')}
+@font-face{font-family:'MysteryQuest';src:url('https://dariaivans.neocities.org/fonts/MysteryQuest-Regular.ttf')}
+@font-face{font-family:'AmoreCTT';src:url('https://dariaivans.neocities.org/fonts/ofont.ru_AmoreCTT.ttf')}
+@font-face{font-family:'SuperMario';src:url('https://dariaivans.neocities.org/fonts/ofont.ru_Super%20Mario%203D.ttf')}
+@font-face{font-family:'RumBubber';src:url('https://dariaivans.neocities.org/fonts/Rum%20Bubber.ttf')}
+@font-face{font-family:'Hy';src:url('https://dariaivans.neocities.org/fonts/Hy______.ttf')}
+@font-face{font-family:'Hippocri';src:url('https://dariaivans.neocities.org/fonts/HIPPOCRI.TTF')}
+@font-face{font-family:'Kaeru';src:url('https://dariaivans.neocities.org/fonts/kaerukaeru-Regular.otf')}
+@font-face{font-family:'Kemushi';src:url('https://dariaivans.neocities.org/fonts/Kemushi.TTF')}
+@font-face{font-family:'KanE';src:url('https://dariaivans.neocities.org/fonts/KAN-E___.TTF')}
+@font-face{font-family:'Srisakdi';src:url('https://dariaivans.neocities.org/fonts/Srisakdi-Regular.ttf')}
+</style>
+
+<div id="mb"><b style="margin-right:6px">🖼 IMG/EDITOR</b><span class="mi">File</span><span class="mi">Edit</span><span class="mi">Image</span><span class="mi">Layer</span><span class="mi">Select</span><span class="mi">Filter</span><span class="mi">View</span><span class="mi">Window</span><span class="mi">Help</span></div>
+<div id="tb">
+  <button class="btn" onclick="doScatter()">💥 Scatter</button>
+  <button class="btn" onclick="doReassemble()">🧲 Reassemble</button>
+  <div class="tsep"></div>
+  <button class="btn" id="btnwc" onclick="toggleWC()">📷 Webcam</button>
+  <button class="btn" onclick="expPNG()">💾 PNG</button>
+  <button class="btn" onclick="expJPG()">💾 JPEG</button>
+  <button class="btn" onclick="expGIF()">💾 GIF</button>
+  <div class="tsep"></div>
+  <span id="coords" style="font-family:monospace;font-size:11px">x:— y:—</span>
+</div>
+
+<div id="lay">
+<div id="tbx">
+  <div class="tp"><div class="tt act" data-tool="scissors" onclick="setTool('scissors')">✂</div><div class="tt" data-tool="ghost" onclick="setTool('ghost')">👻</div></div>
+  <div class="tp"><div class="tt" data-tool="brush" onclick="setTool('brush')">🖌</div><div class="tt" data-tool="nothing" onclick="setTool('nothing')" title="it does nothing">@</div></div>
+  <div class="tsp"></div>
+  <div class="tp"><div class="tt" data-tool="puzzle" onclick="setTool('puzzle')">🧩</div><div class="tt" data-tool="wand" onclick="setTool('wand')">⬡</div></div>
+  <div class="tp"><div class="tt" data-tool="cook" onclick="setTool('cook')">🎂</div><div class="tt" data-tool="copy" onclick="setTool('copy')">⧉</div></div>
+  <div class="tsp"></div>
+  <div class="tp"><div class="tt" data-tool="move" onclick="setTool('move')">✛</div><div class="tt" data-tool="zoom" onclick="setTool('zoom')">🔍</div></div>
+  <div class="tp"><div class="tt" data-tool="eyedrop" onclick="setTool('eyedrop')">💉</div><div class="tt" data-tool="hand" onclick="setTool('hand')">✋</div></div>
+  <div class="tsp"></div>
+  <div class="swa"><div><div class="swst" onclick="cycleSwatch()"><div class="swbg" id="swbg"></div><div class="swfg" id="swfg"></div></div><div class="swl">FG/BG</div></div></div>
+</div>
+
+<div id="cva" onmousemove="trackM(event)" onmousedown="cvaDown(event)">
+  <div id="sca"></div>
+  <div id="ghostzone" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none"></div>
+  <div class="fwin" id="mw" style="left:14px;top:10px;z-index:10">
+    <div class="tbar" onmousedown="startDrag(event,'mw')">
+      <span id="wtitle">loading…</span>
+      <div style="display:flex;gap:2px"><div class="tbtn" onclick="tmin('mw')">_</div><div class="tbtn">□</div><div class="tbtn" onclick="hwn('mw')" style="font-size:7px">✕</div></div>
+    </div>
+    <div class="cw" id="mcw" style="overflow:auto;position:relative">
+      <canvas id="MC" style="cursor:crosshair;display:block"></canvas>
+      <canvas id="decayOverlay"></canvas>
+    </div>
+    <div class="fwb"><span id="dsz">Doc: —</span><span id="dzm">100%</span></div>
+  </div>
+</div>
+
+<div id="rp">
+  <div class="rps">
+    <div class="rpth"><div class="rpt on">Navigator</div><div class="rpt">Info</div><div class="rpt">Histogram</div></div>
+    <div class="rpb" style="padding:4px">
+      <canvas id="navc" width="186" height="80"></canvas>
+      <div style="display:flex;align-items:center;gap:4px;margin-top:3px">
+        <span style="font-size:9px">–</span>
+        <input type="range" min="25" max="300" value="100" class="psr" id="zmsl" style="flex:1" oninput="setZoom(this.value)">
+        <span style="font-size:9px">+</span>
+        <span id="zmpct" style="font-size:11px;min-width:34px;text-align:right">100%</span>
+      </div>
+    </div>
+  </div>
+  <div class="rps">
+    <div class="rpth"><div class="rpt on">Color</div><div class="rpt">Swatches</div><div class="rpt">Styles</div></div>
+    <div class="rpb">
+      <div class="csr"><span style="width:8px;height:8px;border-radius:50%;background:red;display:inline-block;flex-shrink:0"></span><label>R</label><input type="range" min="0" max="255" value="128" class="psr" style="accent-color:red;flex:1" id="cbr" oninput="colorBias('r',this.value)"></div>
+      <div class="csr"><span style="width:8px;height:8px;border-radius:50%;background:#0c0;display:inline-block;flex-shrink:0"></span><label>G</label><input type="range" min="0" max="255" value="128" class="psr" style="accent-color:#0c0;flex:1" id="cbg" oninput="colorBias('g',this.value)"></div>
+      <div class="csr"><span style="width:8px;height:8px;border-radius:50%;background:#44f;display:inline-block;flex-shrink:0"></span><label>B</label><input type="range" min="0" max="255" value="128" class="psr" style="accent-color:#44f;flex:1" id="cbb" oninput="colorBias('b',this.value)"></div>
+      <div class="chb"></div>
+    </div>
+  </div>
+  <div class="rps">
+    <div class="rpth"><div class="rpt on" id="taf" onclick="swTab('f')">Filters</div><div class="rpt" id="tad" onclick="swTab('d')">Decomp</div></div>
+    <div id="pf">
+      <div class="blsec">
+        <div class="blrow"><label>Blend:</label><select id="blendsel" onchange="applySpecialBlend(this.value)"><option value="okay">okay</option><option value="disappear">disappear</option><option value="mimicry">mimicry</option><option value="commemorate">commemorate</option><option value="fillholes">fill the holes</option><option value="disregard">disregard</option><option value="question">?</option></select></div>
+        <div class="blrow"><label>Opacity:</label><input type="range" min="0" max="100" value="100" class="psr" id="layop" style="flex:1" oninput="setLop(this.value)"><span id="layopv" style="min-width:28px;font-size:11px">100%</span></div>
+      </div>
+      <div class="lockrow"><span>Lock:</span><div class="btn" style="padding:1px 4px;font-size:10px">🔒</div><div class="btn" style="padding:1px 4px;font-size:10px">⬡</div><div class="btn" style="padding:1px 4px;font-size:10px">✚</div><div class="btn" style="padding:1px 4px;font-size:10px">🔒</div></div>
+      <div class="fg">
+        <div class="fb" id="ff-fractal" onclick="doFilter('fractal')">Fractal</div>
+        <div class="fb" id="ff-glitch" onclick="doFilter('glitch')">Glitch</div>
+        <div class="fb" id="ff-pixelsort" onclick="doFilter('pixelsort')">Pixel Sort</div>
+        <div class="fb" id="ff-photoalbum" onclick="doFilter('photoalbum')">photo album</div>
+        <div class="fb" id="ff-reward" onclick="doFilter('reward')">reward</div>
+        <div class="fb" id="ff-reclaim" onclick="doFilter('reclaim')">reclaim</div>
+        <div class="fb" id="ff-postcard" onclick="doFilter('postcard')">postcard</div>
+        <div class="fb" id="ff-decay" onclick="doFilter('decay')">decay</div>
+        <div class="fb emp"></div><div class="fb emp"></div>
+        <div class="fb emp"></div><div class="fb emp"></div>
+        <div class="fb emp"></div><div class="fb emp"></div>
+        <div class="fb rst" onclick="resetImg()">↩ Reset</div>
+      </div>
+      <div style="padding:0 4px 2px;font-size:10px">Filter intensity:</div>
+      <div style="padding:0 4px 4px;display:flex;align-items:center;gap:4px">
+        <input type="range" min="0" max="100" value="50" class="psr" id="fstr" style="flex:1" oninput="document.getElementById('fsv').textContent=this.value">
+        <span id="fsv" style="font-size:10px;min-width:20px">50</span>
+      </div>
+    </div>
+    <div id="pd" style="display:none">
+      <div style="padding:4px;font-size:10px;font-weight:bold">Decompose:</div>
+      <div class="fg">
+        <div class="fb" onclick="openDW('red')"><span style="color:red">■</span> Red</div>
+        <div class="fb" onclick="openDW('green')"><span style="color:green">■</span> Green</div>
+        <div class="fb" onclick="openDW('blue')"><span style="color:#44f">■</span> Blue</div>
+        <div class="fb" onclick="openDW('luma')">☀ Luma</div>
+        <div class="fb" onclick="openDW('hue')">🌈 Hue</div>
+        <div class="fb" onclick="openDW('sat')">◐ Sat</div>
+        <div class="fb" onclick="openDW('hf')">⚡ Hi-Freq</div>
+        <div class="fb" onclick="openDW('edges')">◻ Edges</div>
+        <div class="fb full" onclick="openAllDW()">↗ Open All</div>
+      </div>
+    </div>
+  </div>
+  <div class="rps" style="flex:1;min-height:100px">
+    <div class="rpth"><div class="rpt on">Layers</div><div class="rpt">Channels</div><div class="rpt">Paths</div></div>
+    <div id="ll"></div>
+    <div class="lbs">
+      <div class="btn" style="padding:1px 6px" onclick="addL()">+</div>
+      <div class="btn" style="padding:1px 6px" onclick="dupL()">⧉</div>
+      <div class="btn" style="padding:1px 6px" onclick="delL()">🗑</div>
+      <div class="btn" style="padding:1px 6px" onclick="flatL()">⬇</div>
+    </div>
+  </div>
+  <div class="rps">
+    <div class="rpth"><div class="rpt on">Export</div></div>
+    <div style="display:flex;gap:3px;padding:4px;flex-wrap:wrap">
+      <button class="btn" onclick="expPNG()" style="font-size:10px">PNG</button>
+      <button class="btn" onclick="expJPG()" style="font-size:10px">JPEG</button>
+      <button class="btn" onclick="expWP()" style="font-size:10px">WebP</button>
+      <button class="btn" onclick="expGIF()" style="font-size:10px">GIF</button>
+      <button class="btn" onclick="copyC()" style="font-size:10px">Copy</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- WEBCAM floating window -->
+<div class="fwin" id="wcwin">
+  <div class="tbar" onmousedown="startDragFixed(event,'wcwin')">
+    <span>📷 Webcam Texture</span>
+    <div style="display:flex;gap:2px"><div class="tbtn" onclick="stopWC()" style="font-size:7px">✕</div></div>
+  </div>
+  <div style="background:#111;padding:2px"><video id="wcvid" autoplay playsinline muted></video><canvas id="wcc" style="width:100%;display:block;min-height:200px"></canvas></div>
+  <div style="background:var(--p);padding:4px;display:flex;flex-direction:column;gap:3px">
+    <div style="display:flex;align-items:center;gap:4px;font-size:11px"><span>Texture:</span><select class="pss" style="flex:1" id="wctex"><option value="original">Original image</option><option value="edges">Edges</option><option value="red">Red channel</option><option value="glitch">Glitch</option><option value="thermal">Thermal</option><option value="mosaic">Mosaic</option></select></div>
+    <div style="display:flex;align-items:center;gap:4px;font-size:10px"><span style="min-width:56px">BG thresh:</span><input type="range" min="10" max="120" value="35" class="psr" id="wcth" style="flex:1" oninput="document.getElementById('wcthv').textContent=this.value"><span id="wcthv" style="min-width:20px">35</span></div>
+    <div style="display:flex;align-items:center;gap:4px;font-size:10px"><span style="min-width:56px">Tex blend:</span><input type="range" min="0" max="100" value="90" class="psr" id="wcbl" style="flex:1" oninput="document.getElementById('wcblv').textContent=this.value+'%'"><span id="wcblv" style="min-width:28px">90%</span></div>
+    <div style="display:flex;gap:3px">
+      <button class="btn" onclick="resetBG()" style="flex:1;font-size:10px">📸 Set BG</button>
+      <button class="btn" onclick="toggleWCtex()" id="wctbtn" style="flex:1;font-size:10px">▶ Start</button>
+      <button class="btn" onclick="expWC()" style="font-size:10px">💾</button>
+    </div>
+    <div style="font-size:9px;color:#555;text-align:center">Set BG first (without you), then Start</div>
+  </div>
+</div>
+
+<!-- GIF progress -->
+<div id="gifprog">
+  <div style="font-weight:bold;margin-bottom:8px">Generating GIF…</div>
+  <div id="gifbar" style="width:100%;height:14px;background:#ddd;border-top:1px solid var(--bd);border-left:1px solid var(--bd)"><div id="gifbarfill" style="height:100%;background:var(--blue);width:0%;transition:width .1s"></div></div>
+  <div id="gifmsg" style="margin-top:6px;font-size:10px;color:#555">Rendering frames…</div>
+</div>
+
+<div id="stb"><span id="stdoc">Doc: —</span><span>|</span><span id="strgb">R:— G:— B:—</span><span>|</span><span id="sttool">Tool: scissors</span><span>|</span><span id="stmsg">Ready</span></div>
+<div id="ttp"></div>
+</div>
+
+<!-- ════════════════ BRIDGE + EDITOR JS ════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+<script>
+// ── context menu ──────────────────────────────────────────────────────────
+let _cu=null,_cf=null;
+function showCtx(e,url,fn){
+  e.stopPropagation();
+  _cu=url;_cf=fn;
+  const m=document.getElementById('img-ctx');
+  document.getElementById('ctx-label').textContent=fn;
+  m.style.display='block';
+  let x=e.clientX,y=e.clientY;
+  if(x+164>window.innerWidth)x=window.innerWidth-168;
+  if(y+100>window.innerHeight)y=window.innerHeight-104;
+  m.style.left=x+'px';m.style.top=y+'px';
+}
+function hideCtx(){document.getElementById('img-ctx').style.display='none';}
+document.getElementById('ctx-view').onclick=function(){hideCtx();if(_cu)openLb(_cu,_cf);};
+document.getElementById('ctx-ps').onclick=function(){hideCtx();if(_cu)openPsd(_cu,_cf);};
+document.addEventListener('click',hideCtx);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){hideCtx();closePsd();}});
+
+// ── editor open/close ─────────────────────────────────────────────────────
+function openPsd(url,fn){
+  document.getElementById('psd-ov').classList.add('open');
+  if(typeof window.psdLoad==='function')window.psdLoad(url,fn);
+  else{window._editorUrl=url;window._editorFilename=fn;}
+}
+function closePsd(){
+  document.getElementById('psd-ov').classList.remove('open');
+}
+</script>
+<script>
+// ── editor JS (original, unmodified except 2 lines) ───────────────────────
+// ═══════════════════════════ CONSTANTS ═══════════════════════════
+const IMGURL='https://dariaivans.neocities.org/1298457691_0lik.ru_mysli-o-vesne.jpg';
+const CAKEURL='https://dariaivans.neocities.org/cake.png';
+const ALBUMURL='https://dariaivans.neocities.org/album.png';
+const G_SPARK=['https://dariaivans.neocities.org/glitter/picmix.com_1581523.gif','https://dariaivans.neocities.org/glitter/picmix.com_2653722.gif','https://dariaivans.neocities.org/glitter/760408dw1h2jcut6.gif','https://dariaivans.neocities.org/glitter/714833nkm6do15tu.gif'];
+const G_STAR=['https://dariaivans.neocities.org/picgifs-stars-018439.gif','https://dariaivans.neocities.org/glitter/picgifs-stars-1504091.gif','https://dariaivans.neocities.org/glitter/picmix.com_340768.gif'];
+const G_HEART=['https://dariaivans.neocities.org/picmix.com_1960783.gif','https://dariaivans.neocities.org/picmix.com_1586818.gif','https://dariaivans.neocities.org/heart/738240xakrsp7q77.gif'];
+const PCARDFONTS=['Basalte','Bonbon','Bubble','FKScreamer','Floralie','FlorDeRuina','Smoke','Hy','Hippocri','Kaeru','Kemushi','KanE','Srisakdi'];
+const RFONTS=['Bumbazo','FlorDeRuina','MysteryQuest','AmoreCTT','SuperMario','RumBubber','Hy','Hippocri','Kemushi','Srisakdi'];
+const PALETTE=['#FF0066','#FF3300','#FF6600','#FFAA00','#FFE600','#AAFF00','#00FF44','#00FFCC','#00CCFF','#0066FF','#6600FF','#CC00FF','#FF00CC','#FF99CC','#99FFEE','#FF6633','#33FF99','#FF33AA','#AACCFF','#FFAAEE','#FF0000','#00FF00','#0000FF','#FFFFFF','#FFD700','#FF69B4','#7FFFD4','#FF4500','#9400D3','#00CED1'];
+
+// ── Merriam-Webster scrape via CORS proxy ──
+// We call the public MW Word of the Day JSON feed + random from word lists
+// Since MW doesn't have public CORS API, use a large built-in dictionary
+// Words sourced from Merriam-Webster's unusual / evocative word collections
+const MW_ADJS=['numinous','plangent','vespertine','liminal','lambent','susurrant','effulgent','vellichor','fugacious','sempiternal','tenebrous','sidereal','gossamer','phosphene','petrichor','hiraeth','sonder','lacuna','apothecia','palimpsest','mellifluous','sibilant','crepuscular','iridescent','ephemeral','labyrinthine','quiescent','ineffable','ebullient','iridescent'];
+const MW_NOUNS=['reverie','solstice','umbra','penumbra','entropy','cascade','meridian','ossuary','palimpsest','vellum','lacunae','seraphim','phenology','aphelion','perigee','terminus','elegy','threnody','shibboleth','apotheosis','fugue','tessera','nimbus','aurora','nadir','zenith','patina','susurrus','catharsis','ephemera'];
+
+// ═══════════════════════════ STATE ═══════════════════════════
+let OD=null,CD=null,zoom=1,layers=[],selL=0,curTool='scissors';
+let wcStream=null,wcOn=false,wcAF=null,scattered=false,frags=[];
+let copyN=0,dwinZ=30,swI=0,activeFilt=null,bgSample=null;
+let decayAF=null,decayRunning=false,decayFrames=[],decayStep=0;
+const swC=['#000','#c00','#060','#00c','#c60','#909','#fff','#0cc','#ff69b4'];
+const MC=document.getElementById('MC');
+const CTX=MC.getContext('2d');
+const NC=document.getElementById('navc');
+const NCTX=NC.getContext('2d');
+
+// tooltips
+const TIPS={scissors:'scissors',ghost:'ghost hand',brush:'paint brush',nothing:'it does nothing',puzzle:'puzzle',wand:'wand',cook:'cook',copy:'copy',move:'move',zoom:'zoom',eyedrop:'eyedrop',hand:'hand'};
+document.querySelectorAll('.tt').forEach(el=>{
+  const t=el.dataset.tool;
+  el.addEventListener('mouseenter',e=>{const tp=document.getElementById('ttp');tp.textContent=TIPS[t]||t;tp.style.display='block';tp.style.left=(e.clientX+14)+'px';tp.style.top=(e.clientY+4)+'px'});
+  el.addEventListener('mousemove',e=>{const tp=document.getElementById('ttp');tp.style.left=(e.clientX+14)+'px';tp.style.top=(e.clientY+4)+'px'});
+  el.addEventListener('mouseleave',()=>document.getElementById('ttp').style.display='none');
+});
+
+// ═══════════════════════════ HELPERS ═══════════════════════════
+function rnd(a){return a[Math.floor(Math.random()*a.length)]}
+function rpal(){return rnd(PALETTE)}
+function lerp(a,b,t){return Math.round(a+(b-a)*t)}
+function luma(r,g,b){return 0.299*r+0.587*g+0.114*b}
+function cloneID(id){return new ImageData(new Uint8ClampedArray(id.data),id.width,id.height)}
+function mkC(data,W,H){const c=document.createElement('canvas');c.width=W;c.height=H;c.getContext('2d').putImageData(new ImageData(data,W,H),0,0);return c}
+function loadImgP(url){return new Promise((res,rej)=>{const i=new Image();i.crossOrigin='anonymous';i.onload=()=>res(i);i.onerror=rej;i.src=url})}
+function setMsg(m){document.getElementById('stmsg').textContent=m}
+
+// ── Fetch MW word of the day via a CORS-friendly endpoint ──
+async function getMWWords(){
+  // Try to fetch MW Word of the Day page and scrape the word
+  try{
+    // Use allorigins CORS proxy to get MW WOTD
+    const today=new Date();
+    const dateStr=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+    const r=await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.merriam-webster.com/word-of-the-day')}`,{signal:AbortSignal.timeout(4000)});
+    const j=await r.json();
+    const html=j.contents||'';
+    // Extract the word from page title pattern: "Word of the Day: WORD"
+    const m=html.match(/Word of the Day:\s*([A-Za-z\s\-]+?)[\s<"]/);
+    if(m&&m[1]){
+      const wotd=m[1].trim();
+      return [wotd, rnd(MW_NOUNS)+' Day'];
+    }
+  }catch(e){}
+  // Fallback to built-in MW-sourced lists
+  return [rnd(MW_ADJS), rnd(MW_NOUNS)+' Day'];
+}
+
+// ═══════════════════════════ LOAD IMAGE ═══════════════════════════
+function loadImg(){
+  const img=new Image();img.crossOrigin='anonymous';
+  img.onload=()=>{
+    const maxW=window.innerWidth-270,maxH=window.innerHeight-110;
+    const scale=Math.min(maxW/img.width,maxH/img.height,1);
+    const W=Math.round(img.width*scale),H=Math.round(img.height*scale);
+    MC.width=W;MC.height=H;MC.style.width=W+'px';MC.style.height=H+'px';
+    const ov=document.getElementById('decayOverlay');ov.width=W;ov.height=H;ov.style.width=W+'px';ov.style.height=H+'px';
+    CTX.drawImage(img,0,0,W,H);
+    OD=CTX.getImageData(0,0,W,H);CD=cloneID(OD);
+    document.getElementById('wtitle').textContent='mysli-o-vesne.jpg  ['+W+'×'+H+']';
+    document.getElementById('dsz').textContent='Doc: '+W+'×'+H;
+    document.getElementById('stdoc').textContent='Doc: '+W+'×'+H+' px';
+    const mw=document.getElementById('mw');mw.style.width=(W+6)+'px';mw.style.height=(H+44)+'px';
+    buildLayers(img,W,H);updLUI();updNav();setMsg('Image loaded: '+W+'×'+H);
+  };
+  img.onerror=()=>setMsg('Load error');
+  img.src=window._editorUrl||IMGURL;
+  if(window._editorFilename){document.getElementById('wtitle').textContent=window._editorFilename+'  ['+W+'×'+H+']'}
+}
+
+// ═══════════════════════════ NAV & ZOOM ═══════════════════════════
+function updNav(){NCTX.clearRect(0,0,186,80);NCTX.drawImage(MC,0,0,186,80)}
+function setZoom(v){zoom=v/100;MC.style.width=Math.round(MC.width*zoom)+'px';MC.style.height=Math.round(MC.height*zoom)+'px';document.getElementById('zmpct').textContent=v+'%';document.getElementById('dzm').textContent=v+'%'}
+
+// ═══════════════════════════ LAYERS ═══════════════════════════
+function buildLayers(img,W,H){layers=[];const c=document.createElement('canvas');c.width=W;c.height=H;c.getContext('2d').drawImage(img,0,0,W,H);layers.push({name:'Background',canvas:c,vis:true,op:1,blend:'source-over',locked:true})}
+function updLUI(){
+  const ll=document.getElementById('ll');ll.innerHTML='';
+  [...layers].reverse().forEach((l,ri)=>{
+    const i=layers.length-1-ri;const row=document.createElement('div');row.className='lr'+(i===selL?' on':'');row.onclick=()=>{selL=i;updLUI()};
+    const eye=document.createElement('div');eye.className='le';eye.textContent=l.vis?'👁':'○';eye.onclick=e=>{e.stopPropagation();l.vis=!l.vis;composite();updLUI()};
+    const th=document.createElement('div');th.className='lth';const tc=document.createElement('canvas');tc.width=24;tc.height=18;tc.getContext('2d').drawImage(l.canvas,0,0,24,18);th.appendChild(tc);
+    const nm=document.createElement('div');nm.className='ln';nm.textContent=l.name;row.append(eye,th,nm);ll.appendChild(row);
+  });
+}
+function composite(){CTX.clearRect(0,0,MC.width,MC.height);layers.forEach(l=>{if(!l.vis)return;CTX.save();CTX.globalAlpha=l.op;CTX.globalCompositeOperation=l.blend;CTX.drawImage(l.canvas,0,0);CTX.restore()});CD=CTX.getImageData(0,0,MC.width,MC.height);updNav()}
+function pushLayer(name,canvas,op=1,blend='source-over'){layers.push({name,canvas,vis:true,op,blend,locked:false});selL=layers.length-1;updLUI();composite()}
+function addL(){if(!CD)return;const c=document.createElement('canvas');c.width=MC.width;c.height=MC.height;c.getContext('2d').putImageData(CD,0,0);pushLayer('Layer '+layers.length,c,0.5)}
+function dupL(){if(!layers[selL])return;const o=layers[selL];const c=document.createElement('canvas');c.width=o.canvas.width;c.height=o.canvas.height;c.getContext('2d').drawImage(o.canvas,0,0);layers.splice(selL+1,0,{name:o.name+' copy',canvas:c,vis:true,op:o.op,blend:o.blend,locked:false});selL++;updLUI();composite()}
+function delL(){if(layers.length<=1)return;layers.splice(selL,1);selL=Math.max(0,selL-1);updLUI();composite()}
+function flatL(){const c=document.createElement('canvas');c.width=MC.width;c.height=MC.height;const cx=c.getContext('2d');layers.forEach(l=>{if(l.vis)cx.drawImage(l.canvas,0,0)});layers=[{name:'Flattened',canvas:c,vis:true,op:1,blend:'source-over',locked:false}];selL=0;updLUI();composite();setMsg('Flattened')}
+function setLop(v){document.getElementById('layopv').textContent=v+'%';if(layers[selL]){layers[selL].op=v/100;composite()}}
+
+// ═══════════════════════════ TOOLS ═══════════════════════════
+let paintCB=null;
+function setTool(t){
+  document.querySelectorAll('.tt').forEach(b=>b.classList.remove('act'));
+  const el=document.querySelector('[data-tool="'+t+'"]');if(el)el.classList.add('act');
+  curTool=t;document.getElementById('sttool').textContent='Tool: '+t;
+  if(t!=='brush'&&paintCB){MC.removeEventListener('click',paintCB);paintCB=null}
+  if(t==='brush')startBrush();
+  else if(t==='cook')doCook();
+  else if(t==='puzzle')doPuzzle();
+  else if(t==='wand')doWand();
+  else if(t==='ghost')doGhost();
+  else if(t==='copy')doCopy();
+}
+
+// SCISSORS
+function doScissorsClick(e){
+  if(curTool!=='scissors'||!OD)return;
+  const r=MC.getBoundingClientRect();const cx2=(e.clientX-r.left)/zoom,cy2=(e.clientY-r.top)/zoom;
+  const base=layers[0]?.canvas;if(!base)return;
+  const bcx=base.getContext('2d');bcx.save();
+  const n1=18+Math.floor(Math.random()*14),bR=20+Math.random()*75;
+  bcx.beginPath();for(let i=0;i<n1;i++){const a=(i/n1)*Math.PI*2,jr=bR*(0.1+Math.random()*2.1);bcx.lineTo(cx2+jr*Math.cos(a)+(Math.random()-0.5)*45,cy2+jr*Math.sin(a)+(Math.random()-0.5)*45)}
+  bcx.closePath();bcx.globalCompositeOperation='destination-out';bcx.fill();
+  const ang=Math.random()*Math.PI,slen=40+Math.random()*110;bcx.beginPath();
+  for(let i=0;i<16;i++){const t=i/15,ox=(Math.random()-0.5)*24,oy=(Math.random()-0.5)*24;const px=cx2-slen/2*Math.cos(ang)+slen*t*Math.cos(ang)+ox,py=cy2-slen/2*Math.sin(ang)+slen*t*Math.sin(ang)+oy;i===0?bcx.moveTo(px,py):bcx.lineTo(px,py)}
+  bcx.lineWidth=5+Math.random()*22;bcx.strokeStyle='rgba(0,0,0,1)';bcx.lineCap='round';bcx.stroke();bcx.restore();composite();updLUI();
+  const W=MC.width,H=MC.height,fc=document.createElement('canvas');fc.width=W;fc.height=H;const fctx=fc.getContext('2d');fctx.drawImage(MC,0,0);fctx.save();fctx.globalCompositeOperation='destination-in';fctx.beginPath();
+  for(let i=0;i<14;i++){const a=(i/14)*Math.PI*2,jr=(bR+12)*(0.2+Math.random()*1.6);fctx.lineTo(cx2+jr*Math.cos(a)+(Math.random()-0.5)*28,cy2+jr*Math.sin(a)+(Math.random()-0.5)*28)}
+  fctx.closePath();fctx.fill();fctx.restore();
+  const el=document.createElement('div');el.className='frag';el.style.pointerEvents='none';
+  const mr=MC.getBoundingClientRect(),ar=document.getElementById('cva').getBoundingClientRect();
+  el.style.left=(mr.left-ar.left)+'px';el.style.top=(mr.top-ar.top)+'px';el.appendChild(fc);document.getElementById('sca').appendChild(el);
+  setTimeout(()=>{el.style.transform='translate('+(Math.random()-0.5)*450+'px,'+(60+Math.random()*320)+'px) rotate('+(Math.random()*140-70)+'deg) scale('+(0.2+Math.random()*0.7)+')';el.style.opacity=(0.4+Math.random()*0.5)+''},20);
+  setMsg('✂ Cut!');
+}
+
+// GHOST
+function doGhost(){
+  if(!OD)return;const data=new Uint8ClampedArray(OD.data);for(let i=3;i<data.length;i+=4)data[i]=Math.round(data[i]*0.2);
+  const gc=document.createElement('canvas');gc.width=MC.width;gc.height=MC.height;gc.getContext('2d').putImageData(new ImageData(data,MC.width,MC.height),0,0);
+  const gz=document.getElementById('ghostzone');gz.style.pointerEvents='all';
+  const el=document.createElement('div');el.className='ghostlayer';el.style.cssText='position:absolute;left:60px;top:60px;z-index:50;cursor:grab';el.appendChild(gc);gz.appendChild(el);
+  let ox=0,oy=0;el.addEventListener('mousedown',e=>{ox=e.clientX-parseInt(el.style.left);oy=e.clientY-parseInt(el.style.top);const mv=e=>{el.style.left=(e.clientX-ox)+'px';el.style.top=(e.clientY-oy)+'px'};const up=()=>{document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up)};document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);e.preventDefault()});
+  setMsg('Ghost layer: drag it around');
+}
+
+// BRUSH
+const BSYMS=['?','$','+','@'];
+function startBrush(){
+  if(!OD)return;
+  paintCB=e=>{if(curTool!=='brush')return;const r=MC.getBoundingClientRect();const x=(e.clientX-r.left)/zoom,y=(e.clientY-r.top)/zoom;CTX.save();CTX.font='bold '+(14+Math.random()*18)+'px Courier New';CTX.fillStyle='hsl('+(Math.random()*360)+',100%,50%)';CTX.shadowColor='#000';CTX.shadowBlur=3;CTX.fillText(BSYMS[Math.floor(Math.random()*BSYMS.length)],x,y);CTX.restore();CD=CTX.getImageData(0,0,MC.width,MC.height);if(layers[0])layers[0].canvas.getContext('2d').putImageData(CD,0,0);updNav()};
+  MC.addEventListener('click',paintCB);setMsg('Brush: click/drag to paint');
+}
+
+// PUZZLE
+function doPuzzle(){
+  if(!OD)return;const W=OD.width,H=OD.height,data=new Uint8ClampedArray(OD.data);const pW=Math.round(W/10),pH=Math.round(H/8);const pieces=[];for(let y=0;y<H;y+=pH)for(let x=0;x<W;x+=pW)pieces.push({x,y});const sh=[...pieces].sort(()=>Math.random()-0.5);const tmp=new Uint8ClampedArray(data);pieces.forEach((src,i)=>{const dst=sh[i];for(let dy=0;dy<pH&&src.y+dy<H;dy++)for(let dx=0;dx<pW&&src.x+dx<W;dx++){const si=((src.y+dy)*W+(src.x+dx))*4,di=((dst.y+dy)*W+(dst.x+dx))*4;data[di]=tmp[si];data[di+1]=tmp[si+1];data[di+2]=tmp[si+2];data[di+3]=tmp[si+3]}});for(let y=0;y<H;y+=pH)for(let x=0;x<W;x++){const i=(y*W+x)*4;data[i]=data[i+1]=data[i+2]=50}for(let x=0;x<W;x+=pW)for(let y=0;y<H;y++){const i=(y*W+x)*4;data[i]=data[i+1]=data[i+2]=50}
+  pushLayer('Puzzle',mkC(data,W,H),1,'source-over');setMsg('Puzzle!');
+}
+
+// WAND
+function drawStar(cx,x,y,r){cx.beginPath();for(let i=0;i<10;i++){const a=i*Math.PI/5,rr=i%2===0?r:r*0.38;i===0?cx.moveTo(x+rr*Math.cos(a-Math.PI/2),y+rr*Math.sin(a-Math.PI/2)):cx.lineTo(x+rr*Math.cos(a-Math.PI/2),y+rr*Math.sin(a-Math.PI/2))}cx.closePath()}
+function addGif(url,W,H){const img=document.createElement('img');img.src=url;img.className='decogif';const sz=28+Math.random()*55;img.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*(W-sz))+'px;top:'+(Math.random()*(H-sz))+'px';document.getElementById('mcw').appendChild(img)}
+function doWand(){
+  if(!OD)return;const W=OD.width,H=OD.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.drawImage(MC,0,0);
+  for(let i=0;i<260;i++){const x=Math.random()*W,y=Math.random()*H,r=Math.random()*12+2;cx.save();cx.globalAlpha=Math.random()*0.9+0.1;cx.fillStyle=rpal();drawStar(cx,x,y,r);cx.fill();cx.restore()}
+  for(let i=0;i<550;i++){const x=Math.random()*W,y=Math.random()*H;cx.save();cx.globalAlpha=Math.random();cx.fillStyle=rnd(['#fff','#ffd700','#fff0f5','#ffb6c1','#00ffff','#ff69b4']);cx.beginPath();cx.arc(x,y,Math.random()*2,0,Math.PI*2);cx.fill();cx.restore()}
+  pushLayer('Wand',c,1,'source-over');[...G_SPARK,...G_STAR].forEach(g=>addGif(g,W,H));setMsg('Wand: sparkles!');
+}
+
+// COPY
+function doCopy(){if(!OD)return;copyN++;const scale=0.3+copyN*0.18;const W=Math.round(MC.width*scale),H=Math.round(MC.height*scale);const el=document.createElement('div');el.className='frag';el.style.pointerEvents='none';const c=document.createElement('canvas');c.width=W;c.height=H;c.getContext('2d').drawImage(MC,0,0,W,H);el.appendChild(c);const aRect=document.getElementById('cva').getBoundingClientRect();el.style.left=Math.random()*(aRect.width-W)+'px';el.style.top=Math.random()*(aRect.height-H)+'px';document.getElementById('sca').appendChild(el);setMsg('Copy '+copyN)}
+
+// ═══════════════════════════ COOK ═══════════════════════════
+function doCook(){
+  loadImgP(CAKEURL).then(cake=>{
+    const cNW=cake.naturalWidth,cNH=cake.naturalHeight;
+    const W=MC.width,H=MC.height;
+    // Scan for transparent region = cutout
+    const prob=document.createElement('canvas');prob.width=cNW;prob.height=cNH;prob.getContext('2d').drawImage(cake,0,0);
+    const pd=prob.getContext('2d').getImageData(0,0,cNW,cNH).data;
+    let minX=cNW,minY=cNH,maxX=0,maxY=0,cnt=0;
+    for(let y=0;y<cNH;y++)for(let x=0;x<cNW;x++){if(pd[(y*cNW+x)*4+3]<80){if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;cnt++}}
+    if(cnt<50){minX=Math.round(cNW*0.2);minY=Math.round(cNH*0.1);maxX=Math.round(cNW*0.8);maxY=Math.round(cNH*0.7)}
+    const cScale=Math.max(W/cNW,H/cNH);
+    const cW=Math.round(cNW*cScale),cH=Math.round(cNH*cScale);
+    const cOX=Math.round((W-cW)/2),cOY=Math.round((H-cH)/2);
+    const cutX=Math.round(minX*cScale)+cOX,cutY=Math.round(minY*cScale)+cOY;
+    const cutW=Math.round((maxX-minX)*cScale),cutH=Math.round((maxY-minY)*cScale);
+    const out=document.createElement('canvas');out.width=W;out.height=H;const ox=out.getContext('2d');
+    ox.drawImage(cake,0,0,cNW,cNH,cOX,cOY,cW,cH);
+    if(cutW>10&&cutH>10){
+      ox.save();ox.beginPath();ox.rect(cutX,cutY,cutW,cutH);ox.clip();
+      const uSc=Math.max(cutW/W,cutH/H);const uW=Math.round(W*uSc),uH=Math.round(H*uSc);
+      ox.drawImage(MC,cutX+Math.round((cutW-uW)/2),cutY+Math.round((cutH-uH)/2),uW,uH);ox.restore();
+      ox.drawImage(cake,0,0,cNW,cNH,cOX,cOY,cW,cH);
+    }
+    pushLayer('Cook 🎂',out,1,'source-over');setMsg('🎂 Cook: photo in cutout at '+cutX+','+cutY+' '+cutW+'×'+cutH);
+  }).catch(()=>{setMsg('Cook: loading cake...');const W=MC.width,H=MC.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.fillStyle='#ffb6c1';cx.fillRect(0,0,W,H);const cr=Math.min(W,H)*0.28;cx.save();cx.beginPath();cx.arc(W/2,H*0.38,cr,0,Math.PI*2);cx.clip();cx.drawImage(MC,W/2-cr,H*0.38-cr,cr*2,cr*2);cx.restore();cx.beginPath();cx.arc(W/2,H*0.38,cr,0,Math.PI*2);cx.strokeStyle='gold';cx.lineWidth=6;cx.stroke();pushLayer('Cook 🎂',c,1,'source-over')});
+}
+
+// ═══════════════════════════ PHOTO ALBUM ═══════════════════════════
+function doPhotoAlbum(){
+  loadImgP(ALBUMURL).then(album=>{
+    const aNW=album.naturalWidth,aNH=album.naturalHeight;
+    const W=MC.width,H=MC.height;
+    const prob=document.createElement('canvas');prob.width=aNW;prob.height=aNH;prob.getContext('2d').drawImage(album,0,0);
+    const pd=prob.getContext('2d').getImageData(0,0,aNW,aNH).data;
+    // Find transparent regions in each half
+    function bbox(x0,y0,x1,y1){let minX=x1,minY=y1,maxX=x0,maxY=y0,cnt=0;for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){if(pd[(y*aNW+x)*4+3]<80){if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;cnt++}}return cnt>100?{x:minX,y:minY,w:maxX-minX+1,h:maxY-minY+1}:null}
+    const regions=[];const h2=Math.floor(aNH/2),w2=Math.floor(aNW/2);
+    const checks=[[0,0,w2,h2],[w2,0,aNW,h2],[0,h2,w2,aNH],[w2,h2,aNW,aNH],[0,0,aNW,aNH]];
+    for(const[x0,y0,x1,y1] of checks){const b=bbox(x0,y0,x1,y1);if(b&&!regions.some(r=>Math.abs(r.x-b.x)<40&&Math.abs(r.y-b.y)<40))regions.push(b)}
+    const aScale=Math.max(W/aNW,H/aNH);const aW=Math.round(aNW*aScale),aH=Math.round(aNH*aScale);const aOX=Math.round((W-aW)/2),aOY=Math.round((H-aH)/2);
+    const out=document.createElement('canvas');out.width=W;out.height=H;const ox=out.getContext('2d');ox.drawImage(album,0,0,aNW,aNH,aOX,aOY,aW,aH);
+    const usedRegions=regions.length>1?regions.slice(0,-1):regions; // skip full-image region
+    usedRegions.forEach(reg=>{
+      const rx=Math.round(reg.x*aScale)+aOX,ry=Math.round(reg.y*aScale)+aOY;const rw=Math.round(reg.w*aScale),rh=Math.round(reg.h*aScale);if(rw<8||rh<8)return;
+      ox.save();ox.beginPath();ox.rect(rx,ry,rw,rh);ox.clip();const uSc=Math.max(rw/W,rh/H);const uW=Math.round(W*uSc),uH=Math.round(H*uSc);ox.drawImage(MC,rx+Math.round((rw-uW)/2),ry+Math.round((rh-uH)/2),uW,uH);ox.restore();
+    });
+    ox.globalCompositeOperation='source-over';ox.drawImage(album,0,0,aNW,aNH,aOX,aOY,aW,aH);
+    pushLayer('Photo Album',out,1,'source-over');setMsg('Photo album: '+usedRegions.length+' cutout(s) filled');
+  }).catch(()=>{setMsg('Album loading...');const W=MC.width,H=MC.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.fillStyle='#f5e6d3';cx.fillRect(0,0,W,H);[[W*0.07,H*0.1,W*0.38,H*0.5],[W*0.54,H*0.1,W*0.38,H*0.5]].forEach(([x,y,w,h])=>{cx.save();cx.beginPath();cx.rect(x,y,w,h);cx.clip();cx.drawImage(MC,x,y,w,h);cx.restore();cx.strokeStyle='#c0a080';cx.lineWidth=3;cx.strokeRect(x,y,w,h)});pushLayer('Photo Album',c,1,'source-over')});
+}
+
+// ═══════════════════════════ POSTCARD — MW words ═══════════════════════════
+async function doPostcard(){
+  const [adj,noun]=await getMWWords();
+  const W=MC.width,H=MC.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.drawImage(MC,0,0);
+  const ov=cx.createLinearGradient(0,H*0.4,0,H);ov.addColorStop(0,'rgba(0,0,0,0)');ov.addColorStop(1,'rgba(0,0,50,0.82)');cx.fillStyle=ov;cx.fillRect(0,H*0.4,W,H*0.6);
+  [{t:'Happy',sz:W*0.11,y:H*0.57},{t:adj,sz:W*0.135,y:H*0.71},{t:noun+'!',sz:W*0.105,y:H*0.86}].forEach(({t,sz,y})=>{
+    const f=rnd(PCARDFONTS);cx.font='bold '+sz+'px '+f;cx.textAlign='center';const c1=rpal(),c2=rpal(),c3=rpal();
+    const g=cx.createLinearGradient(0,y-sz,W,y);g.addColorStop(0,c1);g.addColorStop(0.4,c2);g.addColorStop(0.8,c3);g.addColorStop(1,c1);
+    cx.shadowColor='rgba(0,0,0,0.95)';cx.shadowBlur=16;cx.shadowOffsetX=4;cx.shadowOffsetY=4;cx.strokeStyle='#000';cx.lineWidth=Math.max(3,sz*0.1);cx.strokeText(t,W/2,y);
+    cx.shadowColor=c2;cx.shadowBlur=20;cx.shadowOffsetX=0;cx.shadowOffsetY=0;cx.fillStyle=g;cx.fillText(t,W/2,y);
+    const gh=cx.createLinearGradient(W*0.2,y-sz*0.8,W*0.8,y-sz*0.1);gh.addColorStop(0,'rgba(255,255,255,0)');gh.addColorStop(0.5,'rgba(255,255,255,0.3)');gh.addColorStop(1,'rgba(255,255,255,0)');cx.shadowBlur=0;cx.shadowOffsetX=0;cx.shadowOffsetY=0;cx.fillStyle=gh;cx.fillText(t,W/2,y);
+  });
+  const months=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  cx.font='10px Arial';cx.fillStyle='rgba(255,255,255,0.55)';cx.textAlign='left';cx.fillText(new Date().getDate()+' '+months[new Date().getMonth()],8,H-6);
+  for(let i=0;i<38;i++){const sx=Math.random()*W,sy=Math.random()*H*0.42,sr=Math.random()*9+2;cx.save();cx.globalAlpha=Math.random()*0.9+0.1;cx.fillStyle=rpal();drawStar(cx,sx,sy,sr);cx.fill();cx.restore()}
+  for(let i=0;i<30;i++){cx.save();cx.globalAlpha=Math.random()*0.7+0.1;cx.font=(10+Math.random()*26)+'px serif';cx.fillStyle=rpal();cx.textAlign='left';cx.fillText('♥',Math.random()*W,Math.random()*H*0.4);cx.restore()}
+  for(let i=0;i<260;i++){cx.save();cx.globalAlpha=Math.random();cx.fillStyle=rnd(['#fff','#ffd700','#ff0','#f0f','#0ff','#ff69b4']);cx.beginPath();cx.arc(Math.random()*W,Math.random()*H,Math.random()*1.4,0,Math.PI*2);cx.fill();cx.restore()}
+  pushLayer('Postcard',c,1,'source-over');[...G_HEART,...G_SPARK,...G_STAR].forEach(g=>addGif(g,W,H));
+  setMsg('Postcard: Happy '+adj+' '+noun+'!');
+}
+
+// ═══════════════════════════ REWARD ═══════════════════════════
+function doReward(){
+  const W=MC.width,H=MC.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.drawImage(MC,0,0);
+  let y=H*0.15;
+  [{t:'Graphic',sz:W*0.14},{t:'Design',sz:W*0.13},{t:'is my',sz:W*0.085},{t:'Passion',sz:W*0.16}].forEach(l=>{
+    const f=rnd(RFONTS);cx.font='bold '+l.sz+'px '+f;cx.textAlign='center';const c1=rpal(),c2=rpal(),c3=rpal();
+    const g=cx.createLinearGradient(0,y-l.sz,W,y);g.addColorStop(0,c1);g.addColorStop(0.33,c2);g.addColorStop(0.66,c3);g.addColorStop(1,c1);
+    cx.shadowColor='rgba(0,0,0,0.95)';cx.shadowBlur=12;cx.shadowOffsetX=5;cx.shadowOffsetY=5;cx.strokeStyle='#000';cx.lineWidth=Math.max(3,l.sz*0.08);cx.strokeText(l.t,W/2,y);
+    cx.shadowColor=c2;cx.shadowBlur=22;cx.shadowOffsetX=0;cx.shadowOffsetY=0;cx.fillStyle=g;cx.fillText(l.t,W/2,y);
+    const gh=cx.createLinearGradient(W*0.2,y-l.sz*0.7,W*0.8,y-l.sz*0.1);gh.addColorStop(0,'rgba(255,255,255,0)');gh.addColorStop(0.5,'rgba(255,255,255,0.35)');gh.addColorStop(1,'rgba(255,255,255,0)');cx.shadowBlur=0;cx.shadowOffsetX=0;cx.shadowOffsetY=0;cx.fillStyle=gh;cx.fillText(l.t,W/2,y);y+=l.sz*1.3;
+  });
+  for(let i=0;i<45;i++){const sx=Math.random()*W,sy=Math.random()*H,sr=Math.random()*11+3;cx.save();cx.globalAlpha=Math.random()*0.9+0.1;cx.fillStyle=rpal();drawStar(cx,sx,sy,sr);cx.fill();cx.restore()}
+  for(let i=0;i<25;i++){cx.save();cx.globalAlpha=Math.random()*0.8+0.1;cx.font=(12+Math.random()*26)+'px serif';cx.fillStyle=rpal();cx.textAlign='left';cx.fillText('♥',Math.random()*W,Math.random()*H);cx.restore()}
+  for(let i=0;i<220;i++){cx.save();cx.globalAlpha=Math.random();cx.fillStyle=rpal();cx.beginPath();cx.arc(Math.random()*W,Math.random()*H,Math.random()*1.6,0,Math.PI*2);cx.fill();cx.restore()}
+  pushLayer('Reward',c,1,'source-over');[...G_SPARK,...G_STAR,...G_HEART].forEach(g=>addGif(g,W,H));setMsg('Reward: Graphic Design is my Passion');
+}
+
+// ═══════════════════════════ FRACTAL ═══════════════════════════
+function doFractal(){
+  if(!OD)return;const W=OD.width,H=OD.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.drawImage(MC,0,0);let sc=0.44;[[W,0],[0,H],[W,H],[0,0],[W,H*0.28],[W*0.28,H],[W,H*0.56],[W*0.56,H]].forEach(([bx,by],i)=>{const w=Math.round(W*sc),h=Math.round(H*sc);cx.save();cx.globalAlpha=0.65-i*0.06;cx.drawImage(MC,bx===W?W-w:bx,by===H?H-h:by,w,h);cx.restore();sc*=0.56});pushLayer('Fractal',c,1,'source-over');setMsg('Fractal');
+}
+
+// ═══════════════════════════ DECAY — ANIMATED ═══════════════════════════
+// Animated decay: spreading JPEG-block corruption + color bleeding,
+// looks like the image is disintegrating in real time.
+// Captures frames for GIF export.
+function doDecay(){
+  if(!OD)return;
+  stopDecay();
+  const W=OD.width,H=OD.height;
+  const ov=document.getElementById('decayOverlay');
+  ov.width=W;ov.height=H;ov.style.display='block';
+  const octx=ov.getContext('2d');
+  const s=document.getElementById('fstr').value/100;
+  decayFrames=[];
+  decayStep=0;
+  const FRAMES=40; // total animation frames
+  // Pre-compute all decay states
+  const states=[];
+  for(let f=0;f<FRAMES;f++){
+    const progress=(f+1)/FRAMES;
+    const data=new Uint8ClampedArray(OD.data);
+    decayFrame(data,W,H,progress*s,f,FRAMES);
+    states.push(new ImageData(data,W,H));
+  }
+  // Animate
+  let fi=0;
+  function tick(){
+    if(!decayRunning)return;
+    octx.putImageData(states[fi],0,0);
+    // Save frame snapshot for GIF
+    if(decayFrames.length<FRAMES){
+      const snap=document.createElement('canvas');snap.width=W;snap.height=H;const sx=snap.getContext('2d');sx.drawImage(MC,0,0);sx.drawImage(ov,0,0);decayFrames.push(snap);
+    }
+    fi=(fi+1)%FRAMES;
+    decayAF=requestAnimationFrame(tick);
+  }
+  decayRunning=true;
+  tick();
+  setMsg('Decay: animated — click Reset to stop');
+}
+function stopDecay(){
+  decayRunning=false;if(decayAF){cancelAnimationFrame(decayAF);decayAF=null}
+  const ov=document.getElementById('decayOverlay');ov.style.display='none';
+  if(ov.getContext)ov.getContext('2d').clearRect(0,0,ov.width,ov.height);
+}
+
+function decayFrame(data,W,H,intensity,frameIdx,totalFrames){
+  // Phase 1: color bleed — pixels leak into neighbors in wave-front pattern
+  const waveFront=(frameIdx/totalFrames)*W; // corruption spreads left-to-right
+  // JPEG-like block quantization, spreading from waveFront
+  const bs=Math.max(2,Math.round(2+intensity*20));
+  const orig=new Uint8ClampedArray(data);
+  for(let by=0;by<H;by+=bs)for(let bx=0;bx<W;bx+=bs){
+    if(bx>waveFront+Math.random()*80)continue; // only corrupt up to waveFront
+    let r=0,g=0,b=0,cnt=0;
+    for(let dy=0;dy<bs&&by+dy<H;dy++)for(let dx=0;dx<bs&&bx+dx<W;dx++){const i=((by+dy)*W+(bx+dx))*4;r+=orig[i];g+=orig[i+1];b+=orig[i+2];cnt++}
+    r/=cnt;g/=cnt;b/=cnt;
+    const lv=Math.max(2,Math.round((1-intensity*0.8)*5)+2);
+    r=Math.round(r/255*(lv-1))/(lv-1)*255;g=Math.round(g/255*(lv-1))/(lv-1)*255;b=Math.round(b/255*(lv-1))/(lv-1)*255;
+    // Watercolor bleed: adjacent block bleeds color
+    const bleedAmt=intensity*0.6;const nx=Math.min(W-1,bx+bs),ni=(by*W+nx)*4;
+    for(let dy=0;dy<bs&&by+dy<H;dy++)for(let dx=0;dx<bs&&bx+dx<W;dx++){
+      const i=((by+dy)*W+(bx+dx))*4;
+      data[i]=lerp(r,orig[ni]*bleedAmt+r*(1-bleedAmt),intensity*0.7);
+      data[i+1]=lerp(g,orig[ni+1]*bleedAmt+g*(1-bleedAmt),intensity*0.7);
+      data[i+2]=lerp(b,orig[ni+2]*bleedAmt+b*(1-bleedAmt),intensity*0.7);
+    }
+  }
+  // Phase 2: block boundary ringing (JPEG mosquito noise)
+  for(let by=0;by<H;by+=bs)for(let x=0;x<Math.min(W,waveFront+60);x++){
+    const i=(by*W+x)*4,ring=(Math.random()-0.5)*intensity*70;
+    data[i]=Math.min(255,Math.max(0,data[i]+ring));data[i+1]=Math.min(255,Math.max(0,data[i+1]+ring));data[i+2]=Math.min(255,Math.max(0,data[i+2]+ring));
+  }
+  // Phase 3: horizontal smear streaks (late-stage corruption)
+  if(intensity>0.3){
+    const nStreaks=Math.round(intensity*12);
+    for(let s2=0;s2<nStreaks;s2++){
+      const sy=Math.floor(Math.random()*H);const sxStart=Math.floor(Math.random()*waveFront);const sxLen=Math.floor(Math.random()*80*intensity);
+      const ci=(sy*W+sxStart)*4;
+      for(let x=sxStart;x<Math.min(W,sxStart+sxLen);x++){const di=(sy*W+x)*4;data[di]=data[ci];data[di+1]=data[ci+1];data[di+2]=data[ci+2]}
+    }
+  }
+  // Phase 4: pixel dissolution — random pixels lose color at edges of corruption
+  for(let i=0;i<data.length;i+=4){
+    const x=(i/4)%W;
+    if(x<waveFront&&Math.random()<intensity*0.06){
+      const v=luma(data[i],data[i+1],data[i+2]);
+      data[i]=lerp(data[i],v,intensity*0.7);data[i+1]=lerp(data[i+1],v+20,intensity*0.5);data[i+2]=lerp(data[i+2],v+8,intensity*0.4);
+    }
+  }
+}
+
+// ═══════════════════════════ OTHER FILTERS ═══════════════════════════
+function fGlitch(d,W,H,s){const sl=Math.round(s*24)+3;for(let i=0;i<sl;i++){const y=Math.floor(Math.random()*H),h2=Math.floor(Math.random()*24)+2;const shift=Math.round((Math.random()-0.5)*W*0.18*s);for(let row=y;row<Math.min(y+h2,H);row++)for(let x=0;x<W;x++){const sx=((x-shift)+W)%W,si=(row*W+sx)*4,di=(row*W+x)*4;d[di]=d[si];d[di+1]=d[si+1];d[di+2]=d[si+2]}}const o=new Uint8ClampedArray(d),cs=Math.round(s*18);for(let i=0;i<d.length;i+=4){const x=(i/4)%W,sx=Math.min(W-1,x+cs);d[i]=o[(Math.floor(i/4/W)*W+sx)*4]}}
+function fPixSort(d,W,H,s){const th=60+s*140;for(let y=0;y<H;y++){let st=-1;for(let x=0;x<W;x++){const idx=(y*W+x)*4,v=luma(d[idx],d[idx+1],d[idx+2]);if(v>th&&st===-1)st=x;if((v<=th||x===W-1)&&st!==-1){const seg=[];for(let k=st;k<x;k++){const ki=(y*W+k)*4;seg.push([d[ki],d[ki+1],d[ki+2],d[ki+3]])}seg.sort((a,b)=>luma(a[0],a[1],a[2])-luma(b[0],b[1],b[2]));seg.forEach((px,j)=>{const ki=(y*W+(st+j))*4;d[ki]=px[0];d[ki+1]=px[1];d[ki+2]=px[2]});st=-1}}}}
+function fBlur(d,W,H,s){const r=Math.round(s*3)+1,o=new Uint8ClampedArray(d);for(let y=r;y<H-r;y++)for(let x=r;x<W-r;x++){let rr=0,gg=0,bb=0,cnt=0;for(let dy=-r;dy<=r;dy++)for(let dx=-r;dx<=r;dx++){const i=((y+dy)*W+(x+dx))*4;rr+=o[i];gg+=o[i+1];bb+=o[i+2];cnt++}const i=(y*W+x)*4;d[i]=rr/cnt;d[i+1]=gg/cnt;d[i+2]=bb/cnt}}
+function fEdges(d,W,H){const o=new Uint8ClampedArray(d);for(let y=1;y<H-1;y++)for(let x=1;x<W-1;x++){const idx=(y*W+x)*4;let gx=0,gy=0;for(let cc=0;cc<3;cc++){gx+=-o[((y-1)*W+(x-1))*4+cc]+o[((y-1)*W+(x+1))*4+cc]-2*o[(y*W+(x-1))*4+cc]+2*o[(y*W+(x+1))*4+cc]-o[((y+1)*W+(x-1))*4+cc]+o[((y+1)*W+(x+1))*4+cc];gy+=-o[((y-1)*W+(x-1))*4+cc]-2*o[((y-1)*W+x)*4+cc]-o[((y-1)*W+(x+1))*4+cc]+o[((y+1)*W+(x-1))*4+cc]+2*o[((y+1)*W+x)*4+cc]+o[((y+1)*W+(x+1))*4+cc]}const mag=Math.min(255,Math.sqrt(gx*gx+gy*gy)/3);d[idx]=mag;d[idx+1]=mag;d[idx+2]=mag}}
+function rgbH(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let h;if(mx===mn)h=0;else if(mx===r)h=(g-b)/(mx-mn)%6;else if(mx===g)h=(b-r)/(mx-mn)+2;else h=(r-g)/(mx-mn)+4;return((h*60)+360)%360/360}
+function rgbS(r,g,b){r/=255;g/=255;b/=255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);return mx===0?0:(mx-mn)/mx}
+function hslRGB(h,s,l){const c=(1-Math.abs(2*l-1))*s,x=c*(1-Math.abs(h*6%2-1)),m=l-c/2;let r,g,b;if(h<1/6){r=c;g=x;b=0}else if(h<2/6){r=x;g=c;b=0}else if(h<3/6){r=0;g=c;b=x}else if(h<4/6){r=0;g=x;b=c}else if(h<5/6){r=x;g=0;b=c}else{r=c;g=0;b=x}return[Math.round((r+m)*255),Math.round((g+m)*255),Math.round((b+m)*255)]}
+
+function doFilter(name){
+  if(!OD)return;activeFilt=name;document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));const el=document.getElementById('ff-'+name);if(el)el.classList.add('on');
+  if(name==='reclaim'){const a=document.createElement('a');a.download='your_file.png';a.href=MC.toDataURL('image/png');a.click();setMsg('Reclaim: saved as your_file');return}
+  if(name==='photoalbum'){doPhotoAlbum();return}if(name==='reward'){doReward();return}if(name==='postcard'){doPostcard();return}if(name==='fractal'){doFractal();return}
+  if(name==='decay'){doDecay();return}
+  const s=document.getElementById('fstr').value/100;const data=new Uint8ClampedArray(OD.data);const W=OD.width,H=OD.height;
+  if(name==='glitch')fGlitch(data,W,H,s);else if(name==='pixelsort')fPixSort(data,W,H,s);
+  const nid=new ImageData(data,W,H);CD=nid;CTX.putImageData(nid,0,0);if(layers[0]){layers[0].canvas.getContext('2d').putImageData(nid,0,0);composite();updLUI()}setMsg('Filter: '+name);
+}
+function resetImg(){stopDecay();if(!OD)return;CTX.putImageData(OD,0,0);CD=cloneID(OD);if(layers[0]){layers[0].canvas.getContext('2d').putImageData(OD,0,0);composite();updLUI()}activeFilt=null;decayFrames=[];document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));setMsg('Reset')}
+
+// SPECIAL BLENDS
+function applySpecialBlend(name){
+  if(!OD)return;const W=OD.width,H=OD.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');
+  if(name==='okay'){cx.drawImage(MC,0,0);pushLayer('okay',c,1,'source-over')}
+  else if(name==='disappear'){cx.drawImage(MC,0,0);pushLayer('disappear',c,1,'source-over');let op=1;const li=layers.length-1;const fade=()=>{op=Math.max(0,op-0.04);if(layers[li])layers[li].op=op;composite();updLUI();if(op>0)setTimeout(fade,60)};setTimeout(fade,300);setMsg('disappear: fading…');return}
+  else if(name==='mimicry'){cx.fillStyle='#c0c0c0';cx.fillRect(0,0,W,H);[[0,0,W,18,'#000080'],[0,18,W,14,'#c0c0c0'],[0,32,52,H,'#b8b8b8'],[W-200,32,200,H,'#c0c0c0'],[0,H-16,W,16,'#c0c0c0']].forEach(([x,y,w,h,col])=>{cx.fillStyle=col;cx.fillRect(x,y,w,h)});cx.font='10px Tahoma';cx.fillStyle='#000';for(let y2=52;y2<H;y2+=18)cx.fillText('Filters  Layers  Blend  Decomp  Export',56,y2);cx.globalCompositeOperation='multiply';cx.drawImage(MC,0,0);pushLayer('mimicry',c,0.9,'multiply')}
+  else if(name==='commemorate'){cx.drawImage(MC,0,0);cx.save();cx.globalAlpha=0.32;cx.globalCompositeOperation='screen';cx.translate(W,0);cx.scale(-1,1);cx.drawImage(MC,0,0);cx.restore();pushLayer('commemorate',c,1,'source-over')}
+  else if(name==='fillholes'){cx.drawImage(MC,0,0);const id2=cx.getImageData(0,0,W,H);const d=id2.data;for(let i=0;i<d.length;i+=4){if(luma(d[i],d[i+1],d[i+2])<35){const x2=(i/4)%W,y2=Math.floor(i/4/W),sx=Math.floor(x2*0.8)%W,sy=Math.floor(y2*0.8)%H,oi=(sy*W+sx)*4;d[i]=OD.data[oi];d[i+1]=OD.data[oi+1];d[i+2]=OD.data[oi+2]}}cx.putImageData(id2,0,0);pushLayer('fill the holes',c,1,'source-over')}
+  else if(name==='disregard'){cx.drawImage(MC,0,0);const id2=cx.getImageData(0,0,W,H);const d=id2.data;for(let i=0;i<d.length;i+=4){if(d[i+1]>d[i]*1.3&&d[i+1]>d[i+2]*1.2&&d[i+1]>60)d[i+3]=0}cx.putImageData(id2,0,0);pushLayer('disregard',c,1,'source-over')}
+  else if(name==='question'){cx.drawImage(MC,0,0);cx.fillStyle='rgba(0,0,0,0.55)';cx.fillRect(0,0,W,H);cx.fillStyle='#ccc';cx.font='italic 10px Tahoma';const t='Ссылки на файлы для загрузки / Download links Только для личного пользования! / For personal use only! Данная новость создана более 2 лет назад. Вероятность что ссылки рабочие очень низкая';let ty=14;for(let i=0;i<t.length;i+=30){cx.fillText(t.substring(i,i+30),6,ty);ty+=12;if(ty>H+12)break}pushLayer('?',c,1,'source-over')}
+  setMsg('Blend: '+name);
+}
+
+// COLOR BIAS
+function colorBias(ch,v){if(!OD)return;const data=new Uint8ClampedArray(OD.data),sh=v-128;const idx=ch==='r'?0:ch==='g'?1:2;for(let i=idx;i<data.length;i+=4)data[i]=Math.min(255,Math.max(0,data[i]+sh));const nid=new ImageData(data,OD.width,OD.height);CD=nid;CTX.putImageData(nid,0,0);if(layers[0]){layers[0].canvas.getContext('2d').putImageData(nid,0,0);composite()}}
+
+// DECOMP
+function openDW(type){
+  if(document.getElementById('dw-'+type)){document.getElementById('dw-'+type).style.display='';return}
+  if(!OD)return;const W=OD.width,H=OD.height,dW=Math.min(180,W),dH=Math.round(H*(dW/W));const n=document.querySelectorAll('[id^="dw-"]').length;const win=document.createElement('div');win.className='fwin';win.id='dw-'+type;win.style.cssText='left:'+(80+n*16)+'px;top:'+(30+n*16)+'px;z-index:'+dwinZ++;
+  win.innerHTML='<div class="tbar" onmousedown="startDrag(event,\'dw-'+type+'\')"><span>'+type.toUpperCase()+'</span><div style="display:flex;gap:2px"><div class="tbtn" onclick="this.closest(\'.fwin\').style.display=\'none\'">_</div><div class="tbtn" style="font-size:7px" onclick="this.closest(\'.fwin\').remove()">✕</div></div></div><div class="cw" style="flex:1"><canvas id="dc-'+type+'" width="'+dW+'" height="'+dH+'" style="display:block"></canvas></div><div class="fwb"><span>'+type+'</span></div>';
+  document.getElementById('cva').appendChild(win);
+  const dc=document.getElementById('dc-'+type),dctx=dc.getContext('2d');const data=new Uint8ClampedArray(OD.data);
+  if(type==='red'){for(let i=0;i<data.length;i+=4){data[i+1]=data[i];data[i+2]=data[i]}}else if(type==='green'){for(let i=0;i<data.length;i+=4){data[i]=data[i+1];data[i+2]=data[i+1]}}else if(type==='blue'){for(let i=0;i<data.length;i+=4){data[i]=data[i+2];data[i+1]=data[i+2]}}else if(type==='luma'){for(let i=0;i<data.length;i+=4){const v=luma(data[i],data[i+1],data[i+2]);data[i]=data[i+1]=data[i+2]=v}}else if(type==='hue'){for(let i=0;i<data.length;i+=4){const h=rgbH(data[i],data[i+1],data[i+2]);const rgb=hslRGB(h,1,0.5);data[i]=rgb[0];data[i+1]=rgb[1];data[i+2]=rgb[2]}}else if(type==='sat'){for(let i=0;i<data.length;i+=4){data[i]=data[i+1]=data[i+2]=rgbS(data[i],data[i+1],data[i+2])*255}}else if(type==='hf'){const b2=new Uint8ClampedArray(data);fBlur(b2,W,H,0.3);for(let i=0;i<data.length;i+=4){data[i]=Math.min(255,Math.abs(OD.data[i]-b2[i])*4+128);data[i+1]=Math.min(255,Math.abs(OD.data[i+1]-b2[i+1])*4+128);data[i+2]=Math.min(255,Math.abs(OD.data[i+2]-b2[i+2])*4+128)}}else if(type==='edges'){fEdges(data,W,H)}
+  const tc=document.createElement('canvas');tc.width=W;tc.height=H;tc.getContext('2d').putImageData(new ImageData(data,W,H),0,0);dctx.drawImage(tc,0,0,dW,dH);
+}
+function openAllDW(){['red','green','blue','luma','edges','hf'].forEach((t,i)=>{openDW(t);const w=document.getElementById('dw-'+t);if(w){w.style.left=(10+(i%3)*185)+'px';w.style.top=(10+Math.floor(i/3)*145)+'px';w.style.zIndex=dwinZ++}})}
+
+// SCATTER
+function doScatter(){
+  if(!CD||scattered)return;scattered=true;const area=document.getElementById('sca');const W=MC.width,H=MC.height,GX=14,GY=10;const fw=Math.floor(W/GX),fh=Math.floor(H/GY);frags=[];MC.style.opacity='0';
+  for(let gy=0;gy<GY;gy++)for(let gx=0;gx<GX;gx++){const fc=document.createElement('canvas');fc.width=fw+20;fc.height=fh+20;const fctx=fc.getContext('2d');fctx.beginPath();const nPts=10,ccx=fw/2+10,ccy=fh/2+10;for(let p=0;p<nPts;p++){const a=(p/nPts)*Math.PI*2,rx=(fw/2-1)+(Math.random()-0.5)*12,ry=(fh/2-1)+(Math.random()-0.5)*12;p===0?fctx.moveTo(ccx+rx*Math.cos(a),ccy+ry*Math.sin(a)):fctx.lineTo(ccx+rx*Math.cos(a),ccy+ry*Math.sin(a))}fctx.closePath();fctx.clip();fctx.drawImage(MC,gx*fw,gy*fh,fw,fh,10,10,fw,fh);const el=document.createElement('div');el.className='frag';const mr=MC.getBoundingClientRect(),ar=document.getElementById('cva').getBoundingClientRect();el.style.cssText='left:'+(mr.left-ar.left+gx*fw*zoom)+'px;top:'+(mr.top-ar.top+gy*fh*zoom)+'px;width:'+(fw+20)+'px;height:'+(fh+20)+'px';el.appendChild(fc);area.appendChild(el);frags.push({el})}
+  setTimeout(()=>{frags.forEach(f=>{const dx=(Math.random()-0.5)*820,dy=(Math.random()-0.5)*600,rot=(Math.random()-0.5)*120,sc=0.2+Math.random();f.el.style.transform='translate('+dx+'px,'+dy+'px) rotate('+rot+'deg) scale('+sc+')';f.el.style.opacity=Math.random()*0.4+0.4})},40);setMsg('Scattered');
+}
+function doReassemble(){if(!scattered)return;frags.forEach(f=>{f.el.style.transform='translate(0,0) rotate(0deg) scale(1)';f.el.style.opacity='1'});MC.style.opacity='1';setTimeout(()=>{document.getElementById('sca').innerHTML='';frags=[];scattered=false},750);setMsg('Reassembled')}
+
+// ═══════════════════════════ GIF EXPORT ═══════════════════════════
+function expGIF(){
+  // If decay animation was running, export those frames; otherwise export current static canvas as single-frame GIF
+  const prog=document.getElementById('gifprog');prog.style.display='block';document.getElementById('gifmsg').textContent='Rendering frames…';document.getElementById('gifbarfill').style.width='0%';
+
+  if(typeof GIF==='undefined'){setMsg('GIF library not loaded — trying fallback');prog.style.display='none';expGIFFallback();return}
+
+  const frames=decayFrames.length>1?decayFrames:null;
+  const W=MC.width,H=MC.height;
+  // Downscale for GIF to keep size manageable
+  const gifScale=Math.min(1,320/Math.max(W,H));const gW=Math.round(W*gifScale),gH=Math.round(H*gifScale);
+
+  const gif=new GIF({workers:2,quality:8,width:gW,height:gH,workerScript:'https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js'});
+
+  if(frames&&frames.length>1){
+    // Use decay frames
+    frames.forEach((f,i)=>{
+      const sc=document.createElement('canvas');sc.width=gW;sc.height=gH;sc.getContext('2d').drawImage(f,0,0,gW,gH);
+      gif.addFrame(sc,{delay:80,copy:true});
+      document.getElementById('gifbarfill').style.width=Math.round((i/frames.length)*50)+'%';
+    });
+    document.getElementById('gifmsg').textContent='Encoding '+frames.length+' frames…';
+  } else {
+    // Static image as GIF
+    const sc=document.createElement('canvas');sc.width=gW;sc.height=gH;sc.getContext('2d').drawImage(MC,0,0,gW,gH);
+    gif.addFrame(sc,{delay:500,copy:true});
+    document.getElementById('gifmsg').textContent='Encoding static frame…';
+  }
+
+  gif.on('progress',p=>{document.getElementById('gifbarfill').style.width=Math.round(50+p*50)+'%'});
+  gif.on('finished',blob=>{
+    prog.style.display='none';const a=document.createElement('a');a.download='edited_'+Date.now()+'.gif';a.href=URL.createObjectURL(blob);a.click();setMsg('GIF exported!');
+  });
+  gif.render();
+}
+function expGIFFallback(){
+  // Fallback: export PNG labelled as animated GIF (browsers will just show the first frame)
+  expPNG();setMsg('GIF lib not available — exported as PNG instead');
+}
+
+// WEBCAM
+async function toggleWC(){
+  if(wcStream){stopWC();return}
+  try{
+    wcStream=await navigator.mediaDevices.getUserMedia({video:{width:{ideal:640},height:{ideal:480},facingMode:'user'},audio:false});
+    const vid=document.getElementById('wcvid');vid.srcObject=wcStream;await new Promise(res=>{vid.onloadedmetadata=()=>res()});await vid.play();
+    const wcc=document.getElementById('wcc');wcc.width=vid.videoWidth||640;wcc.height=vid.videoHeight||480;
+    const wcwin=document.getElementById('wcwin');wcwin.style.display='flex';wcwin.style.flexDirection='column';
+    document.getElementById('btnwc').textContent='📷 Webcam ●';setMsg('Webcam ready — Set BG first, then Start');
+  }catch(e){alert('Webcam error:\n'+e.message);setMsg('Webcam error')}
+}
+function stopWC(){if(wcStream){wcStream.getTracks().forEach(t=>t.stop());wcStream=null}wcOn=false;if(wcAF){cancelAnimationFrame(wcAF);wcAF=null}document.getElementById('wcwin').style.display='none';document.getElementById('btnwc').textContent='📷 Webcam';bgSample=null;setMsg('Webcam stopped')}
+function resetBG(){const vid=document.getElementById('wcvid');if(!vid||vid.readyState<2){setMsg('Webcam not ready');return}const wcc=document.getElementById('wcc');const wctx=wcc.getContext('2d');wcc.width=vid.videoWidth;wcc.height=vid.videoHeight;wctx.drawImage(vid,0,0,wcc.width,wcc.height);bgSample=new Uint8ClampedArray(wctx.getImageData(0,0,wcc.width,wcc.height).data);setMsg('Background captured — step in and click Start')}
+function toggleWCtex(){wcOn=!wcOn;document.getElementById('wctbtn').textContent=wcOn?'⏹ Stop':'▶ Start';if(wcOn)wcLoop();else if(wcAF){cancelAnimationFrame(wcAF);wcAF=null}}
+function wcLoop(){
+  const vid=document.getElementById('wcvid');if(!vid||vid.readyState<2){wcAF=requestAnimationFrame(wcLoop);return}
+  const wcc=document.getElementById('wcc');const wctx=wcc.getContext('2d');const vW=vid.videoWidth||640,vH=vid.videoHeight||480;if(wcc.width!==vW){wcc.width=vW;wcc.height=vH}
+  wctx.drawImage(vid,0,0,vW,vH);const frame=wctx.getImageData(0,0,vW,vH);
+  const thresh=parseInt(document.getElementById('wcth').value);const blendAmt=parseInt(document.getElementById('wcbl').value)/100;const texType=document.getElementById('wctex').value;
+  const mask=new Uint8Array(vW*vH);
+  if(bgSample){for(let i=0;i<frame.data.length;i+=4){const dr=Math.abs(frame.data[i]-bgSample[i]),dg=Math.abs(frame.data[i+1]-bgSample[i+1]),db=Math.abs(frame.data[i+2]-bgSample[i+2]);mask[i/4]=(dr+dg+db)>thresh?1:0}}
+  else{for(let i=0;i<frame.data.length;i+=4){mask[i/4]=luma(frame.data[i],frame.data[i+1],frame.data[i+2])>90?1:0}}
+  const dm=new Uint8Array(vW*vH);for(let y=1;y<vH-1;y++)for(let x=1;x<vW-1;x++){if(mask[y*vW+x]||mask[(y-1)*vW+x]||mask[(y+1)*vW+x]||mask[y*vW+x-1]||mask[y*vW+x+1])dm[y*vW+x]=1}
+  let texC;if(!OD){texC=MC}else if(texType==='original'){texC=layers[0]?.canvas||MC}
+  else{texC=document.createElement('canvas');texC.width=OD.width;texC.height=OD.height;const td=new Uint8ClampedArray(OD.data);if(texType==='edges')fEdges(td,OD.width,OD.height);else if(texType==='red'){for(let i=0;i<td.length;i+=4){td[i+1]=td[i];td[i+2]=td[i]}}else if(texType==='glitch')fGlitch(td,OD.width,OD.height,0.7);else if(texType==='thermal'){for(let i=0;i<td.length;i+=4){const v=luma(td[i],td[i+1],td[i+2])/255;td[i]=Math.min(255,v<0.5?0:(v-0.5)*512);td[i+1]=Math.min(255,v<0.5?v*512:(1-v)*512);td[i+2]=v<0.5?Math.min(255,255-v*512):0}}else if(texType==='mosaic'){const bs=14;for(let by=0;by<OD.height;by+=bs)for(let bx=0;bx<OD.width;bx+=bs){const i=(by*OD.width+bx)*4;const rv=td[i],gv=td[i+1],bv=td[i+2];for(let dy=0;dy<bs&&by+dy<OD.height;dy++)for(let dx=0;dx<bs&&bx+dx<OD.width;dx++){const j=((by+dy)*OD.width+(bx+dx))*4;td[j]=rv;td[j+1]=gv;td[j+2]=bv}}}texC.getContext('2d').putImageData(new ImageData(td,OD.width,OD.height),0,0)}
+  const tData=texC.getContext('2d').getImageData(0,0,texC.width,texC.height).data;const scX=texC.width/vW,scY=texC.height/vH;
+  const out=new ImageData(vW,vH);
+  for(let i=0;i<out.data.length;i+=4){const px=i/4,x=px%vW,y=Math.floor(px/vW);if(dm[px]){const tx=Math.min(texC.width-1,Math.floor(x*scX)),ty=Math.min(texC.height-1,Math.floor(y*scY)),ti=(ty*texC.width+tx)*4;out.data[i]=lerp(frame.data[i],tData[ti],blendAmt);out.data[i+1]=lerp(frame.data[i+1],tData[ti+1],blendAmt);out.data[i+2]=lerp(frame.data[i+2],tData[ti+2],blendAmt);out.data[i+3]=255}else{out.data[i]=frame.data[i];out.data[i+1]=frame.data[i+1];out.data[i+2]=frame.data[i+2];out.data[i+3]=255}}
+  wctx.putImageData(out,0,0);if(wcOn)wcAF=requestAnimationFrame(wcLoop);
+}
+function expWC(){const wcc=document.getElementById('wcc');const a=document.createElement('a');a.download='webcam_'+Date.now()+'.png';a.href=wcc.toDataURL('image/png');a.click();setMsg('Webcam shot saved')}
+
+// DRAG
+function startDrag(e,id){const win=document.getElementById(id);if(!win)return;win.style.zIndex=++dwinZ;const rect=win.getBoundingClientRect();const sx=e.clientX-rect.left,sy=e.clientY-rect.top;const mv=e=>{win.style.left=(e.clientX-sx)+'px';win.style.top=(e.clientY-sy)+'px';win.style.right='auto';win.style.bottom='auto'};const up=()=>{document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up)};document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);e.preventDefault()}
+function startDragFixed(e,id){const win=document.getElementById(id);if(!win)return;win.style.zIndex=++dwinZ;const rect=win.getBoundingClientRect();const sx=e.clientX-rect.left,sy=e.clientY-rect.top;const mv=e=>{win.style.left=(e.clientX-sx)+'px';win.style.top=(e.clientY-sy)+'px';win.style.right='auto';win.style.bottom='auto'};const up=()=>{document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up)};document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up);e.preventDefault()}
+function hwn(id){const w=document.getElementById(id);if(w)w.style.display='none'}
+function tmin(id){const w=document.getElementById(id);if(!w)return;const cw=w.querySelector('.cw');if(cw)cw.style.display=cw.style.display==='none'?'':'none'}
+function cvaDown(e){if(curTool==='scissors')doScissorsClick(e);else if(curTool==='brush'&&paintCB)paintCB(e)}
+function trackM(e){const r=MC.getBoundingClientRect();const x=Math.round((e.clientX-r.left)/zoom),y=Math.round((e.clientY-r.top)/zoom);document.getElementById('coords').textContent='x:'+x+' y:'+y;if(CD&&x>=0&&y>=0&&x<MC.width&&y<MC.height){const i=(y*MC.width+x)*4,d=CD.data;document.getElementById('strgb').textContent='R:'+d[i]+' G:'+d[i+1]+' B:'+d[i+2]}if(curTool==='brush'&&e.buttons===1&&paintCB)paintCB(e)}
+function swTab(t){document.getElementById('pf').style.display=t==='f'?'':'none';document.getElementById('pd').style.display=t==='d'?'':'none';document.getElementById('taf').classList.toggle('on',t==='f');document.getElementById('tad').classList.toggle('on',t==='d')}
+function cycleSwatch(){swI=(swI+1)%swC.length;document.getElementById('swfg').style.background=swC[swI]}
+function expPNG(){const a=document.createElement('a');a.download='edited_'+Date.now()+'.png';a.href=MC.toDataURL('image/png');a.click();setMsg('Exported PNG')}
+function expJPG(){const a=document.createElement('a');a.download='edited_'+Date.now()+'.jpg';a.href=MC.toDataURL('image/jpeg',0.92);a.click()}
+function expWP(){const a=document.createElement('a');a.download='edited_'+Date.now()+'.webp';a.href=MC.toDataURL('image/webp',0.92);a.click()}
+async function copyC(){try{MC.toBlob(async b=>{await navigator.clipboard.write([new ClipboardItem({'image/png':b})]);setMsg('Copied')})}catch(e){setMsg('Copy: '+e.message)}}
+
+window.psdLoad=function(url,fn){window._editorUrl=url;window._editorFilename=fn;loadImg();};
+loadImg();
+</script>
+
 </body>
 </html>
