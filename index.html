@@ -84,6 +84,12 @@ main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
 .empty{display:none;padding:60px;text-align:center;color:var(--muted);font-family:'Martian Mono',monospace;font-size:9.5px;letter-spacing:.1em;}
 aside::-webkit-scrollbar,main::-webkit-scrollbar{width:4px}
 aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb);border-radius:2px}
+
+.nav-sections{padding:16px 14px 10px;margin-top:auto;border-top:1px solid var(--border)}
+.nav-link{display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer;font-size:10px;color:var(--muted);letter-spacing:.01em;text-decoration:none;transition:color .1s;}
+.nav-link:hover{color:var(--text)}
+.nav-link .dash{color:var(--muted);font-size:13px;line-height:1;width:10px;flex-shrink:0}
+
 </style>
 </head>
 <body>
@@ -113,6 +119,12 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
     <div class="tag" data-filter="color" data-value="meadow"><span class="cdot" style="background:var(--meadow)"></span><span>meadow screensaver</span></div>
     <div class="tag" data-filter="color" data-value="rose"><span class="cdot" style="background:var(--rose)"></span><span>balcony rose</span></div>
     <div class="tag" data-filter="color" data-value="deep"><span class="cdot" style="background:var(--deep)"></span><span>deep desktop</span></div>
+    <div class="spacer"></div>
+    <div class="nav-sections">
+      <a class="nav-link" href="about.html" data-en="about this archive" data-ru="об архиве"><span class="dash">—</span><span data-en="about this archive" data-ru="об архиве">about this archive</span></a>
+      <a class="nav-link" href="https://www.are.na/danaia-ivansa/templates-in-action" target="_blank" rel="noopener" data-en="my friends' templates" data-ru="шаблоны друзей"><span class="dash">—</span><span data-en="my friends' templates" data-ru="шаблоны друзей">my friends' templates</span></a>
+      <a class="nav-link" href="https://dariaivans.neocities.org/" target="_blank" rel="noopener" data-en="about me" data-ru="обо мне"><span class="dash">—</span><span data-en="about me" data-ru="обо мне">about me</span></a>
+    </div>
   </aside>
   <main id="main">
     <div class="content-hdr">
@@ -136,7 +148,740 @@ aside::-webkit-scrollbar-thumb,main::-webkit-scrollbar-thumb{background:var(--sb
 // Для экономии места в ответе я показываю структуру,
 // но в реальном файле будут ВСЕ 734 строки из вашего images-js.txt
 const RAW_FILES = [
-{u:"images/fd_0431.jpg",f:"fd_0431.jpg"},{u:"images/fd_0357.jpg",f:"fd_0357.jpg"},{u:"images/fd_0343.jpg",f:"fd_0343.jpg"},{u:"images/fd_0425.jpg",f:"fd_0425.jpg"},{u:"images/ff_0489.jpg",f:"ff_0489.jpg"},{u:"images/fd_0419.jpg",f:"fd_0419.jpg"},{u:"images/fd_0394.jpg",f:"fd_0394.jpg"},{u:"images/fd_0380.jpg",f:"fd_0380.jpg"},{u:"images/bp_ac_0058.jpg",f:"bp_ac_0058.jpg"},{u:"images/mp_dk_0709.jpg",f:"mp_dk_0709.jpg"},{u:"images/mp_0585.jpg",f:"mp_0585.jpg"},{u:"images/mp_0591.jpg",f:"mp_0591.jpg"},{u:"images/bp_fd_0071.jpg",f:"bp_fd_0071.jpg"},{u:"images/mp_0862.jpeg",f:"mp_0862.jpeg"},{u:"images/bp_fd_0065.jpg",f:"bp_fd_0065.jpg"},{u:"images/mp_0546.jpg",f:"mp_0546.jpg"},{u:"images/mp_0552.jpg",f:"mp_0552.jpg"},{u:"images/mp_fd_0743.jpg",f:"mp_fd_0743.jpg"},{u:"images/dk_0269.jpg",f:"dk_0269.jpg"},{u:"images/dk_0241.jpg",f:"dk_0241.jpg"},{u:"images/mp_0874.jpeg",f:"mp_0874.jpeg"},{u:"images/dk_0255.jpg",f:"dk_0255.jpg"},{u:"images/dk_0282.jpg",f:"dk_0282.jpg"},{u:"images/fd_qc_0479.jpg",f:"fd_qc_0479.jpg"},{u:"images/mp_dk_0696.jpg",f:"mp_dk_0696.jpg"},{u:"images/mp_dk_0682.jpg",f:"mp_dk_0682.jpg"},{u:"images/mp_0630.jpg",f:"mp_0630.jpg"},{u:"images/ac_0008.jpg",f:"ac_0008.jpg"},{u:"images/mp_dk_0655.jpg",f:"mp_dk_0655.jpg"},{u:"images/mp_0624.jpg",f:"mp_0624.jpg"},{u:"images/Floralfantasies34.webp",f:"Floralfantasies34.webp"},{u:"images/mp_dk_0669.jpg",f:"mp_dk_0669.jpg"},{u:"images/mp_0618.jpg",f:"mp_0618.jpg"},{u:"images/mp_0619.jpg",f:"mp_0619.jpg"},{u:"images/mp_0858.jpeg",f:"mp_0858.jpeg"},{u:"images/mp_dk_0668.jpg",f:"mp_dk_0668.jpg"},{u:"images/mp_0625.jpg",f:"mp_0625.jpg"},{u:"images/ac_0009.jpg",f:"ac_0009.jpg"},{u:"images/mp_0631.jpg",f:"mp_0631.jpg"},{u:"images/mp_dk_0654.jpg",f:"mp_dk_0654.jpg"},{u:"images/mp_dk_0683.jpg",f:"mp_dk_0683.jpg"},{u:"images/mp_ac_0637.jpg",f:"mp_ac_0637.jpg"},{u:"images/mp_dk_0697.jpg",f:"mp_dk_0697.jpg"},{u:"images/dk_0283.jpg",f:"dk_0283.jpg"},{u:"images/dk_0254.jpg",f:"dk_0254.jpg"},{u:"images/dk_0240.jpg",f:"dk_0240.jpg"},{u:"images/dk_0268.jpg",f:"dk_0268.jpg"},{u:"images/mp_fd_0742.jpg",f:"mp_fd_0742.jpg"},{u:"images/mp_0553.jpg",f:"mp_0553.jpg"},{u:"images/mp_0547.jpg",f:"mp_0547.jpg"},{u:"images/bp_fd_0064.jpg",f:"bp_fd_0064.jpg"},{u:"images/qc_0826.jpg",f:"qc_0826.jpg"},{u:"images/bp_fd_0070.jpg",f:"bp_fd_0070.jpg"},{u:"images/mp_0590.jpg",f:"mp_0590.jpg"},{u:"images/mp_0584.jpg",f:"mp_0584.jpg"},{u:"images/mp_dk_0708.jpg",f:"mp_dk_0708.jpg"},{u:"images/bp_ac_0059.jpg",f:"bp_ac_0059.jpg"},{u:"images/fd_0381.jpg",f:"fd_0381.jpg"},{u:"images/fd_0395.jpg",f:"fd_0395.jpg"},{u:"images/fd_0418.jpg",f:"fd_0418.jpg"},{u:"images/dk_0848.jpeg",f:"dk_0848.jpeg"},{u:"images/fd_0342.jpg",f:"fd_0342.jpg"},{u:"images/ff_0488.jpg",f:"ff_0488.jpg"},{u:"images/fd_0424.jpg",f:"fd_0424.jpg"},{u:"images/fd_0430.jpg",f:"fd_0430.jpg"},{u:"images/fd_0356.jpg",f:"fd_0356.jpg"},{u:"images/fd_0426.jpg",f:"fd_0426.jpg"},{u:"images/fd_0340.jpg",f:"fd_0340.jpg"},{u:"images/fd_0354.jpg",f:"fd_0354.jpg"},{u:"images/fd_0432.jpg",f:"fd_0432.jpg"},{u:"images/fd_0368.jpg",f:"fd_0368.jpg"},{u:"images/fd_0383.jpg",f:"fd_0383.jpg"},{u:"images/fd_0397.jpg",f:"fd_0397.jpg"},{u:"images/qc_0818.jpg",f:"qc_0818.jpg"},{u:"images/mp_0592.jpg",f:"mp_0592.jpg"},{u:"images/mp_0586.jpg",f:"mp_0586.jpg"},{u:"images/mp_qc_dk_0809.jpg",f:"mp_qc_dk_0809.jpg"},{u:"images/qc_0824.jpg",f:"qc_0824.jpg"},{u:"images/bp_fd_0066.jpg",f:"bp_fd_0066.jpg"},{u:"images/bp_fd_0072.jpg",f:"bp_fd_0072.jpg"},{u:"images/mp_0551.jpg",f:"mp_0551.jpg"},{u:"images/mp_0881.jpeg",f:"mp_0881.jpeg"},{u:"images/mp_qc_0798.jpg",f:"mp_qc_0798.jpg"},{u:"images/mp_0545.jpg",f:"mp_0545.jpg"},{u:"images/mp_fd_0754.jpg",f:"mp_fd_0754.jpg"},{u:"images/mp_0579.jpg",f:"mp_0579.jpg"},{u:"images/mp_fd_0740.jpg",f:"mp_fd_0740.jpg"},{u:"images/dk_0256.jpg",f:"dk_0256.jpg"},{u:"images/dk_0242.jpg",f:"dk_0242.jpg"},{u:"images/mp_0878.jpeg",f:"mp_0878.jpeg"},{u:"images/mp_qc_0808.jpg",f:"mp_qc_0808.jpg"},{u:"images/dk_0281.jpg",f:"dk_0281.jpg"},{u:"images/mp_dk_0681.jpg",f:"mp_dk_0681.jpg"},{u:"images/mp_dk_0695.jpg",f:"mp_dk_0695.jpg"},{u:"images/bp_0049.jpg",f:"bp_0049.jpg"},{u:"images/mp_0627.jpg",f:"mp_0627.jpg"},{u:"images/mp_dk_0656.jpg",f:"mp_dk_0656.jpg"},{u:"images/mp_0633.jpg",f:"mp_0633.jpg"},{u:"images/mp_dk_0885.jpeg",f:"mp_dk_0885.jpeg"},{u:"images/mp_dk_0657.jpg",f:"mp_dk_0657.jpg"},{u:"images/mp_0632.jpg",f:"mp_0632.jpg"},{u:"images/mp_0626.jpg",f:"mp_0626.jpg"},{u:"images/bp_0048.jpg",f:"bp_0048.jpg"},{u:"images/mp_dk_0694.jpg",f:"mp_dk_0694.jpg"},{u:"images/mp_dk_0680.jpg",f:"mp_dk_0680.jpg"},{u:"images/dk_0280.jpg",f:"dk_0280.jpg"},{u:"images/dk_0243.jpg",f:"dk_0243.jpg"},{u:"images/dk_0257.jpg",f:"dk_0257.jpg"},{u:"images/mp_0578.jpg",f:"mp_0578.jpg"},{u:"images/mp_fd_0741.jpg",f:"mp_fd_0741.jpg"},{u:"images/mp_0544.jpg",f:"mp_0544.jpg"},{u:"images/mp_qc_0799.jpg",f:"mp_qc_0799.jpg"},{u:"images/mp_0550.jpg",f:"mp_0550.jpg"},{u:"images/bp_fd_0073.jpg",f:"bp_fd_0073.jpg"},{u:"images/qc_0825.jpg",f:"qc_0825.jpg"},{u:"images/bp_fd_0067.jpg",f:"bp_fd_0067.jpg"},{u:"images/mp_0587.jpg",f:"mp_0587.jpg"},{u:"images/qc_0819.jpg",f:"qc_0819.jpg"},{u:"images/mp_0593.jpg",f:"mp_0593.jpg"},{u:"images/fd_0396.jpg",f:"fd_0396.jpg"},{u:"images/fd_0382.jpg",f:"fd_0382.jpg"},{u:"images/fd_0369.jpg",f:"fd_0369.jpg"},{u:"images/fd_0355.jpg",f:"fd_0355.jpg"},{u:"images/fd_0433.jpg",f:"fd_0433.jpg"},{u:"images/fd_0427.jpg",f:"fd_0427.jpg"},{u:"images/fd_0341.jpg",f:"fd_0341.jpg"},{u:"images/fd_0379.jpg",f:"fd_0379.jpg"},{u:"images/fd_0345.jpg",f:"fd_0345.jpg"},{u:"images/fd_0423.jpg",f:"fd_0423.jpg"},{u:"images/fd_0437.jpg",f:"fd_0437.jpg"},{u:"images/fd_0351.jpg",f:"fd_0351.jpg"},{u:"images/dk_0845.jpeg",f:"dk_0845.jpeg"},{u:"images/fd_0386.jpg",f:"fd_0386.jpg"},{u:"images/fd_0392.jpg",f:"fd_0392.jpg"},{u:"images/qc_0821.jpg",f:"qc_0821.jpg"},{u:"images/mp_0597.jpg",f:"mp_0597.jpg"},{u:"images/mp_0583.jpg",f:"mp_0583.jpg"},{u:"images/mp_0568.jpg",f:"mp_0568.jpg"},{u:"images/mp_fd_0751.jpg",f:"mp_fd_0751.jpg"},{u:"images/mp_fd_0745.jpg",f:"mp_fd_0745.jpg"},{u:"images/mp_0554.jpg",f:"mp_0554.jpg"},{u:"images/mp_qc_0789.jpg",f:"mp_qc_0789.jpg"},{u:"images/mp_0540.jpg",f:"mp_0540.jpg"},{u:"images/dk_0253.jpg",f:"dk_0253.jpg"},{u:"images/dk_0247.jpg",f:"dk_0247.jpg"},{u:"images/fd_qc_0480.jpg",f:"fd_qc_0480.jpg"},{u:"images/dk_0290.jpg",f:"dk_0290.jpg"},{u:"images/dk_0284.jpg",f:"dk_0284.jpg"},{u:"images/mp_dk_0684.jpg",f:"mp_dk_0684.jpg"},{u:"images/mp_dk_0690.jpg",f:"mp_dk_0690.jpg"},{u:"images/mp_0622.jpg",f:"mp_0622.jpg"},{u:"images/mp_0636.jpg",f:"mp_0636.jpg"},{u:"images/mp_dk_0653.jpg",f:"mp_dk_0653.jpg"},{u:"images/mp_dk_0652.jpg",f:"mp_dk_0652.jpg"},{u:"images/mp_0623.jpg",f:"mp_0623.jpg"},{u:"images/fd_ac_0458.jpg",f:"fd_ac_0458.jpg"},{u:"images/mp_dk_0691.jpg",f:"mp_dk_0691.jpg"},{u:"images/mp_dk_0685.jpg",f:"mp_dk_0685.jpg"},{u:"images/bp_dk_0843.jpeg",f:"bp_dk_0843.jpeg"},{u:"images/dk_0285.jpg",f:"dk_0285.jpg"},{u:"images/mp_0879.jpeg",f:"mp_0879.jpeg"},{u:"images/bp_fd_dk_0075.jpg",f:"bp_fd_dk_0075.jpg"},{u:"images/dk_0291.jpg",f:"dk_0291.jpg"},{u:"images/fd_qc_0481.jpg",f:"fd_qc_0481.jpg"},{u:"images/dk_0246.jpg",f:"dk_0246.jpg"},{u:"images/dk_0252.jpg",f:"dk_0252.jpg"},{u:"images/mp_0541.jpg",f:"mp_0541.jpg"},{u:"images/mp_qc_0788.jpg",f:"mp_qc_0788.jpg"},{u:"images/mp_0555.jpg",f:"mp_0555.jpg"},{u:"images/mp_0880.jpeg",f:"mp_0880.jpeg"},{u:"images/mp_fd_0744.jpg",f:"mp_fd_0744.jpg"},{u:"images/mp_0569.jpg",f:"mp_0569.jpg"},{u:"images/mp_fd_0750.jpg",f:"mp_fd_0750.jpg"},{u:"images/mp_0582.jpg",f:"mp_0582.jpg"},{u:"images/mp_0596.jpg",f:"mp_0596.jpg"},{u:"images/qc_0820.jpg",f:"qc_0820.jpg"},{u:"images/fd_0393.jpg",f:"fd_0393.jpg"},{u:"images/fd_0387.jpg",f:"fd_0387.jpg"},{u:"images/fd_0436.jpg",f:"fd_0436.jpg"},{u:"images/fd_0350.jpg",f:"fd_0350.jpg"},{u:"images/fd_0344.jpg",f:"fd_0344.jpg"},{u:"images/fd_0422.jpg",f:"fd_0422.jpg"},{u:"images/fd_0378.jpg",f:"fd_0378.jpg"},{u:"images/fd_0408.jpg",f:"fd_0408.jpg"},{u:"images/dk_0849.jpeg",f:"dk_0849.jpeg"},{u:"images/fd_0352.jpg",f:"fd_0352.jpg"},{u:"images/fd_0434.jpg",f:"fd_0434.jpg"},{u:"images/fd_0420.jpg",f:"fd_0420.jpg"},{u:"images/fd_0346.jpg",f:"fd_0346.jpg"},{u:"images/fd_0391.jpg",f:"fd_0391.jpg"},{u:"images/fd_0385.jpg",f:"fd_0385.jpg"},{u:"images/qc_0822.jpg",f:"qc_0822.jpg"},{u:"images/mp_0580.jpg",f:"mp_0580.jpg"},{u:"images/mp_0594.jpg",f:"mp_0594.jpg"},{u:"images/mp_fd_0746.jpg",f:"mp_fd_0746.jpg"},{u:"images/mp_fd_0752.jpg",f:"mp_fd_0752.jpg"},{u:"images/mp_0543.jpg",f:"mp_0543.jpg"},{u:"images/mp_0557.jpg",f:"mp_0557.jpg"},{u:"images/dk_0244.jpg",f:"dk_0244.jpg"},{u:"images/dk_0250.jpg",f:"dk_0250.jpg"},{u:"images/fd_qc_0483.jpg",f:"fd_qc_0483.jpg"},{u:"images/dk_0278.jpg",f:"dk_0278.jpg"},{u:"images/dk_0287.jpg",f:"dk_0287.jpg"},{u:"images/png-klipart-myagkaya-igrushka.jpg",f:"png-klipart-myagkaya-igrushka.jpg"},{u:"images/dk_0293.jpg",f:"dk_0293.jpg"},{u:"images/mp_dk_0693.jpg",f:"mp_dk_0693.jpg"},{u:"images/mp_dk_0687.jpg",f:"mp_dk_0687.jpg"},{u:"images/mp_0609.jpg",f:"mp_0609.jpg"},{u:"images/mp_0859.jpeg",f:"mp_0859.jpeg"},{u:"images/mp_dk_0678.jpg",f:"mp_dk_0678.jpg"},{u:"images/mp_0635.jpg",f:"mp_0635.jpg"},{u:"images/mp_0621.jpg",f:"mp_0621.jpg"},{u:"images/mp_0620.jpg",f:"mp_0620.jpg"},{u:"images/mp_0634.jpg",f:"mp_0634.jpg"},{u:"images/mp_dk_0679.jpg",f:"mp_dk_0679.jpg"},{u:"images/mp_0608.jpg",f:"mp_0608.jpg"},{u:"images/mp_dk_0686.jpg",f:"mp_dk_0686.jpg"},{u:"images/mp_dk_0692.jpg",f:"mp_dk_0692.jpg"},{u:"images/dk_0292.jpg",f:"dk_0292.jpg"},{u:"images/dk_0286.jpg",f:"dk_0286.jpg"},{u:"images/fd_qc_0482.jpg",f:"fd_qc_0482.jpg"},{u:"images/dk_0279.jpg",f:"dk_0279.jpg"},{u:"images/dk_0251.jpg",f:"dk_0251.jpg"},{u:"images/mp_0875.jpeg",f:"mp_0875.jpeg"},{u:"images/dk_0245.jpg",f:"dk_0245.jpg"},{u:"images/mp_0556.jpg",f:"mp_0556.jpg"},{u:"images/mp_0542.jpg",f:"mp_0542.jpg"},{u:"images/mp_fd_0753.jpg",f:"mp_fd_0753.jpg"},{u:"images/mp_fd_0747.jpg",f:"mp_fd_0747.jpg"},{u:"images/mp_0595.jpg",f:"mp_0595.jpg"},{u:"images/mp_0581.jpg",f:"mp_0581.jpg"},{u:"images/qc_0823.jpg",f:"qc_0823.jpg"},{u:"images/mp_0863.jpeg",f:"mp_0863.jpeg"},{u:"images/fd_0384.jpg",f:"fd_0384.jpg"},{u:"images/fd_0390.jpg",f:"fd_0390.jpg"},{u:"images/fd_0421.jpg",f:"fd_0421.jpg"},{u:"images/fd_0347.jpg",f:"fd_0347.jpg"},{u:"images/fd_0353.jpg",f:"fd_0353.jpg"},{u:"images/fd_0435.jpg",f:"fd_0435.jpg"},{u:"images/fd_0409.jpg",f:"fd_0409.jpg"},{u:"images/fd_0334.jpg",f:"fd_0334.jpg"},{u:"images/fd_0452.jpg",f:"fd_0452.jpg"},{u:"images/fd_0446.jpg",f:"fd_0446.jpg"},{u:"images/qc_dk_0835.jpg",f:"qc_dk_0835.jpg"},{u:"images/mp_fd_dk_0761.jpg",f:"mp_fd_dk_0761.jpg"},{u:"images/dk_0197.jpg",f:"dk_0197.jpg"},{u:"images/dk_0183.jpg",f:"dk_0183.jpg"},{u:"images/mp_ff_0773.jpg",f:"mp_ff_0773.jpg"},{u:"images/mp_0525.jpg",f:"mp_0525.jpg"},{u:"images/mp_0531.jpg",f:"mp_0531.jpg"},{u:"images/mp_0519.jpg",f:"mp_0519.jpg"},{u:"images/mp_fd_0720.jpg",f:"mp_fd_0720.jpg"},{u:"images/mp_fd_0734.jpg",f:"mp_fd_0734.jpg"},{u:"images/mp_0868.jpeg",f:"mp_0868.jpeg"},{u:"images/dk_0222.jpg",f:"dk_0222.jpg"},{u:"images/dk_0236.jpg",f:"dk_0236.jpg"},{u:"images/mp_ff_dk_0783.jpg",f:"mp_ff_dk_0783.jpg"},{u:"images/mp_ac_0641.jpg",f:"mp_ac_0641.jpg"},{u:"images/fd_dk_0463.jpg",f:"fd_dk_0463.jpg"},{u:"images/fd_dk_0477.jpg",f:"fd_dk_0477.jpg"},{u:"images/fd_dk_0476.jpg",f:"fd_dk_0476.jpg"},{u:"images/fd_dk_0462.jpg",f:"fd_dk_0462.jpg"},{u:"images/mp_ff_dk_0782.jpg",f:"mp_ff_dk_0782.jpg"},{u:"images/mp_ac_0640.jpg",f:"mp_ac_0640.jpg"},{u:"images/dk_0237.jpg",f:"dk_0237.jpg"},{u:"images/dk_0223.jpg",f:"dk_0223.jpg"},{u:"images/mp_fd_0735.jpg",f:"mp_fd_0735.jpg"},{u:"images/mp_0518.jpg",f:"mp_0518.jpg"},{u:"images/mp_fd_0721.jpg",f:"mp_fd_0721.jpg"},{u:"images/mp_0530.jpg",f:"mp_0530.jpg"},{u:"images/mp_0524.jpg",f:"mp_0524.jpg"},{u:"images/mp_ff_0772.jpg",f:"mp_ff_0772.jpg"},{u:"images/dk_0182.jpg",f:"dk_0182.jpg"},{u:"images/dk_0196.jpg",f:"dk_0196.jpg"},{u:"images/mp_fd_dk_0760.jpg",f:"mp_fd_dk_0760.jpg"},{u:"images/qc_dk_0834.jpg",f:"qc_dk_0834.jpg"},{u:"images/fd_0447.jpg",f:"fd_0447.jpg"},{u:"images/fd_0335.jpg",f:"fd_0335.jpg"},{u:"images/fd_0453.jpg",f:"fd_0453.jpg"},{u:"images/fd_0323.jpg",f:"fd_0323.jpg"},{u:"images/fd_0445.jpg",f:"fd_0445.jpg"},{u:"images/fd_0451.jpg",f:"fd_0451.jpg"},{u:"images/fd_0337.jpg",f:"fd_0337.jpg"},{u:"images/qc_dk_0836.jpg",f:"qc_dk_0836.jpg"},{u:"images/dk_0180.jpg",f:"dk_0180.jpg"},{u:"images/dk_0194.jpg",f:"dk_0194.jpg"},{u:"images/mp_ff_0770.jpg",f:"mp_ff_0770.jpg"},{u:"images/mp_0864.jpeg",f:"mp_0864.jpeg"},{u:"images/mp_0532.jpg",f:"mp_0532.jpg"},{u:"images/mp_0526.jpg",f:"mp_0526.jpg"},{u:"images/mp_fd_0737.jpg",f:"mp_fd_0737.jpg"},{u:"images/mp_fd_0723.jpg",f:"mp_fd_0723.jpg"},{u:"images/dk_0209.jpg",f:"dk_0209.jpg"},{u:"images/dk_0235.jpg",f:"dk_0235.jpg"},{u:"images/dk_0221.jpg",f:"dk_0221.jpg"},{u:"images/mp_0872.jpeg",f:"mp_0872.jpeg"},{u:"images/ff_dk_0509.jpg",f:"ff_dk_0509.jpg"},{u:"images/mp_ac_0642.jpg",f:"mp_ac_0642.jpg"},{u:"images/mp_ff_dk_0780.jpg",f:"mp_ff_dk_0780.jpg"},{u:"images/fd_dk_0474.jpg",f:"fd_dk_0474.jpg"},{u:"images/fd_dk_0460.jpg",f:"fd_dk_0460.jpg"},{u:"images/fd_dk_0461.jpg",f:"fd_dk_0461.jpg"},{u:"images/fd_dk_0475.jpg",f:"fd_dk_0475.jpg"},{u:"images/mp_ac_0643.jpg",f:"mp_ac_0643.jpg"},{u:"images/mp_ff_dk_0781.jpg",f:"mp_ff_dk_0781.jpg"},{u:"images/ff_dk_0508.jpg",f:"ff_dk_0508.jpg"},{u:"images/dk_0220.jpg",f:"dk_0220.jpg"},{u:"images/dk_0234.jpg",f:"dk_0234.jpg"},{u:"images/dk_0208.jpg",f:"dk_0208.jpg"},{u:"images/mp_fd_0722.jpg",f:"mp_fd_0722.jpg"},{u:"images/mp_fd_0736.jpg",f:"mp_fd_0736.jpg"},{u:"images/mp_0527.jpg",f:"mp_0527.jpg"},{u:"images/mp_0533.jpg",f:"mp_0533.jpg"},{u:"images/mp_ff_0771.jpg",f:"mp_ff_0771.jpg"},{u:"images/dk_0195.jpg",f:"dk_0195.jpg"},{u:"images/dk_0181.jpg",f:"dk_0181.jpg"},{u:"images/qc_dk_0837.jpg",f:"qc_dk_0837.jpg"},{u:"images/fd_0450.jpg",f:"fd_0450.jpg"},{u:"images/fd_0336.jpg",f:"fd_0336.jpg"},{u:"images/fd_0322.jpg",f:"fd_0322.jpg"},{u:"images/fd_0444.jpg",f:"fd_0444.jpg"},{u:"images/bp_dk_0062.jpg",f:"bp_dk_0062.jpg"},{u:"images/fd_0440.jpg",f:"fd_0440.jpg"},{u:"images/fd_0326.jpg",f:"fd_0326.jpg"},{u:"images/fd_0332.jpg",f:"fd_0332.jpg"},{u:"images/fd_0454.jpg",f:"fd_0454.jpg"},{u:"images/dk_0185.jpg",f:"dk_0185.jpg"},{u:"images/dk_0191.jpg",f:"dk_0191.jpg"},{u:"images/qc_dk_0827.jpg",f:"qc_dk_0827.jpg"},{u:"images/qc_dk_0833.jpg",f:"qc_dk_0833.jpg"},{u:"images/mp_ff_0775.jpg",f:"mp_ff_0775.jpg"},{u:"images/mp_fd_0732.jpg",f:"mp_fd_0732.jpg"},{u:"images/mp_fd_0726.jpg",f:"mp_fd_0726.jpg"},{u:"images/mp_0537.jpg",f:"mp_0537.jpg"},{u:"images/mp_0523.jpg",f:"mp_0523.jpg"},{u:"images/dk_0230.jpg",f:"dk_0230.jpg"},{u:"images/bp_fd_ac_0074.jpg",f:"bp_fd_ac_0074.jpg"},{u:"images/dk_0224.jpg",f:"dk_0224.jpg"},{u:"images/dk_0218.jpg",f:"dk_0218.jpg"},{u:"images/fd_dk_0471.jpg",f:"fd_dk_0471.jpg"},{u:"images/fd_dk_0465.jpg",f:"fd_dk_0465.jpg"},{u:"images/fd_dk_0459.jpg",f:"fd_dk_0459.jpg"},{u:"images/fd_dk_0464.jpg",f:"fd_dk_0464.jpg"},{u:"images/fd_dk_0470.jpg",f:"fd_dk_0470.jpg"},{u:"images/dk_0219.jpg",f:"dk_0219.jpg"},{u:"images/dk_0225.jpg",f:"dk_0225.jpg"},{u:"images/dk_0231.jpg",f:"dk_0231.jpg"},{u:"images/mp_0873.jpeg",f:"mp_0873.jpeg"},{u:"images/mp_0522.jpg",f:"mp_0522.jpg"},{u:"images/mp_0536.jpg",f:"mp_0536.jpg"},{u:"images/mp_fd_0727.jpg",f:"mp_fd_0727.jpg"},{u:"images/mp_fd_0733.jpg",f:"mp_fd_0733.jpg"},{u:"images/mp_ff_0774.jpg",f:"mp_ff_0774.jpg"},{u:"images/mp_0865.jpeg",f:"mp_0865.jpeg"},{u:"images/qc_dk_0832.jpg",f:"qc_dk_0832.jpg"},{u:"images/dk_0190.jpg",f:"dk_0190.jpg"},{u:"images/dk_0184.jpg",f:"dk_0184.jpg"},{u:"images/fd_0333.jpg",f:"fd_0333.jpg"},{u:"images/fd_0455.jpg",f:"fd_0455.jpg"},{u:"images/fd_0441.jpg",f:"fd_0441.jpg"},{u:"images/bp_dk_0063.jpg",f:"bp_dk_0063.jpg"},{u:"images/fd_0327.jpg",f:"fd_0327.jpg"},{u:"images/fd_0457.jpg",f:"fd_0457.jpg"},{u:"images/fd_0331.jpg",f:"fd_0331.jpg"},{u:"images/dk_0179.jpg",f:"dk_0179.jpg"},{u:"images/fd_0325.jpg",f:"fd_0325.jpg"},{u:"images/bp_dk_0061.jpg",f:"bp_dk_0061.jpg"},{u:"images/fd_0443.jpg",f:"fd_0443.jpg"},{u:"images/dk_0192.jpg",f:"dk_0192.jpg"},{u:"images/dk_0186.jpg",f:"dk_0186.jpg"},{u:"images/mp_fd_dk_0758.jpg",f:"mp_fd_dk_0758.jpg"},{u:"images/qc_dk_0830.jpg",f:"qc_dk_0830.jpg"},{u:"images/mp_ff_0776.jpg",f:"mp_ff_0776.jpg"},{u:"images/mp_fd_0725.jpg",f:"mp_fd_0725.jpg"},{u:"images/mp_fd_0731.jpg",f:"mp_fd_0731.jpg"},{u:"images/mp_fd_0719.jpg",f:"mp_fd_0719.jpg"},{u:"images/mp_0520.jpg",f:"mp_0520.jpg"},{u:"images/mp_0534.jpg",f:"mp_0534.jpg"},{u:"images/dk_0227.jpg",f:"dk_0227.jpg"},{u:"images/dk_0233.jpg",f:"dk_0233.jpg"},{u:"images/fd_dk_0466.jpg",f:"fd_dk_0466.jpg"},{u:"images/fd_dk_0472.jpg",f:"fd_dk_0472.jpg"},{u:"images/bp_0038.jpg",f:"bp_0038.jpg"},{u:"images/mp_ff_dk_0779.jpg",f:"mp_ff_dk_0779.jpg"},{u:"images/fd_dk_0473.jpg",f:"fd_dk_0473.jpg"},{u:"images/bp_0039.jpg",f:"bp_0039.jpg"},{u:"images/fd_dk_0467.jpg",f:"fd_dk_0467.jpg"},{u:"images/dk_0232.jpg",f:"dk_0232.jpg"},{u:"images/dk_0226.jpg",f:"dk_0226.jpg"},{u:"images/mp_0535.jpg",f:"mp_0535.jpg"},{u:"images/mp_fd_0718.jpg",f:"mp_fd_0718.jpg"},{u:"images/mp_0521.jpg",f:"mp_0521.jpg"},{u:"images/mp_fd_0730.jpg",f:"mp_fd_0730.jpg"},{u:"images/mp_fd_0724.jpg",f:"mp_fd_0724.jpg"},{u:"images/mp_0869.jpeg",f:"mp_0869.jpeg"},{u:"images/mp_ff_0777.jpg",f:"mp_ff_0777.jpg"},{u:"images/qc_dk_0831.jpg",f:"qc_dk_0831.jpg"},{u:"images/mp_fd_dk_0759.jpg",f:"mp_fd_dk_0759.jpg"},{u:"images/dk_0187.jpg",f:"dk_0187.jpg"},{u:"images/dk_0193.jpg",f:"dk_0193.jpg"},{u:"images/fd_0324.jpg",f:"fd_0324.jpg"},{u:"images/dk_0178.jpg",f:"dk_0178.jpg"},{u:"images/fd_0442.jpg",f:"fd_0442.jpg"},{u:"images/bp_dk_0060.jpg",f:"bp_dk_0060.jpg"},{u:"images/fd_0456.jpg",f:"fd_0456.jpg"},{u:"images/fd_0330.jpg",f:"fd_0330.jpg"},{u:"images/fd_0329.jpg",f:"fd_0329.jpg"},{u:"images/dk_0175.jpg",f:"dk_0175.jpg"},{u:"images/qc_dk_0828.jpg",f:"qc_dk_0828.jpg"},{u:"images/mp_fd_0729.jpg",f:"mp_fd_0729.jpg"},{u:"images/mp_0538.jpg",f:"mp_0538.jpg"},{u:"images/dk_0203.jpg",f:"dk_0203.jpg"},{u:"images/dk_0217.jpg",f:"dk_0217.jpg"},{u:"images/bp_0034.jpg",f:"bp_0034.jpg"},{u:"images/ff_dk_0503.jpg",f:"ff_dk_0503.jpg"},{u:"images/1251023401_0likru_bezimeni-1_54161015967_o.gif",f:"1251023401_0likru_bezimeni-1_54161015967_o.gif"},{u:"images/ff_dk_0502.jpg",f:"ff_dk_0502.jpg"},{u:"images/bp_0035.jpg",f:"bp_0035.jpg"},{u:"images/dk_0216.jpg",f:"dk_0216.jpg"},{u:"images/dk_0202.jpg",f:"dk_0202.jpg"},{u:"images/mp_0539.jpg",f:"mp_0539.jpg"},{u:"images/mp_fd_0728.jpg",f:"mp_fd_0728.jpg"},{u:"images/qc_dk_0829.jpg",f:"qc_dk_0829.jpg"},{u:"images/bp_0840.jpeg",f:"bp_0840.jpeg"},{u:"images/mp_fd_dk_0755.jpg",f:"mp_fd_dk_0755.jpg"},{u:"images/dk_0174.jpg",f:"dk_0174.jpg"},{u:"images/fd_0328.jpg",f:"fd_0328.jpg"},{u:"images/dk_0176.jpg",f:"dk_0176.jpg"},{u:"images/fd_dk_0856.jpeg",f:"fd_dk_0856.jpeg"},{u:"images/dk_0189.jpg",f:"dk_0189.jpg"},{u:"images/mp_fd_dk_0757.jpg",f:"mp_fd_dk_0757.jpg"},{u:"images/dk_0228.jpg",f:"dk_0228.jpg"},{u:"images/dk_0214.jpg",f:"dk_0214.jpg"},{u:"images/dk_0200.jpg",f:"dk_0200.jpg"},{u:"images/bp_fd_0844.jpeg",f:"bp_fd_0844.jpeg"},{u:"images/fd_dk_0469.jpg",f:"fd_dk_0469.jpg"},{u:"images/bp_0037.jpg",f:"bp_0037.jpg"},{u:"images/ff_dk_0500.jpg",f:"ff_dk_0500.jpg"},{u:"images/fd_0854.jpeg",f:"fd_0854.jpeg"},{u:"images/ff_dk_0501.jpg",f:"ff_dk_0501.jpg"},{u:"images/bp_0036.jpg",f:"bp_0036.jpg"},{u:"images/fd_dk_0468.jpg",f:"fd_dk_0468.jpg"},{u:"images/dk_0201.jpg",f:"dk_0201.jpg"},{u:"images/mp_0870.jpeg",f:"mp_0870.jpeg"},{u:"images/dk_0215.jpg",f:"dk_0215.jpg"},{u:"images/dk_0229.jpg",f:"dk_0229.jpg"},{u:"images/mp_fd_0717.jpg",f:"mp_fd_0717.jpg"},{u:"images/mp_0866.jpeg",f:"mp_0866.jpeg"},{u:"images/mp_ff_0778.jpg",f:"mp_ff_0778.jpg"},{u:"images/mp_fd_dk_0756.jpg",f:"mp_fd_dk_0756.jpg"},{u:"images/dk_0188.jpg",f:"dk_0188.jpg"},{u:"images/dk_0177.jpg",f:"dk_0177.jpg"},{u:"images/dk_0173.jpg",f:"dk_0173.jpg"},{u:"images/fd_0449.jpg",f:"fd_0449.jpg"},{u:"images/fd_0887.png",f:"fd_0887.png"},{u:"images/dk_0198.jpg",f:"dk_0198.jpg"},{u:"images/mp_0867.jpeg",f:"mp_0867.jpeg"},{u:"images/mp_ff_0768.jpg",f:"mp_ff_0768.jpg"},{u:"images/mp_0516.jpg",f:"mp_0516.jpg"},{u:"images/dk_0211.jpg",f:"dk_0211.jpg"},{u:"images/mp_0871.jpeg",f:"mp_0871.jpeg"},{u:"images/dk_0205.jpg",f:"dk_0205.jpg"},{u:"images/dk_0239.jpg",f:"dk_0239.jpg"},{u:"images/ff_dk_0511.jpg",f:"ff_dk_0511.jpg"},{u:"images/ff_dk_0505.jpg",f:"ff_dk_0505.jpg"},{u:"images/fd_dk_0478.jpg",f:"fd_dk_0478.jpg"},{u:"images/fd_0855.jpeg",f:"fd_0855.jpeg"},{u:"images/ff_dk_0504.jpg",f:"ff_dk_0504.jpg"},{u:"images/ff_dk_0510.jpg",f:"ff_dk_0510.jpg"},{u:"images/dk_0238.jpg",f:"dk_0238.jpg"},{u:"images/dk_0204.jpg",f:"dk_0204.jpg"},{u:"images/dk_0210.jpg",f:"dk_0210.jpg"},{u:"images/mp_0517.jpg",f:"mp_0517.jpg"},{u:"images/mp_ff_0769.jpg",f:"mp_ff_0769.jpg"},{u:"images/dk_0199.jpg",f:"dk_0199.jpg"},{u:"images/fd_0448.jpg",f:"fd_0448.jpg"},{u:"images/fd_0338.jpg",f:"fd_0338.jpg"},{u:"images/qc_dk_0839.jpg",f:"qc_dk_0839.jpg"},{u:"images/bp_0841.jpeg",f:"bp_0841.jpeg"},{u:"images/ff_dk_0499.jpg",f:"ff_dk_0499.jpg"},{u:"images/mp_ff_0886.jpeg",f:"mp_ff_0886.jpeg"},{u:"images/mp_fd_qc_dk_0767.jpg",f:"mp_fd_qc_dk_0767.jpg"},{u:"images/mp_0529.jpg",f:"mp_0529.jpg"},{u:"images/mp_fd_0738.jpg",f:"mp_fd_0738.jpg"},{u:"images/mp_0515.jpg",f:"mp_0515.jpg"},{u:"images/dk_0206.jpg",f:"dk_0206.jpg"},{u:"images/dk_0212.jpg",f:"dk_0212.jpg"},{u:"images/ff_dk_0506.jpg",f:"ff_dk_0506.jpg"},{u:"images/ff_dk_0512.jpg",f:"ff_dk_0512.jpg"},{u:"images/ff_dk_0513.jpg",f:"ff_dk_0513.jpg"},{u:"images/ff_dk_0507.jpg",f:"ff_dk_0507.jpg"},{u:"images/dk_0213.jpg",f:"dk_0213.jpg"},{u:"images/dk_0207.jpg",f:"dk_0207.jpg"},{u:"images/mp_0514.jpg",f:"mp_0514.jpg"},{u:"images/mp_fd_0739.jpg",f:"mp_fd_0739.jpg"},{u:"images/mp_0528.jpg",f:"mp_0528.jpg"},{u:"images/ff_dk_0498.jpg",f:"ff_dk_0498.jpg"},{u:"images/qc_dk_0838.jpg",f:"qc_dk_0838.jpg"},{u:"images/fd_0339.jpg",f:"fd_0339.jpg"},{u:"images/fd_0410.jpg",f:"fd_0410.jpg"},{u:"images/fd_0376.jpg",f:"fd_0376.jpg"},{u:"images/fd_0362.jpg",f:"fd_0362.jpg"},{u:"images/fd_0404.jpg",f:"fd_0404.jpg"},{u:"images/fd_0438.jpg",f:"fd_0438.jpg"},{u:"images/ff_0494.jpg",f:"ff_0494.jpg"},{u:"images/mp_dk_0700.jpg",f:"mp_dk_0700.jpg"},{u:"images/mp_dk_0714.jpg",f:"mp_dk_0714.jpg"},{u:"images/ac_dk_0015.jpg",f:"ac_dk_0015.jpg"},{u:"images/fd_0389.jpg",f:"fd_0389.jpg"},{u:"images/mp_qc_dk_0817.jpg",f:"mp_qc_dk_0817.jpg"},{u:"images/mp_0598.jpg",f:"mp_0598.jpg"},{u:"images/mp_fd_qc_0766.jpg",f:"mp_fd_qc_0766.jpg"},{u:"images/mp_0567.jpg",f:"mp_0567.jpg"},{u:"images/mp_0573.jpg",f:"mp_0573.jpg"},{u:"images/mp_qc_0786.jpg",f:"mp_qc_0786.jpg"},{u:"images/mp_qc_0792.jpg",f:"mp_qc_0792.jpg"},{u:"images/dk_0248.jpg",f:"dk_0248.jpg"},{u:"images/dk_0260.jpg",f:"dk_0260.jpg"},{u:"images/dk_0274.jpg",f:"dk_0274.jpg"},{u:"images/mp_qc_0802.jpg",f:"mp_qc_0802.jpg"},{u:"images/bp_0057.jpg",f:"bp_0057.jpg"},{u:"images/bp_0043.jpg",f:"bp_0043.jpg"},{u:"images/mp_0611.jpg",f:"mp_0611.jpg"},{u:"images/mp_dk_0674.jpg",f:"mp_dk_0674.jpg"},{u:"images/mp_dk_0660.jpg",f:"mp_dk_0660.jpg"},{u:"images/mp_0605.jpg",f:"mp_0605.jpg"},{u:"images/fd_0852.jpeg",f:"fd_0852.jpeg"},{u:"images/ac_0014.jpg",f:"ac_0014.jpg"},{u:"images/mp_dk_0661.jpg",f:"mp_dk_0661.jpg"},{u:"images/mp_0604.jpg",f:"mp_0604.jpg"},{u:"images/mp_0610.jpg",f:"mp_0610.jpg"},{u:"images/mp_dk_0675.jpg",f:"mp_dk_0675.jpg"},{u:"images/bp_0042.jpg",f:"bp_0042.jpg"},{u:"images/bp_0056.jpg",f:"bp_0056.jpg"},{u:"images/mp_qc_0803.jpg",f:"mp_qc_0803.jpg"},{u:"images/dk_0275.jpg",f:"dk_0275.jpg"},{u:"images/dk_0261.jpg",f:"dk_0261.jpg"},{u:"images/mp_0876.jpeg",f:"mp_0876.jpeg"},{u:"images/dk_0249.jpg",f:"dk_0249.jpg"},{u:"images/mp_qc_0793.jpg",f:"mp_qc_0793.jpg"},{u:"images/mp_qc_0787.jpg",f:"mp_qc_0787.jpg"},{u:"images/mp_0572.jpg",f:"mp_0572.jpg"},{u:"images/mp_0566.jpg",f:"mp_0566.jpg"},{u:"images/mp_0860.jpeg",f:"mp_0860.jpeg"},{u:"images/mp_qc_dk_0816.jpg",f:"mp_qc_dk_0816.jpg"},{u:"images/mp_0599.jpg",f:"mp_0599.jpg"},{u:"images/fd_0388.jpg",f:"fd_0388.jpg"},{u:"images/mp_dk_0715.jpg",f:"mp_dk_0715.jpg"},{u:"images/mp_dk_0701.jpg",f:"mp_dk_0701.jpg"},{u:"images/ff_0495.jpg",f:"ff_0495.jpg"},{u:"images/fd_0439.jpg",f:"fd_0439.jpg"},{u:"images/fd_0363.jpg",f:"fd_0363.jpg"},{u:"images/fd_0405.jpg",f:"fd_0405.jpg"},{u:"images/fd_0411.jpg",f:"fd_0411.jpg"},{u:"images/fd_0377.jpg",f:"fd_0377.jpg"},{u:"images/fd_0407.jpg",f:"fd_0407.jpg"},{u:"images/fd_0361.jpg",f:"fd_0361.jpg"},{u:"images/fd_0375.jpg",f:"fd_0375.jpg"},{u:"images/fd_0413.jpg",f:"fd_0413.jpg"},{u:"images/ff_0497.jpg",f:"ff_0497.jpg"},{u:"images/fd_0349.jpg",f:"fd_0349.jpg"},{u:"images/ac_dk_0016.jpg",f:"ac_dk_0016.jpg"},{u:"images/mp_dk_0703.jpg",f:"mp_dk_0703.jpg"},{u:"images/dk_0846.jpeg",f:"dk_0846.jpeg"},{u:"images/mp_fd_qc_0765.jpg",f:"mp_fd_qc_0765.jpg"},{u:"images/mp_qc_dk_0814.jpg",f:"mp_qc_dk_0814.jpg"},{u:"images/mp_fd_0749.jpg",f:"mp_fd_0749.jpg"},{u:"images/mp_0570.jpg",f:"mp_0570.jpg"},{u:"images/mp_0564.jpg",f:"mp_0564.jpg"},{u:"images/mp_qc_0791.jpg",f:"mp_qc_0791.jpg"},{u:"images/mp_qc_0785.jpg",f:"mp_qc_0785.jpg"},{u:"images/mp_0558.jpg",f:"mp_0558.jpg"},{u:"images/dk_0277.jpg",f:"dk_0277.jpg"},{u:"images/dk_0263.jpg",f:"dk_0263.jpg"},{u:"images/dk_0288.jpg",f:"dk_0288.jpg"},{u:"images/mp_qc_0801.jpg",f:"mp_qc_0801.jpg"},{u:"images/bp_0040.jpg",f:"bp_0040.jpg"},{u:"images/bp_ac_0842.jpeg",f:"bp_ac_0842.jpeg"},{u:"images/bp_0054.jpg",f:"bp_0054.jpg"},{u:"images/mp_dk_0688.jpg",f:"mp_dk_0688.jpg"},{u:"images/mp_0606.jpg",f:"mp_0606.jpg"},{u:"images/mp_dk_0663.jpg",f:"mp_dk_0663.jpg"},{u:"images/mp_dk_0677.jpg",f:"mp_dk_0677.jpg"},{u:"images/mp_0612.jpg",f:"mp_0612.jpg"},{u:"images/dk_0850.jpeg",f:"dk_0850.jpeg"},{u:"images/mp_dk_0676.jpg",f:"mp_dk_0676.jpg"},{u:"images/mp_0613.jpg",f:"mp_0613.jpg"},{u:"images/mp_0607.jpg",f:"mp_0607.jpg"},{u:"images/mp_dk_0662.jpg",f:"mp_dk_0662.jpg"},{u:"images/mp_dk_0689.jpg",f:"mp_dk_0689.jpg"},{u:"images/bp_0055.jpg",f:"bp_0055.jpg"},{u:"images/bp_0041.jpg",f:"bp_0041.jpg"},{u:"images/dk_0289.jpg",f:"dk_0289.jpg"},{u:"images/mp_qc_0800.jpg",f:"mp_qc_0800.jpg"},{u:"images/dk_0262.jpg",f:"dk_0262.jpg"},{u:"images/dk_0276.jpg",f:"dk_0276.jpg"},{u:"images/mp_0559.jpg",f:"mp_0559.jpg"},{u:"images/mp_qc_0784.jpg",f:"mp_qc_0784.jpg"},{u:"images/mp_qc_0790.jpg",f:"mp_qc_0790.jpg"},{u:"images/mp_0565.jpg",f:"mp_0565.jpg"},{u:"images/mp_0883.jpeg",f:"mp_0883.jpeg"},{u:"images/mp_fd_0748.jpg",f:"mp_fd_0748.jpg"},{u:"images/mp_0571.jpg",f:"mp_0571.jpg"},{u:"images/mp_qc_dk_0815.jpg",f:"mp_qc_dk_0815.jpg"},{u:"images/mp_fd_qc_0764.jpg",f:"mp_fd_qc_0764.jpg"},{u:"images/mp_dk_0702.jpg",f:"mp_dk_0702.jpg"},{u:"images/mp_dk_0716.jpg",f:"mp_dk_0716.jpg"},{u:"images/fd_0348.jpg",f:"fd_0348.jpg"},{u:"images/ff_0496.jpg",f:"ff_0496.jpg"},{u:"images/fd_0374.jpg",f:"fd_0374.jpg"},{u:"images/fd_0412.jpg",f:"fd_0412.jpg"},{u:"images/fd_0406.jpg",f:"fd_0406.jpg"},{u:"images/fd_0360.jpg",f:"fd_0360.jpg"},{u:"images/fd_0358.jpg",f:"fd_0358.jpg"},{u:"images/ff_0492.jpg",f:"ff_0492.jpg"},{u:"images/fd_0364.jpg",f:"fd_0364.jpg"},{u:"images/fd_0402.jpg",f:"fd_0402.jpg"},{u:"images/fd_0416.jpg",f:"fd_0416.jpg"},{u:"images/fd_0370.jpg",f:"fd_0370.jpg"},{u:"images/mp_dk_0712.jpg",f:"mp_dk_0712.jpg"},{u:"images/mp_dk_0706.jpg",f:"mp_dk_0706.jpg"},{u:"images/mp_qc_dk_0811.jpg",f:"mp_qc_dk_0811.jpg"},{u:"images/mp_0549.jpg",f:"mp_0549.jpg"},{u:"images/mp_qc_0794.jpg",f:"mp_qc_0794.jpg"},{u:"images/mp_0882.jpeg",f:"mp_0882.jpeg"},{u:"images/mp_0575.jpg",f:"mp_0575.jpg"},{u:"images/mp_0561.jpg",f:"mp_0561.jpg"},{u:"images/dk_0272.jpg",f:"dk_0272.jpg"},{u:"images/mp_ac_0884.jpeg",f:"mp_ac_0884.jpeg"},{u:"images/dk_0266.jpg",f:"dk_0266.jpg"},{u:"images/mp_qc_0804.jpg",f:"mp_qc_0804.jpg"},{u:"images/mp_dk_0699.jpg",f:"mp_dk_0699.jpg"},{u:"images/mp_ac_0639.jpg",f:"mp_ac_0639.jpg"},{u:"images/bp_0045.jpg",f:"bp_0045.jpg"},{u:"images/bp_0051.jpg",f:"bp_0051.jpg"},{u:"images/fd_qc_dk_0484.jpg",f:"fd_qc_dk_0484.jpg"},{u:"images/ac_0013.jpg",f:"ac_0013.jpg"},{u:"images/mp_dk_0666.jpg",f:"mp_dk_0666.jpg"},{u:"images/mp_0603.jpg",f:"mp_0603.jpg"},{u:"images/mp_0617.jpg",f:"mp_0617.jpg"},{u:"images/mp_dk_0672.jpg",f:"mp_dk_0672.jpg"},{u:"images/mp_0616.jpg",f:"mp_0616.jpg"},{u:"images/mp_dk_0673.jpg",f:"mp_dk_0673.jpg"},{u:"images/mp_dk_0667.jpg",f:"mp_dk_0667.jpg"},{u:"images/mp_0602.jpg",f:"mp_0602.jpg"},{u:"images/ac_0012.jpg",f:"ac_0012.jpg"},{u:"images/fd_qc_dk_0485.jpg",f:"fd_qc_dk_0485.jpg"},{u:"images/dk_0851.jpeg",f:"dk_0851.jpeg"},{u:"images/bp_0050.jpg",f:"bp_0050.jpg"},{u:"images/bp_0044.jpg",f:"bp_0044.jpg"},{u:"images/mp_ac_0638.jpg",f:"mp_ac_0638.jpg"},{u:"images/mp_dk_0698.jpg",f:"mp_dk_0698.jpg"},{u:"images/mp_0857.jpeg",f:"mp_0857.jpeg"},{u:"images/mp_qc_0805.jpg",f:"mp_qc_0805.jpg"},{u:"images/dk_0267.jpg",f:"dk_0267.jpg"},{u:"images/dk_0273.jpg",f:"dk_0273.jpg"},{u:"images/mp_0560.jpg",f:"mp_0560.jpg"},{u:"images/mp_0574.jpg",f:"mp_0574.jpg"},{u:"images/mp_qc_0795.jpg",f:"mp_qc_0795.jpg"},{u:"images/mp_0548.jpg",f:"mp_0548.jpg"},{u:"images/mp_qc_dk_0810.jpg",f:"mp_qc_dk_0810.jpg"},{u:"images/mp_dk_0707.jpg",f:"mp_dk_0707.jpg"},{u:"images/mp_dk_0713.jpg",f:"mp_dk_0713.jpg"},{u:"images/dk_0847.jpeg",f:"dk_0847.jpeg"},{u:"images/fd_0417.jpg",f:"fd_0417.jpg"},{u:"images/fd_0371.jpg",f:"fd_0371.jpg"},{u:"images/fd_0365.jpg",f:"fd_0365.jpg"},{u:"images/fd_0403.jpg",f:"fd_0403.jpg"},{u:"images/ff_0487.jpg",f:"ff_0487.jpg"},{u:"images/fd_0359.jpg",f:"fd_0359.jpg"},{u:"images/ff_0493.jpg",f:"ff_0493.jpg"},{u:"images/fd_0429.jpg",f:"fd_0429.jpg"},{u:"images/ff_0491.jpg",f:"ff_0491.jpg"},{u:"images/fd_0373.jpg",f:"fd_0373.jpg"},{u:"images/fd_0415.jpg",f:"fd_0415.jpg"},{u:"images/fd_0401.jpg",f:"fd_0401.jpg"},{u:"images/fd_0367.jpg",f:"fd_0367.jpg"},{u:"images/fd_0398.jpg",f:"fd_0398.jpg"},{u:"images/mp_dk_0705.jpg",f:"mp_dk_0705.jpg"},{u:"images/mp_dk_0711.jpg",f:"mp_dk_0711.jpg"},{u:"images/mp_0861.jpeg",f:"mp_0861.jpeg"},{u:"images/mp_qc_dk_0812.jpg",f:"mp_qc_dk_0812.jpg"},{u:"images/mp_fd_qc_0763.jpg",f:"mp_fd_qc_0763.jpg"},{u:"images/mp_0589.jpg",f:"mp_0589.jpg"},{u:"images/bp_fd_0069.jpg",f:"bp_fd_0069.jpg"},{u:"images/mp_qc_0797.jpg",f:"mp_qc_0797.jpg"},{u:"images/mp_0562.jpg",f:"mp_0562.jpg"},{u:"images/mp_0576.jpg",f:"mp_0576.jpg"},{u:"images/dk_0265.jpg",f:"dk_0265.jpg"},{u:"images/dk_0271.jpg",f:"dk_0271.jpg"},{u:"images/mp_0877.jpeg",f:"mp_0877.jpeg"},{u:"images/dk_0259.jpg",f:"dk_0259.jpg"},{u:"images/mp_qc_0807.jpg",f:"mp_qc_0807.jpg"},{u:"images/bp_0052.jpg",f:"bp_0052.jpg"},{u:"images/bp_0046.jpg",f:"bp_0046.jpg"},{u:"images/fd_0853.jpeg",f:"fd_0853.jpeg"},{u:"images/mp_0628.jpg",f:"mp_0628.jpg"},{u:"images/ac_0010.jpg",f:"ac_0010.jpg"},{u:"images/mp_bp_0644.jpg",f:"mp_bp_0644.jpg"},{u:"images/mp_dk_0659.jpg",f:"mp_dk_0659.jpg"},{u:"images/mp_dk_0671.jpg",f:"mp_dk_0671.jpg"},{u:"images/mp_0614.jpg",f:"mp_0614.jpg"},{u:"images/mp_0600.jpg",f:"mp_0600.jpg"},{u:"images/mp_dk_0665.jpg",f:"mp_dk_0665.jpg"},{u:"images/mp_0601.jpg",f:"mp_0601.jpg"},{u:"images/mp_dk_0664.jpg",f:"mp_dk_0664.jpg"},{u:"images/mp_dk_0670.jpg",f:"mp_dk_0670.jpg"},{u:"images/mp_0615.jpg",f:"mp_0615.jpg"},{u:"images/fd_qc_dk_0486.jpg",f:"fd_qc_dk_0486.jpg"},{u:"images/mp_dk_0658.jpg",f:"mp_dk_0658.jpg"},{u:"images/ac_0011.jpg",f:"ac_0011.jpg"},{u:"images/mp_0629.jpg",f:"mp_0629.jpg"},{u:"images/bp_0047.jpg",f:"bp_0047.jpg"},{u:"images/bp_0053.jpg",f:"bp_0053.jpg"},{u:"images/mp_qc_0806.jpg",f:"mp_qc_0806.jpg"},{u:"images/dk_0258.jpg",f:"dk_0258.jpg"},{u:"images/dk_0270.jpg",f:"dk_0270.jpg"},{u:"images/dk_0264.jpg",f:"dk_0264.jpg"},{u:"images/mp_0577.jpg",f:"mp_0577.jpg"},{u:"images/mp_0563.jpg",f:"mp_0563.jpg"},{u:"images/mp_qc_0796.jpg",f:"mp_qc_0796.jpg"},{u:"images/bp_fd_0068.jpg",f:"bp_fd_0068.jpg"},{u:"images/mp_0588.jpg",f:"mp_0588.jpg"},{u:"images/mp_fd_qc_0762.jpg",f:"mp_fd_qc_0762.jpg"},{u:"images/mp_qc_dk_0813.jpg",f:"mp_qc_dk_0813.jpg"},{u:"images/mp_dk_0710.jpg",f:"mp_dk_0710.jpg"},{u:"images/mp_dk_0704.jpg",f:"mp_dk_0704.jpg"},{u:"images/fd_0399.jpg",f:"fd_0399.jpg"},{u:"images/fd_0400.jpg",f:"fd_0400.jpg"},{u:"images/fd_0366.jpg",f:"fd_0366.jpg"},{u:"images/fd_0372.jpg",f:"fd_0372.jpg"},{u:"images/fd_0414.jpg",f:"fd_0414.jpg"},{u:"images/ff_0490.jpg",f:"ff_0490.jpg"},{u:"images/fd_0428.jpg",f:"fd_0428.jpg"}
+{u:"images/fd_0431.jpg",f:"fd_0431.jpg"},
+{u:"images/fd_0357.jpg",f:"fd_0357.jpg"},
+{u:"images/fd_0343.jpg",f:"fd_0343.jpg"},
+{u:"images/fd_0425.jpg",f:"fd_0425.jpg"},
+{u:"images/ff_0489.jpg",f:"ff_0489.jpg"},
+{u:"images/fd_0419.jpg",f:"fd_0419.jpg"},
+{u:"images/fd_0394.jpg",f:"fd_0394.jpg"},
+{u:"images/fd_0380.jpg",f:"fd_0380.jpg"},
+{u:"images/bp_ac_0058.jpg",f:"bp_ac_0058.jpg"},
+{u:"images/mp_dk_0709.jpg",f:"mp_dk_0709.jpg"},
+{u:"images/mp_0585.jpg",f:"mp_0585.jpg"},
+{u:"images/mp_0591.jpg",f:"mp_0591.jpg"},
+{u:"images/bp_fd_0071.jpg",f:"bp_fd_0071.jpg"},
+{u:"images/mp_0862.jpeg",f:"mp_0862.jpeg"},
+{u:"images/bp_fd_0065.jpg",f:"bp_fd_0065.jpg"},
+{u:"images/mp_0546.jpg",f:"mp_0546.jpg"},
+{u:"images/mp_0552.jpg",f:"mp_0552.jpg"},
+{u:"images/mp_fd_0743.jpg",f:"mp_fd_0743.jpg"},
+{u:"images/dk_0269.jpg",f:"dk_0269.jpg"},
+{u:"images/dk_0241.jpg",f:"dk_0241.jpg"},
+{u:"images/mp_0874.jpeg",f:"mp_0874.jpeg"},
+{u:"images/dk_0255.jpg",f:"dk_0255.jpg"},
+{u:"images/dk_0282.jpg",f:"dk_0282.jpg"},
+{u:"images/fd_qc_0479.jpg",f:"fd_qc_0479.jpg"},
+{u:"images/mp_dk_0696.jpg",f:"mp_dk_0696.jpg"},
+{u:"images/mp_dk_0682.jpg",f:"mp_dk_0682.jpg"},
+{u:"images/mp_0630.jpg",f:"mp_0630.jpg"},
+{u:"images/ac_0008.jpg",f:"ac_0008.jpg"},
+{u:"images/mp_dk_0655.jpg",f:"mp_dk_0655.jpg"},
+{u:"images/mp_0624.jpg",f:"mp_0624.jpg"},
+{u:"images/Floralfantasies34.webp",f:"Floralfantasies34.webp"},
+{u:"images/mp_dk_0669.jpg",f:"mp_dk_0669.jpg"},
+{u:"images/mp_0618.jpg",f:"mp_0618.jpg"},
+{u:"images/mp_0619.jpg",f:"mp_0619.jpg"},
+{u:"images/mp_0858.jpeg",f:"mp_0858.jpeg"},
+{u:"images/mp_dk_0668.jpg",f:"mp_dk_0668.jpg"},
+{u:"images/mp_0625.jpg",f:"mp_0625.jpg"},
+{u:"images/ac_0009.jpg",f:"ac_0009.jpg"},
+{u:"images/mp_0631.jpg",f:"mp_0631.jpg"},
+{u:"images/mp_dk_0654.jpg",f:"mp_dk_0654.jpg"},
+{u:"images/mp_dk_0683.jpg",f:"mp_dk_0683.jpg"},
+{u:"images/mp_ac_0637.jpg",f:"mp_ac_0637.jpg"},
+{u:"images/mp_dk_0697.jpg",f:"mp_dk_0697.jpg"},
+{u:"images/dk_0283.jpg",f:"dk_0283.jpg"},
+{u:"images/dk_0254.jpg",f:"dk_0254.jpg"},
+{u:"images/dk_0240.jpg",f:"dk_0240.jpg"},
+{u:"images/dk_0268.jpg",f:"dk_0268.jpg"},
+{u:"images/mp_fd_0742.jpg",f:"mp_fd_0742.jpg"},
+{u:"images/mp_0553.jpg",f:"mp_0553.jpg"},
+{u:"images/mp_0547.jpg",f:"mp_0547.jpg"},
+{u:"images/bp_fd_0064.jpg",f:"bp_fd_0064.jpg"},
+{u:"images/qc_0826.jpg",f:"qc_0826.jpg"},
+{u:"images/bp_fd_0070.jpg",f:"bp_fd_0070.jpg"},
+{u:"images/mp_0590.jpg",f:"mp_0590.jpg"},
+{u:"images/mp_0584.jpg",f:"mp_0584.jpg"},
+{u:"images/mp_dk_0708.jpg",f:"mp_dk_0708.jpg"},
+{u:"images/bp_ac_0059.jpg",f:"bp_ac_0059.jpg"},
+{u:"images/fd_0381.jpg",f:"fd_0381.jpg"},
+{u:"images/fd_0395.jpg",f:"fd_0395.jpg"},
+{u:"images/fd_0418.jpg",f:"fd_0418.jpg"},
+{u:"images/dk_0848.jpeg",f:"dk_0848.jpeg"},
+{u:"images/fd_0342.jpg",f:"fd_0342.jpg"},
+{u:"images/ff_0488.jpg",f:"ff_0488.jpg"},
+{u:"images/fd_0424.jpg",f:"fd_0424.jpg"},
+{u:"images/fd_0430.jpg",f:"fd_0430.jpg"},
+{u:"images/fd_0356.jpg",f:"fd_0356.jpg"},
+{u:"images/fd_0426.jpg",f:"fd_0426.jpg"},
+{u:"images/fd_0340.jpg",f:"fd_0340.jpg"},
+{u:"images/fd_0354.jpg",f:"fd_0354.jpg"},
+{u:"images/fd_0432.jpg",f:"fd_0432.jpg"},
+{u:"images/fd_0368.jpg",f:"fd_0368.jpg"},
+{u:"images/fd_0383.jpg",f:"fd_0383.jpg"},
+{u:"images/fd_0397.jpg",f:"fd_0397.jpg"},
+{u:"images/qc_0818.jpg",f:"qc_0818.jpg"},
+{u:"images/mp_0592.jpg",f:"mp_0592.jpg"},
+{u:"images/mp_0586.jpg",f:"mp_0586.jpg"},
+{u:"images/mp_qc_dk_0809.jpg",f:"mp_qc_dk_0809.jpg"},
+{u:"images/qc_0824.jpg",f:"qc_0824.jpg"},
+{u:"images/bp_fd_0066.jpg",f:"bp_fd_0066.jpg"},
+{u:"images/bp_fd_0072.jpg",f:"bp_fd_0072.jpg"},
+{u:"images/mp_0551.jpg",f:"mp_0551.jpg"},
+{u:"images/mp_0881.jpeg",f:"mp_0881.jpeg"},
+{u:"images/mp_qc_0798.jpg",f:"mp_qc_0798.jpg"},
+{u:"images/mp_0545.jpg",f:"mp_0545.jpg"},
+{u:"images/mp_fd_0754.jpg",f:"mp_fd_0754.jpg"},
+{u:"images/mp_0579.jpg",f:"mp_0579.jpg"},
+{u:"images/mp_fd_0740.jpg",f:"mp_fd_0740.jpg"},
+{u:"images/dk_0256.jpg",f:"dk_0256.jpg"},
+{u:"images/dk_0242.jpg",f:"dk_0242.jpg"},
+{u:"images/mp_0878.jpeg",f:"mp_0878.jpeg"},
+{u:"images/mp_qc_0808.jpg",f:"mp_qc_0808.jpg"},
+{u:"images/dk_0281.jpg",f:"dk_0281.jpg"},
+{u:"images/mp_dk_0681.jpg",f:"mp_dk_0681.jpg"},
+{u:"images/mp_dk_0695.jpg",f:"mp_dk_0695.jpg"},
+{u:"images/bp_0049.jpg",f:"bp_0049.jpg"},
+{u:"images/mp_0627.jpg",f:"mp_0627.jpg"},
+{u:"images/mp_dk_0656.jpg",f:"mp_dk_0656.jpg"},
+{u:"images/mp_0633.jpg",f:"mp_0633.jpg"},
+{u:"images/mp_dk_0885.jpeg",f:"mp_dk_0885.jpeg"},
+{u:"images/mp_dk_0657.jpg",f:"mp_dk_0657.jpg"},
+{u:"images/mp_0632.jpg",f:"mp_0632.jpg"},
+{u:"images/mp_0626.jpg",f:"mp_0626.jpg"},
+{u:"images/bp_0048.jpg",f:"bp_0048.jpg"},
+{u:"images/mp_dk_0694.jpg",f:"mp_dk_0694.jpg"},
+{u:"images/mp_dk_0680.jpg",f:"mp_dk_0680.jpg"},
+{u:"images/dk_0280.jpg",f:"dk_0280.jpg"},
+{u:"images/dk_0243.jpg",f:"dk_0243.jpg"},
+{u:"images/dk_0257.jpg",f:"dk_0257.jpg"},
+{u:"images/mp_0578.jpg",f:"mp_0578.jpg"},
+{u:"images/mp_fd_0741.jpg",f:"mp_fd_0741.jpg"},
+{u:"images/mp_0544.jpg",f:"mp_0544.jpg"},
+{u:"images/mp_qc_0799.jpg",f:"mp_qc_0799.jpg"},
+{u:"images/mp_0550.jpg",f:"mp_0550.jpg"},
+{u:"images/bp_fd_0073.jpg",f:"bp_fd_0073.jpg"},
+{u:"images/qc_0825.jpg",f:"qc_0825.jpg"},
+{u:"images/bp_fd_0067.jpg",f:"bp_fd_0067.jpg"},
+{u:"images/mp_0587.jpg",f:"mp_0587.jpg"},
+{u:"images/qc_0819.jpg",f:"qc_0819.jpg"},
+{u:"images/mp_0593.jpg",f:"mp_0593.jpg"},
+{u:"images/fd_0396.jpg",f:"fd_0396.jpg"},
+{u:"images/fd_0382.jpg",f:"fd_0382.jpg"},
+{u:"images/fd_0369.jpg",f:"fd_0369.jpg"},
+{u:"images/fd_0355.jpg",f:"fd_0355.jpg"},
+{u:"images/fd_0433.jpg",f:"fd_0433.jpg"},
+{u:"images/fd_0427.jpg",f:"fd_0427.jpg"},
+{u:"images/fd_0341.jpg",f:"fd_0341.jpg"},
+{u:"images/fd_0379.jpg",f:"fd_0379.jpg"},
+{u:"images/fd_0345.jpg",f:"fd_0345.jpg"},
+{u:"images/fd_0423.jpg",f:"fd_0423.jpg"},
+{u:"images/fd_0437.jpg",f:"fd_0437.jpg"},
+{u:"images/fd_0351.jpg",f:"fd_0351.jpg"},
+{u:"images/dk_0845.jpeg",f:"dk_0845.jpeg"},
+{u:"images/fd_0386.jpg",f:"fd_0386.jpg"},
+{u:"images/fd_0392.jpg",f:"fd_0392.jpg"},
+{u:"images/qc_0821.jpg",f:"qc_0821.jpg"},
+{u:"images/mp_0597.jpg",f:"mp_0597.jpg"},
+{u:"images/mp_0583.jpg",f:"mp_0583.jpg"},
+{u:"images/mp_0568.jpg",f:"mp_0568.jpg"},
+{u:"images/mp_fd_0751.jpg",f:"mp_fd_0751.jpg"},
+{u:"images/mp_fd_0745.jpg",f:"mp_fd_0745.jpg"},
+{u:"images/mp_0554.jpg",f:"mp_0554.jpg"},
+{u:"images/mp_qc_0789.jpg",f:"mp_qc_0789.jpg"},
+{u:"images/mp_0540.jpg",f:"mp_0540.jpg"},
+{u:"images/dk_0253.jpg",f:"dk_0253.jpg"},
+{u:"images/dk_0247.jpg",f:"dk_0247.jpg"},
+{u:"images/fd_qc_0480.jpg",f:"fd_qc_0480.jpg"},
+{u:"images/dk_0290.jpg",f:"dk_0290.jpg"},
+{u:"images/dk_0284.jpg",f:"dk_0284.jpg"},
+{u:"images/mp_dk_0684.jpg",f:"mp_dk_0684.jpg"},
+{u:"images/mp_dk_0690.jpg",f:"mp_dk_0690.jpg"},
+{u:"images/mp_0622.jpg",f:"mp_0622.jpg"},
+{u:"images/mp_0636.jpg",f:"mp_0636.jpg"},
+{u:"images/mp_dk_0653.jpg",f:"mp_dk_0653.jpg"},
+{u:"images/mp_dk_0652.jpg",f:"mp_dk_0652.jpg"},
+{u:"images/mp_0623.jpg",f:"mp_0623.jpg"},
+{u:"images/fd_ac_0458.jpg",f:"fd_ac_0458.jpg"},
+{u:"images/mp_dk_0691.jpg",f:"mp_dk_0691.jpg"},
+{u:"images/mp_dk_0685.jpg",f:"mp_dk_0685.jpg"},
+{u:"images/bp_dk_0843.jpeg",f:"bp_dk_0843.jpeg"},
+{u:"images/dk_0285.jpg",f:"dk_0285.jpg"},
+{u:"images/mp_0879.jpeg",f:"mp_0879.jpeg"},
+{u:"images/bp_fd_dk_0075.jpg",f:"bp_fd_dk_0075.jpg"},
+{u:"images/dk_0291.jpg",f:"dk_0291.jpg"},
+{u:"images/fd_qc_0481.jpg",f:"fd_qc_0481.jpg"},
+{u:"images/dk_0246.jpg",f:"dk_0246.jpg"},
+{u:"images/dk_0252.jpg",f:"dk_0252.jpg"},
+{u:"images/mp_0541.jpg",f:"mp_0541.jpg"},
+{u:"images/mp_qc_0788.jpg",f:"mp_qc_0788.jpg"},
+{u:"images/mp_0555.jpg",f:"mp_0555.jpg"},
+{u:"images/mp_0880.jpeg",f:"mp_0880.jpeg"},
+{u:"images/mp_fd_0744.jpg",f:"mp_fd_0744.jpg"},
+{u:"images/mp_0569.jpg",f:"mp_0569.jpg"},
+{u:"images/mp_fd_0750.jpg",f:"mp_fd_0750.jpg"},
+{u:"images/mp_0582.jpg",f:"mp_0582.jpg"},
+{u:"images/mp_0596.jpg",f:"mp_0596.jpg"},
+{u:"images/qc_0820.jpg",f:"qc_0820.jpg"},
+{u:"images/fd_0393.jpg",f:"fd_0393.jpg"},
+{u:"images/fd_0387.jpg",f:"fd_0387.jpg"},
+{u:"images/fd_0436.jpg",f:"fd_0436.jpg"},
+{u:"images/fd_0350.jpg",f:"fd_0350.jpg"},
+{u:"images/fd_0344.jpg",f:"fd_0344.jpg"},
+{u:"images/fd_0422.jpg",f:"fd_0422.jpg"},
+{u:"images/fd_0378.jpg",f:"fd_0378.jpg"},
+{u:"images/fd_0408.jpg",f:"fd_0408.jpg"},
+{u:"images/dk_0849.jpeg",f:"dk_0849.jpeg"},
+{u:"images/fd_0352.jpg",f:"fd_0352.jpg"},
+{u:"images/fd_0434.jpg",f:"fd_0434.jpg"},
+{u:"images/fd_0420.jpg",f:"fd_0420.jpg"},
+{u:"images/fd_0346.jpg",f:"fd_0346.jpg"},
+{u:"images/fd_0391.jpg",f:"fd_0391.jpg"},
+{u:"images/fd_0385.jpg",f:"fd_0385.jpg"},
+{u:"images/qc_0822.jpg",f:"qc_0822.jpg"},
+{u:"images/mp_0580.jpg",f:"mp_0580.jpg"},
+{u:"images/mp_0594.jpg",f:"mp_0594.jpg"},
+{u:"images/mp_fd_0746.jpg",f:"mp_fd_0746.jpg"},
+{u:"images/mp_fd_0752.jpg",f:"mp_fd_0752.jpg"},
+{u:"images/mp_0543.jpg",f:"mp_0543.jpg"},
+{u:"images/mp_0557.jpg",f:"mp_0557.jpg"},
+{u:"images/dk_0244.jpg",f:"dk_0244.jpg"},
+{u:"images/dk_0250.jpg",f:"dk_0250.jpg"},
+{u:"images/fd_qc_0483.jpg",f:"fd_qc_0483.jpg"},
+{u:"images/dk_0278.jpg",f:"dk_0278.jpg"},
+{u:"images/dk_0287.jpg",f:"dk_0287.jpg"},
+{u:"images/png-klipart-myagkaya-igrushka.jpg",f:"png-klipart-myagkaya-igrushka.jpg"},
+{u:"images/dk_0293.jpg",f:"dk_0293.jpg"},
+{u:"images/mp_dk_0693.jpg",f:"mp_dk_0693.jpg"},
+{u:"images/mp_dk_0687.jpg",f:"mp_dk_0687.jpg"},
+{u:"images/mp_0609.jpg",f:"mp_0609.jpg"},
+{u:"images/mp_0859.jpeg",f:"mp_0859.jpeg"},
+{u:"images/mp_dk_0678.jpg",f:"mp_dk_0678.jpg"},
+{u:"images/mp_0635.jpg",f:"mp_0635.jpg"},
+{u:"images/mp_0621.jpg",f:"mp_0621.jpg"},
+{u:"images/mp_0620.jpg",f:"mp_0620.jpg"},
+{u:"images/mp_0634.jpg",f:"mp_0634.jpg"},
+{u:"images/mp_dk_0679.jpg",f:"mp_dk_0679.jpg"},
+{u:"images/mp_0608.jpg",f:"mp_0608.jpg"},
+{u:"images/mp_dk_0686.jpg",f:"mp_dk_0686.jpg"},
+{u:"images/mp_dk_0692.jpg",f:"mp_dk_0692.jpg"},
+{u:"images/dk_0292.jpg",f:"dk_0292.jpg"},
+{u:"images/dk_0286.jpg",f:"dk_0286.jpg"},
+{u:"images/fd_qc_0482.jpg",f:"fd_qc_0482.jpg"},
+{u:"images/dk_0279.jpg",f:"dk_0279.jpg"},
+{u:"images/dk_0251.jpg",f:"dk_0251.jpg"},
+{u:"images/mp_0875.jpeg",f:"mp_0875.jpeg"},
+{u:"images/dk_0245.jpg",f:"dk_0245.jpg"},
+{u:"images/mp_0556.jpg",f:"mp_0556.jpg"},
+{u:"images/mp_0542.jpg",f:"mp_0542.jpg"},
+{u:"images/mp_fd_0753.jpg",f:"mp_fd_0753.jpg"},
+{u:"images/mp_fd_0747.jpg",f:"mp_fd_0747.jpg"},
+{u:"images/mp_0595.jpg",f:"mp_0595.jpg"},
+{u:"images/mp_0581.jpg",f:"mp_0581.jpg"},
+{u:"images/qc_0823.jpg",f:"qc_0823.jpg"},
+{u:"images/mp_0863.jpeg",f:"mp_0863.jpeg"},
+{u:"images/fd_0384.jpg",f:"fd_0384.jpg"},
+{u:"images/fd_0390.jpg",f:"fd_0390.jpg"},
+{u:"images/fd_0421.jpg",f:"fd_0421.jpg"},
+{u:"images/fd_0347.jpg",f:"fd_0347.jpg"},
+{u:"images/fd_0353.jpg",f:"fd_0353.jpg"},
+{u:"images/fd_0435.jpg",f:"fd_0435.jpg"},
+{u:"images/fd_0409.jpg",f:"fd_0409.jpg"},
+{u:"images/fd_0334.jpg",f:"fd_0334.jpg"},
+{u:"images/fd_0452.jpg",f:"fd_0452.jpg"},
+{u:"images/fd_0446.jpg",f:"fd_0446.jpg"},
+{u:"images/qc_dk_0835.jpg",f:"qc_dk_0835.jpg"},
+{u:"images/mp_fd_dk_0761.jpg",f:"mp_fd_dk_0761.jpg"},
+{u:"images/dk_0197.jpg",f:"dk_0197.jpg"},
+{u:"images/dk_0183.jpg",f:"dk_0183.jpg"},
+{u:"images/mp_ff_0773.jpg",f:"mp_ff_0773.jpg"},
+{u:"images/mp_0525.jpg",f:"mp_0525.jpg"},
+{u:"images/mp_0531.jpg",f:"mp_0531.jpg"},
+{u:"images/mp_0519.jpg",f:"mp_0519.jpg"},
+{u:"images/mp_fd_0720.jpg",f:"mp_fd_0720.jpg"},
+{u:"images/mp_fd_0734.jpg",f:"mp_fd_0734.jpg"},
+{u:"images/mp_0868.jpeg",f:"mp_0868.jpeg"},
+{u:"images/dk_0222.jpg",f:"dk_0222.jpg"},
+{u:"images/dk_0236.jpg",f:"dk_0236.jpg"},
+{u:"images/mp_ff_dk_0783.jpg",f:"mp_ff_dk_0783.jpg"},
+{u:"images/mp_ac_0641.jpg",f:"mp_ac_0641.jpg"},
+{u:"images/fd_dk_0463.jpg",f:"fd_dk_0463.jpg"},
+{u:"images/fd_dk_0477.jpg",f:"fd_dk_0477.jpg"},
+{u:"images/fd_dk_0476.jpg",f:"fd_dk_0476.jpg"},
+{u:"images/fd_dk_0462.jpg",f:"fd_dk_0462.jpg"},
+{u:"images/mp_ff_dk_0782.jpg",f:"mp_ff_dk_0782.jpg"},
+{u:"images/mp_ac_0640.jpg",f:"mp_ac_0640.jpg"},
+{u:"images/dk_0237.jpg",f:"dk_0237.jpg"},
+{u:"images/dk_0223.jpg",f:"dk_0223.jpg"},
+{u:"images/mp_fd_0735.jpg",f:"mp_fd_0735.jpg"},
+{u:"images/mp_0518.jpg",f:"mp_0518.jpg"},
+{u:"images/mp_fd_0721.jpg",f:"mp_fd_0721.jpg"},
+{u:"images/mp_0530.jpg",f:"mp_0530.jpg"},
+{u:"images/mp_0524.jpg",f:"mp_0524.jpg"},
+{u:"images/mp_ff_0772.jpg",f:"mp_ff_0772.jpg"},
+{u:"images/dk_0182.jpg",f:"dk_0182.jpg"},
+{u:"images/dk_0196.jpg",f:"dk_0196.jpg"},
+{u:"images/mp_fd_dk_0760.jpg",f:"mp_fd_dk_0760.jpg"},
+{u:"images/qc_dk_0834.jpg",f:"qc_dk_0834.jpg"},
+{u:"images/fd_0447.jpg",f:"fd_0447.jpg"},
+{u:"images/fd_0335.jpg",f:"fd_0335.jpg"},
+{u:"images/fd_0453.jpg",f:"fd_0453.jpg"},
+{u:"images/fd_0323.jpg",f:"fd_0323.jpg"},
+{u:"images/fd_0445.jpg",f:"fd_0445.jpg"},
+{u:"images/fd_0451.jpg",f:"fd_0451.jpg"},
+{u:"images/fd_0337.jpg",f:"fd_0337.jpg"},
+{u:"images/qc_dk_0836.jpg",f:"qc_dk_0836.jpg"},
+{u:"images/dk_0180.jpg",f:"dk_0180.jpg"},
+{u:"images/dk_0194.jpg",f:"dk_0194.jpg"},
+{u:"images/mp_ff_0770.jpg",f:"mp_ff_0770.jpg"},
+{u:"images/mp_0864.jpeg",f:"mp_0864.jpeg"},
+{u:"images/mp_0532.jpg",f:"mp_0532.jpg"},
+{u:"images/mp_0526.jpg",f:"mp_0526.jpg"},
+{u:"images/mp_fd_0737.jpg",f:"mp_fd_0737.jpg"},
+{u:"images/mp_fd_0723.jpg",f:"mp_fd_0723.jpg"},
+{u:"images/dk_0209.jpg",f:"dk_0209.jpg"},
+{u:"images/dk_0235.jpg",f:"dk_0235.jpg"},
+{u:"images/dk_0221.jpg",f:"dk_0221.jpg"},
+{u:"images/mp_0872.jpeg",f:"mp_0872.jpeg"},
+{u:"images/ff_dk_0509.jpg",f:"ff_dk_0509.jpg"},
+{u:"images/mp_ac_0642.jpg",f:"mp_ac_0642.jpg"},
+{u:"images/mp_ff_dk_0780.jpg",f:"mp_ff_dk_0780.jpg"},
+{u:"images/fd_dk_0474.jpg",f:"fd_dk_0474.jpg"},
+{u:"images/fd_dk_0460.jpg",f:"fd_dk_0460.jpg"},
+{u:"images/fd_dk_0461.jpg",f:"fd_dk_0461.jpg"},
+{u:"images/fd_dk_0475.jpg",f:"fd_dk_0475.jpg"},
+{u:"images/mp_ac_0643.jpg",f:"mp_ac_0643.jpg"},
+{u:"images/mp_ff_dk_0781.jpg",f:"mp_ff_dk_0781.jpg"},
+{u:"images/ff_dk_0508.jpg",f:"ff_dk_0508.jpg"},
+{u:"images/dk_0220.jpg",f:"dk_0220.jpg"},
+{u:"images/dk_0234.jpg",f:"dk_0234.jpg"},
+{u:"images/dk_0208.jpg",f:"dk_0208.jpg"},
+{u:"images/mp_fd_0722.jpg",f:"mp_fd_0722.jpg"},
+{u:"images/mp_fd_0736.jpg",f:"mp_fd_0736.jpg"},
+{u:"images/mp_0527.jpg",f:"mp_0527.jpg"},
+{u:"images/mp_0533.jpg",f:"mp_0533.jpg"},
+{u:"images/mp_ff_0771.jpg",f:"mp_ff_0771.jpg"},
+{u:"images/dk_0195.jpg",f:"dk_0195.jpg"},
+{u:"images/dk_0181.jpg",f:"dk_0181.jpg"},
+{u:"images/qc_dk_0837.jpg",f:"qc_dk_0837.jpg"},
+{u:"images/fd_0450.jpg",f:"fd_0450.jpg"},
+{u:"images/fd_0336.jpg",f:"fd_0336.jpg"},
+{u:"images/fd_0322.jpg",f:"fd_0322.jpg"},
+{u:"images/fd_0444.jpg",f:"fd_0444.jpg"},
+{u:"images/bp_dk_0062.jpg",f:"bp_dk_0062.jpg"},
+{u:"images/fd_0440.jpg",f:"fd_0440.jpg"},
+{u:"images/fd_0326.jpg",f:"fd_0326.jpg"},
+{u:"images/fd_0332.jpg",f:"fd_0332.jpg"},
+{u:"images/fd_0454.jpg",f:"fd_0454.jpg"},
+{u:"images/dk_0185.jpg",f:"dk_0185.jpg"},
+{u:"images/dk_0191.jpg",f:"dk_0191.jpg"},
+{u:"images/qc_dk_0827.jpg",f:"qc_dk_0827.jpg"},
+{u:"images/qc_dk_0833.jpg",f:"qc_dk_0833.jpg"},
+{u:"images/mp_ff_0775.jpg",f:"mp_ff_0775.jpg"},
+{u:"images/mp_fd_0732.jpg",f:"mp_fd_0732.jpg"},
+{u:"images/mp_fd_0726.jpg",f:"mp_fd_0726.jpg"},
+{u:"images/mp_0537.jpg",f:"mp_0537.jpg"},
+{u:"images/mp_0523.jpg",f:"mp_0523.jpg"},
+{u:"images/dk_0230.jpg",f:"dk_0230.jpg"},
+{u:"images/bp_fd_ac_0074.jpg",f:"bp_fd_ac_0074.jpg"},
+{u:"images/dk_0224.jpg",f:"dk_0224.jpg"},
+{u:"images/dk_0218.jpg",f:"dk_0218.jpg"},
+{u:"images/fd_dk_0471.jpg",f:"fd_dk_0471.jpg"},
+{u:"images/fd_dk_0465.jpg",f:"fd_dk_0465.jpg"},
+{u:"images/fd_dk_0459.jpg",f:"fd_dk_0459.jpg"},
+{u:"images/fd_dk_0464.jpg",f:"fd_dk_0464.jpg"},
+{u:"images/fd_dk_0470.jpg",f:"fd_dk_0470.jpg"},
+{u:"images/dk_0219.jpg",f:"dk_0219.jpg"},
+{u:"images/dk_0225.jpg",f:"dk_0225.jpg"},
+{u:"images/dk_0231.jpg",f:"dk_0231.jpg"},
+{u:"images/mp_0873.jpeg",f:"mp_0873.jpeg"},
+{u:"images/mp_0522.jpg",f:"mp_0522.jpg"},
+{u:"images/mp_0536.jpg",f:"mp_0536.jpg"},
+{u:"images/mp_fd_0727.jpg",f:"mp_fd_0727.jpg"},
+{u:"images/mp_fd_0733.jpg",f:"mp_fd_0733.jpg"},
+{u:"images/mp_ff_0774.jpg",f:"mp_ff_0774.jpg"},
+{u:"images/mp_0865.jpeg",f:"mp_0865.jpeg"},
+{u:"images/qc_dk_0832.jpg",f:"qc_dk_0832.jpg"},
+{u:"images/dk_0190.jpg",f:"dk_0190.jpg"},
+{u:"images/dk_0184.jpg",f:"dk_0184.jpg"},
+{u:"images/fd_0333.jpg",f:"fd_0333.jpg"},
+{u:"images/fd_0455.jpg",f:"fd_0455.jpg"},
+{u:"images/fd_0441.jpg",f:"fd_0441.jpg"},
+{u:"images/bp_dk_0063.jpg",f:"bp_dk_0063.jpg"},
+{u:"images/fd_0327.jpg",f:"fd_0327.jpg"},
+{u:"images/fd_0457.jpg",f:"fd_0457.jpg"},
+{u:"images/fd_0331.jpg",f:"fd_0331.jpg"},
+{u:"images/dk_0179.jpg",f:"dk_0179.jpg"},
+{u:"images/fd_0325.jpg",f:"fd_0325.jpg"},
+{u:"images/bp_dk_0061.jpg",f:"bp_dk_0061.jpg"},
+{u:"images/fd_0443.jpg",f:"fd_0443.jpg"},
+{u:"images/dk_0192.jpg",f:"dk_0192.jpg"},
+{u:"images/dk_0186.jpg",f:"dk_0186.jpg"},
+{u:"images/mp_fd_dk_0758.jpg",f:"mp_fd_dk_0758.jpg"},
+{u:"images/qc_dk_0830.jpg",f:"qc_dk_0830.jpg"},
+{u:"images/mp_ff_0776.jpg",f:"mp_ff_0776.jpg"},
+{u:"images/mp_fd_0725.jpg",f:"mp_fd_0725.jpg"},
+{u:"images/mp_fd_0731.jpg",f:"mp_fd_0731.jpg"},
+{u:"images/mp_fd_0719.jpg",f:"mp_fd_0719.jpg"},
+{u:"images/mp_0520.jpg",f:"mp_0520.jpg"},
+{u:"images/mp_0534.jpg",f:"mp_0534.jpg"},
+{u:"images/dk_0227.jpg",f:"dk_0227.jpg"},
+{u:"images/dk_0233.jpg",f:"dk_0233.jpg"},
+{u:"images/fd_dk_0466.jpg",f:"fd_dk_0466.jpg"},
+{u:"images/fd_dk_0472.jpg",f:"fd_dk_0472.jpg"},
+{u:"images/bp_0038.jpg",f:"bp_0038.jpg"},
+{u:"images/mp_ff_dk_0779.jpg",f:"mp_ff_dk_0779.jpg"},
+{u:"images/fd_dk_0473.jpg",f:"fd_dk_0473.jpg"},
+{u:"images/bp_0039.jpg",f:"bp_0039.jpg"},
+{u:"images/fd_dk_0467.jpg",f:"fd_dk_0467.jpg"},
+{u:"images/dk_0232.jpg",f:"dk_0232.jpg"},
+{u:"images/dk_0226.jpg",f:"dk_0226.jpg"},
+{u:"images/mp_0535.jpg",f:"mp_0535.jpg"},
+{u:"images/mp_fd_0718.jpg",f:"mp_fd_0718.jpg"},
+{u:"images/mp_0521.jpg",f:"mp_0521.jpg"},
+{u:"images/mp_fd_0730.jpg",f:"mp_fd_0730.jpg"},
+{u:"images/mp_fd_0724.jpg",f:"mp_fd_0724.jpg"},
+{u:"images/mp_0869.jpeg",f:"mp_0869.jpeg"},
+{u:"images/mp_ff_0777.jpg",f:"mp_ff_0777.jpg"},
+{u:"images/qc_dk_0831.jpg",f:"qc_dk_0831.jpg"},
+{u:"images/mp_fd_dk_0759.jpg",f:"mp_fd_dk_0759.jpg"},
+{u:"images/dk_0187.jpg",f:"dk_0187.jpg"},
+{u:"images/dk_0193.jpg",f:"dk_0193.jpg"},
+{u:"images/fd_0324.jpg",f:"fd_0324.jpg"},
+{u:"images/dk_0178.jpg",f:"dk_0178.jpg"},
+{u:"images/fd_0442.jpg",f:"fd_0442.jpg"},
+{u:"images/bp_dk_0060.jpg",f:"bp_dk_0060.jpg"},
+{u:"images/fd_0456.jpg",f:"fd_0456.jpg"},
+{u:"images/fd_0330.jpg",f:"fd_0330.jpg"},
+{u:"images/fd_0329.jpg",f:"fd_0329.jpg"},
+{u:"images/dk_0175.jpg",f:"dk_0175.jpg"},
+{u:"images/qc_dk_0828.jpg",f:"qc_dk_0828.jpg"},
+{u:"images/mp_fd_0729.jpg",f:"mp_fd_0729.jpg"},
+{u:"images/mp_0538.jpg",f:"mp_0538.jpg"},
+{u:"images/dk_0203.jpg",f:"dk_0203.jpg"},
+{u:"images/dk_0217.jpg",f:"dk_0217.jpg"},
+{u:"images/bp_0034.jpg",f:"bp_0034.jpg"},
+{u:"images/ff_dk_0503.jpg",f:"ff_dk_0503.jpg"},
+{u:"images/1251023401_0likru_bezimeni-1_54161015967_o.gif",f:"1251023401_0likru_bezimeni-1_54161015967_o.gif"},
+{u:"images/ff_dk_0502.jpg",f:"ff_dk_0502.jpg"},
+{u:"images/bp_0035.jpg",f:"bp_0035.jpg"},
+{u:"images/dk_0216.jpg",f:"dk_0216.jpg"},
+{u:"images/dk_0202.jpg",f:"dk_0202.jpg"},
+{u:"images/mp_0539.jpg",f:"mp_0539.jpg"},
+{u:"images/mp_fd_0728.jpg",f:"mp_fd_0728.jpg"},
+{u:"images/qc_dk_0829.jpg",f:"qc_dk_0829.jpg"},
+{u:"images/bp_0840.jpeg",f:"bp_0840.jpeg"},
+{u:"images/mp_fd_dk_0755.jpg",f:"mp_fd_dk_0755.jpg"},
+{u:"images/dk_0174.jpg",f:"dk_0174.jpg"},
+{u:"images/fd_0328.jpg",f:"fd_0328.jpg"},
+{u:"images/dk_0176.jpg",f:"dk_0176.jpg"},
+{u:"images/fd_dk_0856.jpeg",f:"fd_dk_0856.jpeg"},
+{u:"images/dk_0189.jpg",f:"dk_0189.jpg"},
+{u:"images/mp_fd_dk_0757.jpg",f:"mp_fd_dk_0757.jpg"},
+{u:"images/dk_0228.jpg",f:"dk_0228.jpg"},
+{u:"images/dk_0214.jpg",f:"dk_0214.jpg"},
+{u:"images/dk_0200.jpg",f:"dk_0200.jpg"},
+{u:"images/bp_fd_0844.jpeg",f:"bp_fd_0844.jpeg"},
+{u:"images/fd_dk_0469.jpg",f:"fd_dk_0469.jpg"},
+{u:"images/bp_0037.jpg",f:"bp_0037.jpg"},
+{u:"images/ff_dk_0500.jpg",f:"ff_dk_0500.jpg"},
+{u:"images/fd_0854.jpeg",f:"fd_0854.jpeg"},
+{u:"images/ff_dk_0501.jpg",f:"ff_dk_0501.jpg"},
+{u:"images/bp_0036.jpg",f:"bp_0036.jpg"},
+{u:"images/fd_dk_0468.jpg",f:"fd_dk_0468.jpg"},
+{u:"images/dk_0201.jpg",f:"dk_0201.jpg"},
+{u:"images/mp_0870.jpeg",f:"mp_0870.jpeg"},
+{u:"images/dk_0215.jpg",f:"dk_0215.jpg"},
+{u:"images/dk_0229.jpg",f:"dk_0229.jpg"},
+{u:"images/mp_fd_0717.jpg",f:"mp_fd_0717.jpg"},
+{u:"images/mp_0866.jpeg",f:"mp_0866.jpeg"},
+{u:"images/mp_ff_0778.jpg",f:"mp_ff_0778.jpg"},
+{u:"images/mp_fd_dk_0756.jpg",f:"mp_fd_dk_0756.jpg"},
+{u:"images/dk_0188.jpg",f:"dk_0188.jpg"},
+{u:"images/dk_0177.jpg",f:"dk_0177.jpg"},
+{u:"images/dk_0173.jpg",f:"dk_0173.jpg"},
+{u:"images/fd_0449.jpg",f:"fd_0449.jpg"},
+{u:"images/fd_0887.png",f:"fd_0887.png"},
+{u:"images/dk_0198.jpg",f:"dk_0198.jpg"},
+{u:"images/mp_0867.jpeg",f:"mp_0867.jpeg"},
+{u:"images/mp_ff_0768.jpg",f:"mp_ff_0768.jpg"},
+{u:"images/mp_0516.jpg",f:"mp_0516.jpg"},
+{u:"images/dk_0211.jpg",f:"dk_0211.jpg"},
+{u:"images/mp_0871.jpeg",f:"mp_0871.jpeg"},
+{u:"images/dk_0205.jpg",f:"dk_0205.jpg"},
+{u:"images/dk_0239.jpg",f:"dk_0239.jpg"},
+{u:"images/ff_dk_0511.jpg",f:"ff_dk_0511.jpg"},
+{u:"images/ff_dk_0505.jpg",f:"ff_dk_0505.jpg"},
+{u:"images/fd_dk_0478.jpg",f:"fd_dk_0478.jpg"},
+{u:"images/fd_0855.jpeg",f:"fd_0855.jpeg"},
+{u:"images/ff_dk_0504.jpg",f:"ff_dk_0504.jpg"},
+{u:"images/ff_dk_0510.jpg",f:"ff_dk_0510.jpg"},
+{u:"images/dk_0238.jpg",f:"dk_0238.jpg"},
+{u:"images/dk_0204.jpg",f:"dk_0204.jpg"},
+{u:"images/dk_0210.jpg",f:"dk_0210.jpg"},
+{u:"images/mp_0517.jpg",f:"mp_0517.jpg"},
+{u:"images/mp_ff_0769.jpg",f:"mp_ff_0769.jpg"},
+{u:"images/dk_0199.jpg",f:"dk_0199.jpg"},
+{u:"images/fd_0448.jpg",f:"fd_0448.jpg"},
+{u:"images/fd_0338.jpg",f:"fd_0338.jpg"},
+{u:"images/qc_dk_0839.jpg",f:"qc_dk_0839.jpg"},
+{u:"images/bp_0841.jpeg",f:"bp_0841.jpeg"},
+{u:"images/ff_dk_0499.jpg",f:"ff_dk_0499.jpg"},
+{u:"images/mp_ff_0886.jpeg",f:"mp_ff_0886.jpeg"},
+{u:"images/mp_fd_qc_dk_0767.jpg",f:"mp_fd_qc_dk_0767.jpg"},
+{u:"images/mp_0529.jpg",f:"mp_0529.jpg"},
+{u:"images/mp_fd_0738.jpg",f:"mp_fd_0738.jpg"},
+{u:"images/mp_0515.jpg",f:"mp_0515.jpg"},
+{u:"images/dk_0206.jpg",f:"dk_0206.jpg"},
+{u:"images/dk_0212.jpg",f:"dk_0212.jpg"},
+{u:"images/ff_dk_0506.jpg",f:"ff_dk_0506.jpg"},
+{u:"images/ff_dk_0512.jpg",f:"ff_dk_0512.jpg"},
+{u:"images/ff_dk_0513.jpg",f:"ff_dk_0513.jpg"},
+{u:"images/ff_dk_0507.jpg",f:"ff_dk_0507.jpg"},
+{u:"images/dk_0213.jpg",f:"dk_0213.jpg"},
+{u:"images/dk_0207.jpg",f:"dk_0207.jpg"},
+{u:"images/mp_0514.jpg",f:"mp_0514.jpg"},
+{u:"images/mp_fd_0739.jpg",f:"mp_fd_0739.jpg"},
+{u:"images/mp_0528.jpg",f:"mp_0528.jpg"},
+{u:"images/ff_dk_0498.jpg",f:"ff_dk_0498.jpg"},
+{u:"images/qc_dk_0838.jpg",f:"qc_dk_0838.jpg"},
+{u:"images/fd_0339.jpg",f:"fd_0339.jpg"},
+{u:"images/fd_0410.jpg",f:"fd_0410.jpg"},
+{u:"images/fd_0376.jpg",f:"fd_0376.jpg"},
+{u:"images/fd_0362.jpg",f:"fd_0362.jpg"},
+{u:"images/fd_0404.jpg",f:"fd_0404.jpg"},
+{u:"images/fd_0438.jpg",f:"fd_0438.jpg"},
+{u:"images/ff_0494.jpg",f:"ff_0494.jpg"},
+{u:"images/mp_dk_0700.jpg",f:"mp_dk_0700.jpg"},
+{u:"images/mp_dk_0714.jpg",f:"mp_dk_0714.jpg"},
+{u:"images/ac_dk_0015.jpg",f:"ac_dk_0015.jpg"},
+{u:"images/fd_0389.jpg",f:"fd_0389.jpg"},
+{u:"images/mp_qc_dk_0817.jpg",f:"mp_qc_dk_0817.jpg"},
+{u:"images/mp_0598.jpg",f:"mp_0598.jpg"},
+{u:"images/mp_fd_qc_0766.jpg",f:"mp_fd_qc_0766.jpg"},
+{u:"images/mp_0567.jpg",f:"mp_0567.jpg"},
+{u:"images/mp_0573.jpg",f:"mp_0573.jpg"},
+{u:"images/mp_qc_0786.jpg",f:"mp_qc_0786.jpg"},
+{u:"images/mp_qc_0792.jpg",f:"mp_qc_0792.jpg"},
+{u:"images/dk_0248.jpg",f:"dk_0248.jpg"},
+{u:"images/dk_0260.jpg",f:"dk_0260.jpg"},
+{u:"images/dk_0274.jpg",f:"dk_0274.jpg"},
+{u:"images/mp_qc_0802.jpg",f:"mp_qc_0802.jpg"},
+{u:"images/bp_0057.jpg",f:"bp_0057.jpg"},
+{u:"images/bp_0043.jpg",f:"bp_0043.jpg"},
+{u:"images/mp_0611.jpg",f:"mp_0611.jpg"},
+{u:"images/mp_dk_0674.jpg",f:"mp_dk_0674.jpg"},
+{u:"images/mp_dk_0660.jpg",f:"mp_dk_0660.jpg"},
+{u:"images/mp_0605.jpg",f:"mp_0605.jpg"},
+{u:"images/fd_0852.jpeg",f:"fd_0852.jpeg"},
+{u:"images/ac_0014.jpg",f:"ac_0014.jpg"},
+{u:"images/mp_dk_0661.jpg",f:"mp_dk_0661.jpg"},
+{u:"images/mp_0604.jpg",f:"mp_0604.jpg"},
+{u:"images/mp_0610.jpg",f:"mp_0610.jpg"},
+{u:"images/mp_dk_0675.jpg",f:"mp_dk_0675.jpg"},
+{u:"images/bp_0042.jpg",f:"bp_0042.jpg"},
+{u:"images/bp_0056.jpg",f:"bp_0056.jpg"},
+{u:"images/mp_qc_0803.jpg",f:"mp_qc_0803.jpg"},
+{u:"images/dk_0275.jpg",f:"dk_0275.jpg"},
+{u:"images/dk_0261.jpg",f:"dk_0261.jpg"},
+{u:"images/mp_0876.jpeg",f:"mp_0876.jpeg"},
+{u:"images/dk_0249.jpg",f:"dk_0249.jpg"},
+{u:"images/mp_qc_0793.jpg",f:"mp_qc_0793.jpg"},
+{u:"images/mp_qc_0787.jpg",f:"mp_qc_0787.jpg"},
+{u:"images/mp_0572.jpg",f:"mp_0572.jpg"},
+{u:"images/mp_0566.jpg",f:"mp_0566.jpg"},
+{u:"images/mp_0860.jpeg",f:"mp_0860.jpeg"},
+{u:"images/mp_qc_dk_0816.jpg",f:"mp_qc_dk_0816.jpg"},
+{u:"images/mp_0599.jpg",f:"mp_0599.jpg"},
+{u:"images/fd_0388.jpg",f:"fd_0388.jpg"},
+{u:"images/mp_dk_0715.jpg",f:"mp_dk_0715.jpg"},
+{u:"images/mp_dk_0701.jpg",f:"mp_dk_0701.jpg"},
+{u:"images/ff_0495.jpg",f:"ff_0495.jpg"},
+{u:"images/fd_0439.jpg",f:"fd_0439.jpg"},
+{u:"images/fd_0363.jpg",f:"fd_0363.jpg"},
+{u:"images/fd_0405.jpg",f:"fd_0405.jpg"},
+{u:"images/fd_0411.jpg",f:"fd_0411.jpg"},
+{u:"images/fd_0377.jpg",f:"fd_0377.jpg"},
+{u:"images/fd_0407.jpg",f:"fd_0407.jpg"},
+{u:"images/fd_0361.jpg",f:"fd_0361.jpg"},
+{u:"images/fd_0375.jpg",f:"fd_0375.jpg"},
+{u:"images/fd_0413.jpg",f:"fd_0413.jpg"},
+{u:"images/ff_0497.jpg",f:"ff_0497.jpg"},
+{u:"images/fd_0349.jpg",f:"fd_0349.jpg"},
+{u:"images/ac_dk_0016.jpg",f:"ac_dk_0016.jpg"},
+{u:"images/mp_dk_0703.jpg",f:"mp_dk_0703.jpg"},
+{u:"images/dk_0846.jpeg",f:"dk_0846.jpeg"},
+{u:"images/mp_fd_qc_0765.jpg",f:"mp_fd_qc_0765.jpg"},
+{u:"images/mp_qc_dk_0814.jpg",f:"mp_qc_dk_0814.jpg"},
+{u:"images/mp_fd_0749.jpg",f:"mp_fd_0749.jpg"},
+{u:"images/mp_0570.jpg",f:"mp_0570.jpg"},
+{u:"images/mp_0564.jpg",f:"mp_0564.jpg"},
+{u:"images/mp_qc_0791.jpg",f:"mp_qc_0791.jpg"},
+{u:"images/mp_qc_0785.jpg",f:"mp_qc_0785.jpg"},
+{u:"images/mp_0558.jpg",f:"mp_0558.jpg"},
+{u:"images/dk_0277.jpg",f:"dk_0277.jpg"},
+{u:"images/dk_0263.jpg",f:"dk_0263.jpg"},
+{u:"images/dk_0288.jpg",f:"dk_0288.jpg"},
+{u:"images/mp_qc_0801.jpg",f:"mp_qc_0801.jpg"},
+{u:"images/bp_0040.jpg",f:"bp_0040.jpg"},
+{u:"images/bp_ac_0842.jpeg",f:"bp_ac_0842.jpeg"},
+{u:"images/bp_0054.jpg",f:"bp_0054.jpg"},
+{u:"images/mp_dk_0688.jpg",f:"mp_dk_0688.jpg"},
+{u:"images/mp_0606.jpg",f:"mp_0606.jpg"},
+{u:"images/mp_dk_0663.jpg",f:"mp_dk_0663.jpg"},
+{u:"images/mp_dk_0677.jpg",f:"mp_dk_0677.jpg"},
+{u:"images/mp_0612.jpg",f:"mp_0612.jpg"},
+{u:"images/dk_0850.jpeg",f:"dk_0850.jpeg"},
+{u:"images/mp_dk_0676.jpg",f:"mp_dk_0676.jpg"},
+{u:"images/mp_0613.jpg",f:"mp_0613.jpg"},
+{u:"images/mp_0607.jpg",f:"mp_0607.jpg"},
+{u:"images/mp_dk_0662.jpg",f:"mp_dk_0662.jpg"},
+{u:"images/mp_dk_0689.jpg",f:"mp_dk_0689.jpg"},
+{u:"images/bp_0055.jpg",f:"bp_0055.jpg"},
+{u:"images/bp_0041.jpg",f:"bp_0041.jpg"},
+{u:"images/dk_0289.jpg",f:"dk_0289.jpg"},
+{u:"images/mp_qc_0800.jpg",f:"mp_qc_0800.jpg"},
+{u:"images/dk_0262.jpg",f:"dk_0262.jpg"},
+{u:"images/dk_0276.jpg",f:"dk_0276.jpg"},
+{u:"images/mp_0559.jpg",f:"mp_0559.jpg"},
+{u:"images/mp_qc_0784.jpg",f:"mp_qc_0784.jpg"},
+{u:"images/mp_qc_0790.jpg",f:"mp_qc_0790.jpg"},
+{u:"images/mp_0565.jpg",f:"mp_0565.jpg"},
+{u:"images/mp_0883.jpeg",f:"mp_0883.jpeg"},
+{u:"images/mp_fd_0748.jpg",f:"mp_fd_0748.jpg"},
+{u:"images/mp_0571.jpg",f:"mp_0571.jpg"},
+{u:"images/mp_qc_dk_0815.jpg",f:"mp_qc_dk_0815.jpg"},
+{u:"images/mp_fd_qc_0764.jpg",f:"mp_fd_qc_0764.jpg"},
+{u:"images/mp_dk_0702.jpg",f:"mp_dk_0702.jpg"},
+{u:"images/mp_dk_0716.jpg",f:"mp_dk_0716.jpg"},
+{u:"images/fd_0348.jpg",f:"fd_0348.jpg"},
+{u:"images/ff_0496.jpg",f:"ff_0496.jpg"},
+{u:"images/fd_0374.jpg",f:"fd_0374.jpg"},
+{u:"images/fd_0412.jpg",f:"fd_0412.jpg"},
+{u:"images/fd_0406.jpg",f:"fd_0406.jpg"},
+{u:"images/fd_0360.jpg",f:"fd_0360.jpg"},
+{u:"images/fd_0358.jpg",f:"fd_0358.jpg"},
+{u:"images/ff_0492.jpg",f:"ff_0492.jpg"},
+{u:"images/fd_0364.jpg",f:"fd_0364.jpg"},
+{u:"images/fd_0402.jpg",f:"fd_0402.jpg"},
+{u:"images/fd_0416.jpg",f:"fd_0416.jpg"},
+{u:"images/fd_0370.jpg",f:"fd_0370.jpg"},
+{u:"images/mp_dk_0712.jpg",f:"mp_dk_0712.jpg"},
+{u:"images/mp_dk_0706.jpg",f:"mp_dk_0706.jpg"},
+{u:"images/mp_qc_dk_0811.jpg",f:"mp_qc_dk_0811.jpg"},
+{u:"images/mp_0549.jpg",f:"mp_0549.jpg"},
+{u:"images/mp_qc_0794.jpg",f:"mp_qc_0794.jpg"},
+{u:"images/mp_0882.jpeg",f:"mp_0882.jpeg"},
+{u:"images/mp_0575.jpg",f:"mp_0575.jpg"},
+{u:"images/mp_0561.jpg",f:"mp_0561.jpg"},
+{u:"images/dk_0272.jpg",f:"dk_0272.jpg"},
+{u:"images/mp_ac_0884.jpeg",f:"mp_ac_0884.jpeg"},
+{u:"images/dk_0266.jpg",f:"dk_0266.jpg"},
+{u:"images/mp_qc_0804.jpg",f:"mp_qc_0804.jpg"},
+{u:"images/mp_dk_0699.jpg",f:"mp_dk_0699.jpg"},
+{u:"images/mp_ac_0639.jpg",f:"mp_ac_0639.jpg"},
+{u:"images/bp_0045.jpg",f:"bp_0045.jpg"},
+{u:"images/bp_0051.jpg",f:"bp_0051.jpg"},
+{u:"images/fd_qc_dk_0484.jpg",f:"fd_qc_dk_0484.jpg"},
+{u:"images/ac_0013.jpg",f:"ac_0013.jpg"},
+{u:"images/mp_dk_0666.jpg",f:"mp_dk_0666.jpg"},
+{u:"images/mp_0603.jpg",f:"mp_0603.jpg"},
+{u:"images/mp_0617.jpg",f:"mp_0617.jpg"},
+{u:"images/mp_dk_0672.jpg",f:"mp_dk_0672.jpg"},
+{u:"images/mp_0616.jpg",f:"mp_0616.jpg"},
+{u:"images/mp_dk_0673.jpg",f:"mp_dk_0673.jpg"},
+{u:"images/mp_dk_0667.jpg",f:"mp_dk_0667.jpg"},
+{u:"images/mp_0602.jpg",f:"mp_0602.jpg"},
+{u:"images/ac_0012.jpg",f:"ac_0012.jpg"},
+{u:"images/fd_qc_dk_0485.jpg",f:"fd_qc_dk_0485.jpg"},
+{u:"images/dk_0851.jpeg",f:"dk_0851.jpeg"},
+{u:"images/bp_0050.jpg",f:"bp_0050.jpg"},
+{u:"images/bp_0044.jpg",f:"bp_0044.jpg"},
+{u:"images/mp_ac_0638.jpg",f:"mp_ac_0638.jpg"},
+{u:"images/mp_dk_0698.jpg",f:"mp_dk_0698.jpg"},
+{u:"images/mp_0857.jpeg",f:"mp_0857.jpeg"},
+{u:"images/mp_qc_0805.jpg",f:"mp_qc_0805.jpg"},
+{u:"images/dk_0267.jpg",f:"dk_0267.jpg"},
+{u:"images/dk_0273.jpg",f:"dk_0273.jpg"},
+{u:"images/mp_0560.jpg",f:"mp_0560.jpg"},
+{u:"images/mp_0574.jpg",f:"mp_0574.jpg"},
+{u:"images/mp_qc_0795.jpg",f:"mp_qc_0795.jpg"},
+{u:"images/mp_0548.jpg",f:"mp_0548.jpg"},
+{u:"images/mp_qc_dk_0810.jpg",f:"mp_qc_dk_0810.jpg"},
+{u:"images/mp_dk_0707.jpg",f:"mp_dk_0707.jpg"},
+{u:"images/mp_dk_0713.jpg",f:"mp_dk_0713.jpg"},
+{u:"images/dk_0847.jpeg",f:"dk_0847.jpeg"},
+{u:"images/fd_0417.jpg",f:"fd_0417.jpg"},
+{u:"images/fd_0371.jpg",f:"fd_0371.jpg"},
+{u:"images/fd_0365.jpg",f:"fd_0365.jpg"},
+{u:"images/fd_0403.jpg",f:"fd_0403.jpg"},
+{u:"images/ff_0487.jpg",f:"ff_0487.jpg"},
+{u:"images/fd_0359.jpg",f:"fd_0359.jpg"},
+{u:"images/ff_0493.jpg",f:"ff_0493.jpg"},
+{u:"images/fd_0429.jpg",f:"fd_0429.jpg"},
+{u:"images/ff_0491.jpg",f:"ff_0491.jpg"},
+{u:"images/fd_0373.jpg",f:"fd_0373.jpg"},
+{u:"images/fd_0415.jpg",f:"fd_0415.jpg"},
+{u:"images/fd_0401.jpg",f:"fd_0401.jpg"},
+{u:"images/fd_0367.jpg",f:"fd_0367.jpg"},
+{u:"images/fd_0398.jpg",f:"fd_0398.jpg"},
+{u:"images/mp_dk_0705.jpg",f:"mp_dk_0705.jpg"},
+{u:"images/mp_dk_0711.jpg",f:"mp_dk_0711.jpg"},
+{u:"images/mp_0861.jpeg",f:"mp_0861.jpeg"},
+{u:"images/mp_qc_dk_0812.jpg",f:"mp_qc_dk_0812.jpg"},
+{u:"images/mp_fd_qc_0763.jpg",f:"mp_fd_qc_0763.jpg"},
+{u:"images/mp_0589.jpg",f:"mp_0589.jpg"},
+{u:"images/bp_fd_0069.jpg",f:"bp_fd_0069.jpg"},
+{u:"images/mp_qc_0797.jpg",f:"mp_qc_0797.jpg"},
+{u:"images/mp_0562.jpg",f:"mp_0562.jpg"},
+{u:"images/mp_0576.jpg",f:"mp_0576.jpg"},
+{u:"images/dk_0265.jpg",f:"dk_0265.jpg"},
+{u:"images/dk_0271.jpg",f:"dk_0271.jpg"},
+{u:"images/mp_0877.jpeg",f:"mp_0877.jpeg"},
+{u:"images/dk_0259.jpg",f:"dk_0259.jpg"},
+{u:"images/mp_qc_0807.jpg",f:"mp_qc_0807.jpg"},
+{u:"images/bp_0052.jpg",f:"bp_0052.jpg"},
+{u:"images/bp_0046.jpg",f:"bp_0046.jpg"},
+{u:"images/fd_0853.jpeg",f:"fd_0853.jpeg"},
+{u:"images/mp_0628.jpg",f:"mp_0628.jpg"},
+{u:"images/ac_0010.jpg",f:"ac_0010.jpg"},
+{u:"images/mp_bp_0644.jpg",f:"mp_bp_0644.jpg"},
+{u:"images/mp_dk_0659.jpg",f:"mp_dk_0659.jpg"},
+{u:"images/mp_dk_0671.jpg",f:"mp_dk_0671.jpg"},
+{u:"images/mp_0614.jpg",f:"mp_0614.jpg"},
+{u:"images/mp_0600.jpg",f:"mp_0600.jpg"},
+{u:"images/mp_dk_0665.jpg",f:"mp_dk_0665.jpg"},
+{u:"images/mp_0601.jpg",f:"mp_0601.jpg"},
+{u:"images/mp_dk_0664.jpg",f:"mp_dk_0664.jpg"},
+{u:"images/mp_dk_0670.jpg",f:"mp_dk_0670.jpg"},
+{u:"images/mp_0615.jpg",f:"mp_0615.jpg"},
+{u:"images/fd_qc_dk_0486.jpg",f:"fd_qc_dk_0486.jpg"},
+{u:"images/mp_dk_0658.jpg",f:"mp_dk_0658.jpg"},
+{u:"images/ac_0011.jpg",f:"ac_0011.jpg"},
+{u:"images/mp_0629.jpg",f:"mp_0629.jpg"},
+{u:"images/bp_0047.jpg",f:"bp_0047.jpg"},
+{u:"images/bp_0053.jpg",f:"bp_0053.jpg"},
+{u:"images/mp_qc_0806.jpg",f:"mp_qc_0806.jpg"},
+{u:"images/dk_0258.jpg",f:"dk_0258.jpg"},
+{u:"images/dk_0270.jpg",f:"dk_0270.jpg"},
+{u:"images/dk_0264.jpg",f:"dk_0264.jpg"},
+{u:"images/mp_0577.jpg",f:"mp_0577.jpg"},
+{u:"images/mp_0563.jpg",f:"mp_0563.jpg"},
+{u:"images/mp_qc_0796.jpg",f:"mp_qc_0796.jpg"},
+{u:"images/bp_fd_0068.jpg",f:"bp_fd_0068.jpg"},
+{u:"images/mp_0588.jpg",f:"mp_0588.jpg"},
+{u:"images/mp_fd_qc_0762.jpg",f:"mp_fd_qc_0762.jpg"},
+{u:"images/mp_qc_dk_0813.jpg",f:"mp_qc_dk_0813.jpg"},
+{u:"images/mp_dk_0710.jpg",f:"mp_dk_0710.jpg"},
+{u:"images/mp_dk_0704.jpg",f:"mp_dk_0704.jpg"},
+{u:"images/fd_0399.jpg",f:"fd_0399.jpg"},
+{u:"images/fd_0400.jpg",f:"fd_0400.jpg"},
+{u:"images/fd_0366.jpg",f:"fd_0366.jpg"},
+{u:"images/fd_0372.jpg",f:"fd_0372.jpg"},
+{u:"images/fd_0414.jpg",f:"fd_0414.jpg"},
+{u:"images/ff_0490.jpg",f:"ff_0490.jpg"},
+{u:"images/fd_0428.jpg",f:"fd_0428.jpg"}
 ];
 
 const BASE_URL = "https://raw.githubusercontent.com/Lshfn/shablony/main/";
@@ -326,7 +1071,11 @@ function toggleLang(btn) {
   lang = lang === 'en' ? 'ru' : 'en';
   btn.innerText = lang === 'en' ? 'read in rus' : 'читать на англ';
   document.querySelectorAll('[data-en]').forEach(el => {
-    el.innerText = lang === 'en' ? el.dataset.en : el.dataset.ru;
+    if(el.tagName !== 'A') el.innerText = lang === 'en' ? el.dataset.en : el.dataset.ru;
+    else {
+      const span = el.querySelector('span[data-en]');
+      if(span) span.innerText = lang === 'en' ? span.dataset.en : span.dataset.ru;
+    }
   });
 }
 
@@ -660,7 +1409,7 @@ function closePsd(){
 // ═══════════════════════════ CONSTANTS ═══════════════════════════
 const IMGURL='https://dariaivans.neocities.org/1298457691_0lik.ru_mysli-o-vesne.jpg';
 const CAKEURL='https://dariaivans.neocities.org/cake.png';
-const ALBUMURL='https://dariaivans.neocities.org/album.png';
+const ALBUMURL='https://dariaivans.neocities.org/ph.png';
 const G_SPARK=['https://dariaivans.neocities.org/glitter/picmix.com_1581523.gif','https://dariaivans.neocities.org/glitter/picmix.com_2653722.gif','https://dariaivans.neocities.org/glitter/760408dw1h2jcut6.gif','https://dariaivans.neocities.org/glitter/714833nkm6do15tu.gif'];
 const G_STAR=['https://dariaivans.neocities.org/picgifs-stars-018439.gif','https://dariaivans.neocities.org/glitter/picgifs-stars-1504091.gif','https://dariaivans.neocities.org/glitter/picmix.com_340768.gif'];
 const G_HEART=['https://dariaivans.neocities.org/picmix.com_1960783.gif','https://dariaivans.neocities.org/picmix.com_1586818.gif','https://dariaivans.neocities.org/heart/738240xakrsp7q77.gif'];
@@ -876,26 +1625,99 @@ function doCook(){
 // ═══════════════════════════ PHOTO ALBUM ═══════════════════════════
 function doPhotoAlbum(){
   loadImgP(ALBUMURL).then(album=>{
-    const aNW=album.naturalWidth,aNH=album.naturalHeight;
+    const aNW=album.naturalWidth, aNH=album.naturalHeight;
+    const W=MC.width, H=MC.height;
+
+    // Scale album to fill canvas
+    const aScale=Math.max(W/aNW, H/aNH);
+    const aW=Math.round(aNW*aScale), aH=Math.round(aNH*aScale);
+    const aOX=Math.round((W-aW)/2), aOY=Math.round((H-aH)/2);
+
+    // ── Find the white slot in ph.png by scanning its pixels ──
+    // Render album into offscreen canvas at NATIVE resolution to scan it
+    const scan=document.createElement('canvas');
+    scan.width=aNW; scan.height=aNH;
+    const sx=scan.getContext('2d');
+    // Draw on grey background so white slot stands out from transparent areas
+    sx.fillStyle='#808080'; sx.fillRect(0,0,aNW,aNH);
+    sx.drawImage(album,0,0);
+    const pd=sx.getImageData(0,0,aNW,aNH).data;
+
+    // Detect white slot: R>240, G>240, B>240, NOT transparent (already composited on grey)
+    // Scan from center outwards for robustness
+    let minX=aNW,minY=aNH,maxX=0,maxY=0,cnt=0;
+    // Only look in the inner 80% to skip outer album edges / page edges
+    const mx0=Math.round(aNW*0.05), mx1=Math.round(aNW*0.95);
+    const my0=Math.round(aNH*0.05), my1=Math.round(aNH*0.95);
+    for(let y=my0;y<my1;y++){
+      for(let x=mx0;x<mx1;x++){
+        const i=(y*aNW+x)*4;
+        if(pd[i]>238 && pd[i+1]>235 && pd[i+2]>230){
+          if(x<minX)minX=x; if(x>maxX)maxX=x;
+          if(y<minY)minY=y; if(y>maxY)maxY=y;
+          cnt++;
+        }
+      }
+    }
+
+    let slotX,slotY,slotW,slotH;
+    const minArea=aNW*aNH*0.03; // slot must be at least 3% of image area
+
+    if(cnt>minArea && (maxX-minX)>aNW*0.08 && (maxY-minY)>aNH*0.08){
+      // Detected slot in native px — convert to scaled canvas coords
+      slotX=Math.round(minX*aScale)+aOX;
+      slotY=Math.round(minY*aScale)+aOY;
+      slotW=Math.round((maxX-minX)*aScale);
+      slotH=Math.round((maxY-minY)*aScale);
+      setMsg('Album: slot detected '+slotW+'×'+slotH+' at ('+slotX+','+slotY+')');
+    } else {
+      // Fallback: hardcoded fractions measured from ph.png screenshot
+      // x=0.223..0.861 of album width, y=0.149..0.609 of album height
+      slotX=Math.round(0.223*aW)+aOX;
+      slotY=Math.round(0.149*aH)+aOY;
+      slotW=Math.round(0.638*aW);
+      slotH=Math.round(0.460*aH);
+      setMsg('Album: using fallback slot '+slotW+'×'+slotH);
+    }
+
+    // ── Compose: photo inside slot, album frame on top ──
+    const out=document.createElement('canvas');out.width=W;out.height=H;
+    const ox=out.getContext('2d');
+
+    // 1) Photo clipped to slot
+    ox.save();
+    ox.beginPath(); ox.rect(slotX,slotY,slotW,slotH); ox.clip();
+    const sc=Math.max(slotW/MC.width, slotH/MC.height);
+    const dw=Math.round(MC.width*sc), dh=Math.round(MC.height*sc);
+    ox.drawImage(MC,0,0,MC.width,MC.height,
+      slotX+Math.round((slotW-dw)/2),
+      slotY+Math.round((slotH-dh)/2),
+      dw,dh);
+    ox.restore();
+
+    // 2) Album drawn on top — hands and frame cover photo edges
+    ox.drawImage(album,0,0,aNW,aNH,aOX,aOY,aW,aH);
+
+    pushLayer('Photo Album',out,1,'source-over');
+  }).catch(e=>{
+    setMsg('Album: load failed ('+e.message+')');
     const W=MC.width,H=MC.height;
-    const prob=document.createElement('canvas');prob.width=aNW;prob.height=aNH;prob.getContext('2d').drawImage(album,0,0);
-    const pd=prob.getContext('2d').getImageData(0,0,aNW,aNH).data;
-    // Find transparent regions in each half
-    function bbox(x0,y0,x1,y1){let minX=x1,minY=y1,maxX=x0,maxY=y0,cnt=0;for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++){if(pd[(y*aNW+x)*4+3]<80){if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;cnt++}}return cnt>100?{x:minX,y:minY,w:maxX-minX+1,h:maxY-minY+1}:null}
-    const regions=[];const h2=Math.floor(aNH/2),w2=Math.floor(aNW/2);
-    const checks=[[0,0,w2,h2],[w2,0,aNW,h2],[0,h2,w2,aNH],[w2,h2,aNW,aNH],[0,0,aNW,aNH]];
-    for(const[x0,y0,x1,y1] of checks){const b=bbox(x0,y0,x1,y1);if(b&&!regions.some(r=>Math.abs(r.x-b.x)<40&&Math.abs(r.y-b.y)<40))regions.push(b)}
-    const aScale=Math.max(W/aNW,H/aNH);const aW=Math.round(aNW*aScale),aH=Math.round(aNH*aScale);const aOX=Math.round((W-aW)/2),aOY=Math.round((H-aH)/2);
-    const out=document.createElement('canvas');out.width=W;out.height=H;const ox=out.getContext('2d');ox.drawImage(album,0,0,aNW,aNH,aOX,aOY,aW,aH);
-    const usedRegions=regions.length>1?regions.slice(0,-1):regions; // skip full-image region
-    usedRegions.forEach(reg=>{
-      const rx=Math.round(reg.x*aScale)+aOX,ry=Math.round(reg.y*aScale)+aOY;const rw=Math.round(reg.w*aScale),rh=Math.round(reg.h*aScale);if(rw<8||rh<8)return;
-      ox.save();ox.beginPath();ox.rect(rx,ry,rw,rh);ox.clip();const uSc=Math.max(rw/W,rh/H);const uW=Math.round(W*uSc),uH=Math.round(H*uSc);ox.drawImage(MC,rx+Math.round((rw-uW)/2),ry+Math.round((rh-uH)/2),uW,uH);ox.restore();
-    });
-    ox.globalCompositeOperation='source-over';ox.drawImage(album,0,0,aNW,aNH,aOX,aOY,aW,aH);
-    pushLayer('Photo Album',out,1,'source-over');setMsg('Photo album: '+usedRegions.length+' cutout(s) filled');
-  }).catch(()=>{setMsg('Album loading...');const W=MC.width,H=MC.height;const c=document.createElement('canvas');c.width=W;c.height=H;const cx=c.getContext('2d');cx.fillStyle='#f5e6d3';cx.fillRect(0,0,W,H);[[W*0.07,H*0.1,W*0.38,H*0.5],[W*0.54,H*0.1,W*0.38,H*0.5]].forEach(([x,y,w,h])=>{cx.save();cx.beginPath();cx.rect(x,y,w,h);cx.clip();cx.drawImage(MC,x,y,w,h);cx.restore();cx.strokeStyle='#c0a080';cx.lineWidth=3;cx.strokeRect(x,y,w,h)});pushLayer('Photo Album',c,1,'source-over')});
+    const c=document.createElement('canvas');c.width=W;c.height=H;
+    const cx=c.getContext('2d');
+    cx.fillStyle='#f0ece3'; cx.fillRect(0,0,W,H);
+    const slX=Math.round(W*0.15),slY=Math.round(H*0.20);
+    const slW=Math.round(W*0.70),slH=Math.round(H*0.55);
+    cx.save(); cx.beginPath(); cx.rect(slX,slY,slW,slH); cx.clip();
+    const sc=Math.max(slW/MC.width,slH/MC.height);
+    const dw=Math.round(MC.width*sc),dh=Math.round(MC.height*sc);
+    cx.drawImage(MC,0,0,MC.width,MC.height,
+      slX+Math.round((slW-dw)/2),slY+Math.round((slH-dh)/2),dw,dh);
+    cx.restore();
+    cx.strokeStyle='#b8a890'; cx.lineWidth=4; cx.strokeRect(slX,slY,slW,slH);
+    pushLayer('Photo Album',c,1,'source-over');
+  });
 }
+
 
 // ═══════════════════════════ POSTCARD — MW words ═══════════════════════════
 async function doPostcard(){
@@ -941,95 +1763,292 @@ function doFractal(){
 }
 
 // ═══════════════════════════ DECAY — ANIMATED ═══════════════════════════
-// Animated decay: spreading JPEG-block corruption + color bleeding,
-// looks like the image is disintegrating in real time.
-// Captures frames for GIF export.
 function doDecay(){
-  if(!OD)return;
-  stopDecay();
+  if(!OD)return; stopDecay();
   const W=OD.width,H=OD.height;
   const ov=document.getElementById('decayOverlay');
-  ov.width=W;ov.height=H;ov.style.display='block';
+  ov.width=W; ov.height=H; ov.style.display='block';
   const octx=ov.getContext('2d');
-  const s=document.getElementById('fstr').value/100;
+  const str=Math.max(0.25, document.getElementById('fstr').value/100);
   decayFrames=[];
-  decayStep=0;
-  const FRAMES=40; // total animation frames
-  // Pre-compute all decay states
-  const states=[];
-  for(let f=0;f<FRAMES;f++){
-    const progress=(f+1)/FRAMES;
-    const data=new Uint8ClampedArray(OD.data);
-    decayFrame(data,W,H,progress*s,f,FRAMES);
-    states.push(new ImageData(data,W,H));
+
+  // Fresh entropy source each run — guarantees different result every time
+  const E=Date.now()^(Math.random()*0xFFFFFF|0);
+  function rng(n){
+    let x=Math.sin(E*0.001+n*127.1+n*n*0.003)*43758.5453;
+    return x-Math.floor(x);
   }
-  // Animate
+  function rngI(n,max){return Math.floor(rng(n)*max);}
+
+  const NFRAMES=32; // more frames = more variety per cycle
+  const orig=OD.data;
+  const frameData=[];
+
+  // ── helper: DCT-style block quantise + checkerboard ──
+  function dctBlocks(d,bs,lvl){
+    for(let by=0;by<H;by+=bs){
+      for(let bx=0;bx<W;bx+=bs){
+        let rr=0,gg=0,bb=0,cnt=0;
+        for(let dy=0;dy<bs&&by+dy<H;dy++)
+          for(let dx=0;dx<bs&&bx+dx<W;dx++){
+            const i=((by+dy)*W+(bx+dx))*4;
+            rr+=orig[i];gg+=orig[i+1];bb+=orig[i+2];cnt++;
+          }
+        rr/=cnt;gg/=cnt;bb/=cnt;
+        const qr=Math.round(rr/255*(lvl-1))/(lvl-1)*255;
+        const qg=Math.round(gg/255*(lvl-1))/(lvl-1)*255;
+        const qb=Math.round(bb/255*(lvl-1))/(lvl-1)*255;
+        for(let dy=0;dy<bs&&by+dy<H;dy++)
+          for(let dx=0;dx<bs&&bx+dx<W;dx++){
+            const idx=((by+dy)*W+(bx+dx))*4;
+            const chess=((bx/bs|0)+(by/bs|0))&1;
+            d[idx]  =chess?255-qr|0:qr|0;
+            d[idx+1]=chess?255-qg|0:qg|0;
+            d[idx+2]=chess?255-qb|0:qb|0;
+          }
+      }
+    }
+  }
+
+  // ── helper: channel shift (RGB lateral displacement) ──
+  function chanShift(d,sR,sG,sB){
+    const tmp=new Uint8ClampedArray(d);
+    for(let y=0;y<H;y++)
+      for(let x=0;x<W;x++){
+        const dst=(y*W+x)*4;
+        d[dst]  =tmp[(y*W+Math.min(W-1,Math.max(0,x+sR)))*4];
+        d[dst+1]=tmp[(y*W+Math.min(W-1,Math.max(0,x+sG)))*4+1];
+        d[dst+2]=tmp[(y*W+Math.min(W-1,Math.max(0,x+sB)))*4+2];
+      }
+  }
+
+  // ── helper: vertical block warp ──
+  function vertWarp(d,blockW,shift){
+    const tmp=new Uint8ClampedArray(d);
+    for(let bx=0;bx<W;bx+=blockW){
+      const vs=Math.round((rng(bx*7+shift)-0.5)*str*shift);
+      for(let y=0;y<H;y++){
+        const sy=Math.min(H-1,Math.max(0,y+vs));
+        for(let dx=0;dx<blockW&&bx+dx<W;dx++){
+          const dst=(y*W+bx+dx)*4, src=(sy*W+bx+dx)*4;
+          d[dst]=tmp[src];d[dst+1]=tmp[src+1];d[dst+2]=tmp[src+2];
+        }
+      }
+    }
+  }
+
+  // ── helper: horizontal scanline glitch ──
+  function scanlineGlitch(d,n,seed){
+    for(let i=0;i<n;i++){
+      const y=rngI(seed+i*13,H);
+      const color=[rngI(seed+i*7,256),rngI(seed+i*11,256),rngI(seed+i*17,256)];
+      const alpha=0.5+rng(seed+i)*0.5;
+      for(let x=0;x<W;x++){
+        const idx=(y*W+x)*4;
+        d[idx]  =d[idx]*(1-alpha)+color[0]*alpha|0;
+        d[idx+1]=d[idx+1]*(1-alpha)+color[1]*alpha|0;
+        d[idx+2]=d[idx+2]*(1-alpha)+color[2]*alpha|0;
+      }
+    }
+  }
+
+  // ── 9 distinct frame modes ──
+  const MODES=9;
+  for(let f=0;f<NFRAMES;f++){
+    const d=new Uint8ClampedArray(orig);
+    const mode=f%MODES;
+    const fs=f*37+mode*111; // per-frame seed offset
+
+    // Always start with DCT blocks (the core decay look), varying params
+    const bs=3+rngI(fs,Math.round(18*str))|0||3;
+    const lvl=Math.max(2,2+rngI(fs+1,5)|0);
+    dctBlocks(d,bs,lvl);
+
+    // ── Mode-specific heavy second pass ──
+    if(mode===0){
+      // Pure B&W high-contrast + fine checker  (frame 1 style)
+      for(let i=0;i<d.length;i+=4){
+        const v=(d[i]*0.299+d[i+1]*0.587+d[i+2]*0.114)>127?255:0;
+        d[i]=d[i+1]=d[i+2]=v;
+      }
+      // add mosquito ringing on block boundaries
+      for(let by=0;by<H;by+=(bs*2)){
+        for(let x=0;x<W;x++){
+          const i=(by*W+x)*4;
+          const r=(rng(x*0.1+by+fs)-0.5)*200*str;
+          d[i]=Math.min(255,Math.max(0,d[i]+r))|0;
+          d[i+1]=d[i];d[i+2]=d[i];
+        }
+      }
+    }
+    else if(mode===1){
+      // Oversaturated color explosion (frame 3 style)
+      for(let i=0;i<d.length;i+=4){
+        const mx=Math.max(d[i],d[i+1],d[i+2]);
+        const mn=Math.min(d[i],d[i+1],d[i+2]);
+        if(mx>mn){
+          const boost=255/(mx-mn+0.001);
+          d[i]  =Math.min(255,(d[i]-mn)*boost)|0;
+          d[i+1]=Math.min(255,(d[i+1]-mn)*boost)|0;
+          d[i+2]=Math.min(255,(d[i+2]-mn)*boost)|0;
+        }
+      }
+      // neon scanlines
+      scanlineGlitch(d,4+rngI(fs+5,6),fs+200);
+    }
+    else if(mode===2){
+      // Large neon colour blobs (frame 5 style)
+      const NEON=[[0,255,60],[160,0,255],[255,230,0],[0,220,255],[255,0,140],[255,120,0]];
+      for(let b=0;b<5+rngI(fs,4);b++){
+        const col=NEON[rngI(fs+b*7,NEON.length)];
+        const bx2=rngI(fs+b*13,W-50), by2=rngI(fs+b*17,H-40);
+        const bw2=60+rngI(fs+b*19,W*0.5*str|0);
+        const bh2=40+rngI(fs+b*23,H*0.4*str|0);
+        for(let y=by2;y<Math.min(H,by2+bh2);y++)
+          for(let x=bx2;x<Math.min(W,bx2+bw2);x++){
+            const idx=(y*W+x)*4;
+            d[idx]=col[0];d[idx+1]=col[1];d[idx+2]=col[2];
+          }
+      }
+    }
+    else if(mode===3){
+      // Giant BLACK rectangle(s) dominating (frame 10 style)
+      for(let b=0;b<1+rngI(fs,2);b++){
+        const bx2=rngI(fs+b*29,W*0.5|0);
+        const by2=rngI(fs+b*31,H*0.4|0);
+        const bw2=W*0.3+rngI(fs+b*37,W*0.35)|0;
+        const bh2=H*0.25+rngI(fs+b*41,H*0.35)|0;
+        for(let y=by2;y<Math.min(H,by2+bh2);y++)
+          for(let x=bx2;x<Math.min(W,bx2+bw2);x++){
+            const idx=(y*W+x)*4; d[idx]=d[idx+1]=d[idx+2]=0;
+          }
+      }
+      chanShift(d,
+        (rng(fs+1)-0.5)*str*30|0,
+        (rng(fs+2)-0.5)*str*22|0,
+        (rng(fs+3)-0.5)*str*36|0);
+    }
+    else if(mode===4){
+      // Channel swap permutation — wild colour fringing
+      const perm=[
+        [1,2,0],[2,0,1],[0,2,1],[2,1,0],[1,0,2]
+      ][rngI(fs,5)];
+      for(let i=0;i<d.length;i+=4){
+        const [r,g,b]=[d[i],d[i+1],d[i+2]];
+        const src=[r,g,b];
+        d[i]=src[perm[0]];d[i+1]=src[perm[1]];d[i+2]=src[perm[2]];
+      }
+      scanlineGlitch(d,3+rngI(fs+9,5),fs+300);
+    }
+    else if(mode===5){
+      // Soft pixel-blur then checker overlay (frame 15 style)
+      const tmp=new Uint8ClampedArray(orig);
+      const br=4+rngI(fs,5);
+      for(let y=br;y<H-br;y++)
+        for(let x=br;x<W-br;x++){
+          let rr=0,gg=0,bb=0,c=0;
+          for(let dy=-br;dy<=br;dy+=2)for(let dx=-br;dx<=br;dx+=2){
+            const i=((y+dy)*W+(x+dx))*4;rr+=tmp[i];gg+=tmp[i+1];bb+=tmp[i+2];c++;
+          }
+          const i=(y*W+x)*4;d[i]=rr/c|0;d[i+1]=gg/c|0;d[i+2]=bb/c|0;
+        }
+      // fine checker overlay
+      const bs2=2+rngI(fs+3,3);
+      for(let y=0;y<H;y++)
+        for(let x=0;x<W;x++)
+          if(((x/bs2|0)+(y/bs2|0))&1){
+            const i=(y*W+x)*4;
+            d[i]=255-d[i];d[i+1]=255-d[i+1];d[i+2]=255-d[i+2];
+          }
+    }
+    else if(mode===6){
+      // Vertical block warp + heavy channel shift
+      vertWarp(d,4+rngI(fs,12),20+rngI(fs+5,30));
+      chanShift(d,
+        (rng(fs+1)-0.5)*str*40|0,
+        (rng(fs+2)-0.5)*str*30|0,
+        (rng(fs+3)-0.5)*str*50|0);
+    }
+    else if(mode===7){
+      // Partial inversion in random stripes
+      const nStripes=3+rngI(fs,5);
+      for(let s=0;s<nStripes;s++){
+        const sy=rngI(fs+s*7,H-20);
+        const sh=10+rngI(fs+s*11,H*0.2|0);
+        for(let y=sy;y<Math.min(H,sy+sh);y++)
+          for(let x=0;x<W;x++){
+            const i=(y*W+x)*4;
+            d[i]=255-d[i];d[i+1]=255-d[i+1];d[i+2]=255-d[i+2];
+          }
+      }
+      scanlineGlitch(d,2+rngI(fs+3,4),fs+400);
+    }
+    else {
+      // mode===8: Pixel-sort simulation (bright pixels float to one side per column)
+      const tmp=new Uint8ClampedArray(d);
+      const sortCols=Math.max(1,W*0.6*str|0);
+      for(let x=0;x<sortCols;x++){
+        const colX=rngI(fs+x*7,W);
+        const pixels=[];
+        for(let y=0;y<H;y++){
+          const i=(y*W+colX)*4;
+          pixels.push([tmp[i],tmp[i+1],tmp[i+2]]);
+        }
+        // partial sort by brightness
+        const threshold=80+rngI(fs+x*3,100);
+        const bright=pixels.filter(p=>p[0]+p[1]+p[2]>threshold*3);
+        const dark =pixels.filter(p=>p[0]+p[1]+p[2]<=threshold*3);
+        const sorted=[...bright,...dark];
+        for(let y=0;y<H;y++){
+          const i=(y*W+colX)*4;
+          d[i]=sorted[y][0];d[i+1]=sorted[y][1];d[i+2]=sorted[y][2];
+        }
+      }
+    }
+
+    // ── Always apply channel shift + block ringing ──
+    if(mode!==3&&mode!==6){
+      chanShift(d,
+        (rng(fs+1)-0.5)*str*20|0,
+        (rng(fs+2)-0.5)*str*14|0,
+        (rng(fs+3)-0.5)*str*26|0);
+    }
+    const bsR=6+rngI(fs+9,10);
+    for(let by=0;by<H;by+=bsR){
+      for(let x=0;x<W;x++){
+        const i=(by*W+x)*4;
+        const ring=(rng(fs+x*0.07+by)-0.5)*str*120;
+        d[i]  =Math.min(255,Math.max(0,d[i]+ring))|0;
+        d[i+1]=Math.min(255,Math.max(0,d[i+1]+ring))|0;
+        d[i+2]=Math.min(255,Math.max(0,d[i+2]+ring))|0;
+      }
+    }
+
+    frameData.push(new ImageData(new Uint8ClampedArray(d),W,H));
+  }
+
   let fi=0;
   function tick(){
     if(!decayRunning)return;
-    octx.putImageData(states[fi],0,0);
-    // Save frame snapshot for GIF
-    if(decayFrames.length<FRAMES){
-      const snap=document.createElement('canvas');snap.width=W;snap.height=H;const sx=snap.getContext('2d');sx.drawImage(MC,0,0);sx.drawImage(ov,0,0);decayFrames.push(snap);
+    octx.putImageData(frameData[fi],0,0);
+    if(decayFrames.length<NFRAMES){
+      const snap=document.createElement('canvas');snap.width=W;snap.height=H;
+      const sx=snap.getContext('2d');sx.drawImage(MC,0,0);sx.drawImage(ov,0,0);
+      decayFrames.push(snap);
     }
-    fi=(fi+1)%FRAMES;
+    fi=(fi+1)%NFRAMES;
     decayAF=requestAnimationFrame(tick);
   }
   decayRunning=true;
   tick();
-  setMsg('Decay: animated — click Reset to stop');
+  setMsg('Decay — click Reset to stop');
 }
 function stopDecay(){
-  decayRunning=false;if(decayAF){cancelAnimationFrame(decayAF);decayAF=null}
+  decayRunning=false;if(decayAF){cancelAnimationFrame(decayAF);decayAF=null;}
   const ov=document.getElementById('decayOverlay');ov.style.display='none';
   if(ov.getContext)ov.getContext('2d').clearRect(0,0,ov.width,ov.height);
 }
-
-function decayFrame(data,W,H,intensity,frameIdx,totalFrames){
-  // Phase 1: color bleed — pixels leak into neighbors in wave-front pattern
-  const waveFront=(frameIdx/totalFrames)*W; // corruption spreads left-to-right
-  // JPEG-like block quantization, spreading from waveFront
-  const bs=Math.max(2,Math.round(2+intensity*20));
-  const orig=new Uint8ClampedArray(data);
-  for(let by=0;by<H;by+=bs)for(let bx=0;bx<W;bx+=bs){
-    if(bx>waveFront+Math.random()*80)continue; // only corrupt up to waveFront
-    let r=0,g=0,b=0,cnt=0;
-    for(let dy=0;dy<bs&&by+dy<H;dy++)for(let dx=0;dx<bs&&bx+dx<W;dx++){const i=((by+dy)*W+(bx+dx))*4;r+=orig[i];g+=orig[i+1];b+=orig[i+2];cnt++}
-    r/=cnt;g/=cnt;b/=cnt;
-    const lv=Math.max(2,Math.round((1-intensity*0.8)*5)+2);
-    r=Math.round(r/255*(lv-1))/(lv-1)*255;g=Math.round(g/255*(lv-1))/(lv-1)*255;b=Math.round(b/255*(lv-1))/(lv-1)*255;
-    // Watercolor bleed: adjacent block bleeds color
-    const bleedAmt=intensity*0.6;const nx=Math.min(W-1,bx+bs),ni=(by*W+nx)*4;
-    for(let dy=0;dy<bs&&by+dy<H;dy++)for(let dx=0;dx<bs&&bx+dx<W;dx++){
-      const i=((by+dy)*W+(bx+dx))*4;
-      data[i]=lerp(r,orig[ni]*bleedAmt+r*(1-bleedAmt),intensity*0.7);
-      data[i+1]=lerp(g,orig[ni+1]*bleedAmt+g*(1-bleedAmt),intensity*0.7);
-      data[i+2]=lerp(b,orig[ni+2]*bleedAmt+b*(1-bleedAmt),intensity*0.7);
-    }
-  }
-  // Phase 2: block boundary ringing (JPEG mosquito noise)
-  for(let by=0;by<H;by+=bs)for(let x=0;x<Math.min(W,waveFront+60);x++){
-    const i=(by*W+x)*4,ring=(Math.random()-0.5)*intensity*70;
-    data[i]=Math.min(255,Math.max(0,data[i]+ring));data[i+1]=Math.min(255,Math.max(0,data[i+1]+ring));data[i+2]=Math.min(255,Math.max(0,data[i+2]+ring));
-  }
-  // Phase 3: horizontal smear streaks (late-stage corruption)
-  if(intensity>0.3){
-    const nStreaks=Math.round(intensity*12);
-    for(let s2=0;s2<nStreaks;s2++){
-      const sy=Math.floor(Math.random()*H);const sxStart=Math.floor(Math.random()*waveFront);const sxLen=Math.floor(Math.random()*80*intensity);
-      const ci=(sy*W+sxStart)*4;
-      for(let x=sxStart;x<Math.min(W,sxStart+sxLen);x++){const di=(sy*W+x)*4;data[di]=data[ci];data[di+1]=data[ci+1];data[di+2]=data[ci+2]}
-    }
-  }
-  // Phase 4: pixel dissolution — random pixels lose color at edges of corruption
-  for(let i=0;i<data.length;i+=4){
-    const x=(i/4)%W;
-    if(x<waveFront&&Math.random()<intensity*0.06){
-      const v=luma(data[i],data[i+1],data[i+2]);
-      data[i]=lerp(data[i],v,intensity*0.7);data[i+1]=lerp(data[i+1],v+20,intensity*0.5);data[i+2]=lerp(data[i+2],v+8,intensity*0.4);
-    }
-  }
-}
+function decayFrame(){}
 
 // ═══════════════════════════ OTHER FILTERS ═══════════════════════════
 function fGlitch(d,W,H,s){const sl=Math.round(s*24)+3;for(let i=0;i<sl;i++){const y=Math.floor(Math.random()*H),h2=Math.floor(Math.random()*24)+2;const shift=Math.round((Math.random()-0.5)*W*0.18*s);for(let row=y;row<Math.min(y+h2,H);row++)for(let x=0;x<W;x++){const sx=((x-shift)+W)%W,si=(row*W+sx)*4,di=(row*W+x)*4;d[di]=d[si];d[di+1]=d[si+1];d[di+2]=d[si+2]}}const o=new Uint8ClampedArray(d),cs=Math.round(s*18);for(let i=0;i<d.length;i+=4){const x=(i/4)%W,sx=Math.min(W-1,x+cs);d[i]=o[(Math.floor(i/4/W)*W+sx)*4]}}
