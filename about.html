@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image in Waiting: Vernacular Design and Automatization Before AI</title>
+<style>
+  :root{
+    --frame-bg:#dbffd4;
+    --ink:#3a1640;
+    --link:#d9651c;
+    --italic-color:#932af5;
+  }
+  @font-face{
+    font-family:'DGM Sans';
+    src:url('https://dariaivans.neocities.org/shablony_article/DGMTypesetSans-Regular.otf') format('opentype');
+    font-weight:400; font-style:normal;
+  }
+  @font-face{
+    font-family:'Xabadoble';
+    src:url('https://dariaivans.neocities.org/shablony_article/Xabadoble-8OmgA.otf') format('opentype');
+    font-weight:400; font-style:normal;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background-image:url('https://dariaivans.neocities.org/shablony_article/3244697bmq288ni9i.jpg');
+    background-repeat:repeat;
+    font-family:'DGM Sans', Arial, sans-serif;
+    color:var(--ink);
+    padding:64px 18px 120px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:700px;margin:0 auto;}
+  .frame{
+    background:var(--frame-bg);
+    padding:58px 58px 70px;
+    box-shadow:0 20px 46px rgba(20,10,22,.30);
+  }
+  h1.title{
+    font-size:31px;line-height:1.28;margin:0 0 30px;font-weight:700;
+  }
+  .epigraph{
+    font-family:'Xabadoble', cursive;
+    color:var(--italic-color);
+    font-size:23px;line-height:1.5;margin:0 0 36px;
+    padding-left:20px;
+    border-left:2px solid rgba(58,22,64,.3);
+  }
+  h2.section{
+    font-size:21px;margin:48px 0 18px;font-weight:700;
+    padding-top:22px;border-top:1px solid rgba(58,22,64,.25);
+  }
+  h2.section .num{color:var(--link);}
+  p{font-size:17px;line-height:1.7;margin:0 0 20px;text-align:justify;hyphens:auto;}
+  .italic{font-family:'Xabadoble', cursive;font-style:normal;color:var(--italic-color);}
+  a{color:var(--link);text-decoration:underline;text-decoration-color:rgba(217,101,28,.55);text-underline-offset:2px;}
+  a:hover{text-decoration-color:var(--link);}
+  .hov{cursor:help;border-bottom:1px dotted rgba(58,22,64,.5);}
+  .hov:hover,.hov:focus,.hov.is-locked{background:rgba(58,22,64,.09);}
+  .hov:focus{outline:2px solid var(--link);outline-offset:2px;}
+
+  .popup{
+    position:fixed;z-index:999;width:300px;pointer-events:none;
+    opacity:0;transform:translateY(5px);
+    transition:opacity .16s ease, transform .16s ease;
+  }
+  .popup.show{opacity:1;transform:translateY(0);}
+  .popup-imgs{display:flex;flex-direction:column;gap:10px;}
+  .popup img{display:block;width:100%;height:auto;box-shadow:0 7px 18px rgba(12,4,16,.5);}
+  .popup figcaption{
+    font-family:'Xabadoble', cursive;font-size:28px;line-height:1.25;
+    color:var(--ink);text-align:center;margin-top:6px;
+  }
+
+  @media (prefers-reduced-motion:reduce){.popup{transition:none;}}
+
+  @media (max-width:760px){
+    body{padding:36px 12px 90px;}
+    .frame{padding:36px 22px 46px;}
+    h1.title{font-size:25px;}
+    .epigraph{font-size:19px;}
+    p{font-size:16px;text-align:left;hyphens:none;}
+    h2.section{font-size:19px;}
+    .popup{width:min(300px, 78vw);}
+    .popup figcaption{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+<article class="frame">
+
+  <h1 class="title">Image in Waiting: Vernacular Design and Automatization Before AI</h1>
+
+  <p class="epigraph">Unlike the final image, the template exists as the promise of an image. Its design remains incomplete until activated by a user.</p>
+
+  <p>Before the automation of image production by generative AI, Russian visual culture of the 2000s and early 2010s had already developed an earlier form of automation — not of images themselves, but of their constituent parts. Layers, masks, presets, and frames circulated freely, pirated, decentralized, and largely anonymous, to be assembled by hand by people with no design training. This essay treats that circulation as a historical object in its own right: a vernacular design infrastructure whose logic differed fundamentally from the generative systems that have since displaced it. Neither authorship nor the files themselves reliably survived this infrastructure. What survived, more often than not, was only the <span class="hov" id="hov-preview" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">preview</span> — the promise of an image, never quite the image itself, and rarely the file behind it.</p>
+
+  <p>Two terms do most of the theoretical work in what follows, and it is worth naming them before the history begins. &#8220;Vernacular&#8221; is borrowed from <a href="https://art.teleportacia.org/observation/vernacular/" target="_blank" rel="noopener">Olia Lialina</a>&#8217;s writing on amateur web design (principally <i class="italic">A Vernacular Web</i> and its sequel, <i class="italic">A Vernacular Web 2</i>), which trace the shift from idiosyncratic amateur homepages toward templated, platform-driven design. Lialina uses the term in something close to its architectural sense: production by people without formal training, working inside inherited, informal conventions rather than a professional design language. Lev Manovich&#8217;s related notion of cultural software supplies the second term: software as an environment that pre-structures what can count as an image, prior to any individual aesthetic decision. Held together, the two terms frame the question this essay tries to answer historically rather than abstractly — what vernacular production looks like once it is fully mediated by inherited digital components, and what happens to it once even those components are replaced by a generative model that requires no inheritance at all.</p>
+
+  <h2 class="section"><span class="num">1.</span> The Boom of the Photoshop Templates</h2>
+
+  <p>For a generation of Russian children born in the post-Soviet period, the Photoshop template was not a novelty but a basic fact of visual life, rarely remarked upon precisely because it was so ordinary. Templates circulated through rutracker, through torrent trackers, and through platforms dedicated to design and photography. No specialized training was required to use them — only the ability to operate a computer, locate a file, and insert a photograph of a child&#8217;s face into a hole cut out of a fairytale <span class="hov" id="hov-scene" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">scene</span>.</p>
+
+  <p>This was their first and most literal application. The graduation booklet of a <span class="hov" id="hov-kindergarten" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">kindergarten</span>, the end-of-season photo board of a summer camp, the anniversary collage of a <span class="hov" id="hov-school" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">school</span>: in the great majority of cases, these were not produced by anyone with design training, but assembled by an administrator using a downloaded template, because the alternative (a photograph of the institution itself) was frequently unflattering. Many schools, kindergartens, and provincial municipal buildings inherited from the late Soviet period were underfunded and visibly deteriorating: peeling paint, mismatched additions, broken pavement in the yard. The template did not document this infrastructure. It replaced it with a forest, a castle, a hot-air balloon, a cosmonaut&#8217;s <span class="hov" id="hov-helmet" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">helmet</span>, and floated the children&#8217;s faces inside that substitute setting. The Photoshop template, in this context, performed a specific kind of social repair: it did not improve the underlying conditions, only declined to represent them.</p>
+
+  <p>This anecdotal starting point is offered as evidence for a broader claim about infrastructure rather than as nostalgia. What is at stake is not a particular style but a system: a set of editable, freely circulating components that allowed people without design training to produce the visual rituals their institutions required. Lev Manovich&#8217;s concept of cultural software — articulated in <i class="italic">The Language of New Media</i> and developed further in <i class="italic">Software Takes Command</i> — is useful here, because it describes precisely this: software functioning not as a specialist&#8217;s tool but as an environment inhabited by ordinary users, one that pre-structures what can count as an image before any deliberate aesthetic choice is made. The Photoshop template, considered this way, is cultural software in its most domestic and least remarked register — not only a form of art, but also a form of plumbing.</p>
+
+  <p>It is worth pausing on that duality rather than letting it pass as a figure of speech. A vernacular building is not &#8220;art&#8221; in the sense of a signed, individually authored statement, but it is not merely functional infrastructure either: it has a real, recognizable, locally consistent style, produced collectively over time by builders nobody remembers individually. Lialina&#8217;s account of the vernacular web describes the same condition in a digital register: the personal homepage with its tiled background, its blinking &#8220;under construction&#8221; sign, its guestbook, made by someone with no training, using whatever components were locally available, according to conventions nobody had centrally authored, yet unmistakably belonging to a recognizable aesthetic moment. The Photoshop template belongs to this lineage but it inverts one of its central values. Lialina&#8217;s vernacular homepage is prized, in retrospect, for its idiosyncrasy: every page slightly wrong in its own particular way, recognizably the work of one untrained person rather than another. The template&#8217;s vernacular character lies instead in repetition. The entire point of using one was that the gold frame, the glitter border, the cosmonaut cutout would be recognized, because thousands of other users had used the same file. Sameness was not a failure of originality to be hidden; it was the visible sign of belonging to a shared, anonymous, un-authored code — a second kind of vernacular, of repetition rather than individuation, that the rest of this essay follows: from its physical precursor on the resort boardwalk, through its informal channels of distribution, to its eventual disappearance behind the non-vernacular and nevertheless predictable output of a generative model.</p>
+
+  <p>Two threads follow from this, and they organize what comes next. The first concerns precedent: the template had a non-digital ancestor, a physical format that had already trained an earlier generation to expect a premade scene with a space cut out for an individual face. The second concerns infrastructure: none of this — the templates, the pirated software required to open them, the hardware that ran it — existed within a formal economy. It circulated through an informal one, and it is precisely that informality that let a vernacular of repetition become infrastructure rather than commodity.</p>
+
+  <h2 class="section"><span class="num">2.</span> Tantamaresque and Resort Towns</h2>
+
+  <p>The vernacular of repetition described above has a literal, physical prototype, predating the Photoshop template by decades and confirming that its logic was never purely digital to begin with. The <a href="https://en.wikipedia.org/wiki/Photo_stand-in" target="_blank" rel="noopener">Tantamaresque</a> (also known as a photo stand-in or face-in-hole board) is a painted wooden or plywood board, taller than an adult, with a hole cut where a face should be: a mermaid&#8217;s tail and scales, a bodybuilder&#8217;s torso, two cosmonauts sharing a single suit, a king and queen seated on thrones. These boards were a fixture of Black Sea resort boardwalks — Sochi, <span class="hov" id="hov-gelendzhik" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">Gelendzhik</span>, Anapa — where a tourist stands behind the board, inserts their face through the opening, and a friend or a local photographer produces an immediate souvenir photograph of a body that is not their own.</p>
+
+  <p>This format reached its cultural peak just as the generation of my parents was travelling south for summer <span class="hov" id="hov-holidays" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">holidays</span>, to the stretch of post-Soviet coastline that functioned as an accessible, domestic substitute for travel abroad. Structurally, the tantamaresque photograph is identical to the later Photoshop template: a pre-built scene, a predetermined pose, a body designed in advance and awaiting a face to complete <span class="hov" id="hov-it" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">it</span>. What changes between the boardwalk version and its digital descendant is only the medium of fabrication — painted plywood, as against a PSD file with a face-shaped placeholder layer.</p>
+
+  <p>This lineage suggests that the Photoshop template did not introduce a new logic into Russian visual culture so much as digitize an existing one. José van Dijck&#8217;s account of mediated memories is useful here: family photography, in her analysis, has always served ritual rather than documentary functions, producing objects — albums, prints, framed portraits — that perform memory rather than simply record it (<i class="italic">Mediated Memories in the Digital Age</i>, 2007). Like the vernacular building, the ritual requires no individual author to be effective; it works because it is repeated correctly, not because it is signed. Digital photography displaced film technologically over the course of the 2000s, but the older rituals of memory production did not disappear but migrated. The printed wedding album, the graduation book, the framed commemorative portrait persisted, and Photoshop assets emerged specifically to translate them into the new medium. A gold-foil texture, a floral frame, a fabricated polaroid border, a glossy &#8220;photo album&#8221; overlay: each imitates a tactile object — paper, ribbon, glitter, a studio <span class="hov" id="hov-prop" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photos">prop</span> — using a medium that possesses none of those physical properties. These are digital artifacts haunted by physical ones.</p>
+
+  <p>What the tantamaresque could not do, because it required physical presence at a specific space, on a specific boardwalk, on a specific day, the Photoshop template accomplished by other means. It relocated the tantamaresque&#8217;s basic offer, a finished world awaiting an insertion, from a wooden board fixed in one place to a single editable layer inside a pirated copy of Photoshop: a file with no fixed location at all, infinitely copyable, openable anywhere a cracked installer could be found. That shift, from a board to a file, is best understood not through what templates depicted but through how they moved.</p>
+
+  <h2 class="section"><span class="num">3.</span> The Circulation of Templates and the Distribution of Pirated Software</h2>
+
+  <p>A given template rarely had a single home. It existed simultaneously, in marginally different versions, across forums, Photoshop-dedicated galleries, later Tumblr &#8220;resource packs&#8221;, &#8220;1000 Photoshop Styles&#8221; archive <span class="hov" id="hov-files" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">files</span>, fan communities organized around a particular music band or anime series, and the working folders of small-town photography studios producing a wedding-album PSD on deadline. None of these locations was the origin. Each was a copy of a copy, and beyond a certain point the question of priority ceased to be answerable, because the file itself no longer pointed back to anyone — or, at best, to a nickname that was itself no longer searchable.</p>
+
+  <p>This condition is close to what Geert Lovink describes in his writing on amateur media cultures (<i class="italic">Zero Comments</i>, 2007): a media ecology organized not around professional authorship but around continuous, low-friction reposting, in which an asset&#8217;s cultural value is measured by its distribution rather than by its origin. It also resembles Hito Steyerl&#8217;s account of the <i class="italic">poor image</i> — a file that degrades with each reproduction, losing resolution and metadata as it circulates, and that derives its cultural force from precisely this condition of ubiquity and anonymity (<i class="italic">In Defense of the Poor Image</i>, e-flux journal, 2009). The half-legible watermark on a reposted frame, cropped away by the fortieth user, is a poor image in this sense. So, in a more structural register, is the PSD file itself: every time a template was opened, edited, and re-exported by someone without the skill or patience to preserve its structure, layers were flattened, layer styles were rasterized, masks were merged irreversibly into the background. The file lost editability the way a JPEG loses resolution — not all at once, but generation after generation, until what circulated was no longer a layered, editable object but a frozen image pretending to be one. This matters for the argument developed in section four: if a template is, at the moment of its design, a <i class="italic">potential</i> image — latent, layered, waiting to be activated — then its circulation through anonymous reposting was also, simultaneously, the slow death of that potential. The poor image and the potential image are the same file at two different moments in its life.</p>
+
+  <p>Henry Jenkins&#8217; notion of participatory culture (<i class="italic">Convergence Culture</i>, 2006) describes something related but not quite this. Jenkins&#8217; model assumes that participation tends to produce recognition: fan communities crediting one another, reputational networks sustained through circulation. What circulated in Russian template culture produced a different kind of recognition — not of persons but of patterns. Using the same glitter frame, the same anime-forum signature border, the same gold tantamaresque-style booklet cover, signaled membership in a shared visual code, not credit to whoever had first assembled it. This is the vernacular of repetition described in section one, working now at the level of the social: belonging was demonstrated through visible sameness, not despite it. Authorship dissolved rather than accumulated; a demotivational-poster generator, a sparkle-text overlay, a &#8220;1000 styles&#8221; archive spread through VK groups, forum signatures, and torrent trackers with no mechanism for tracking provenance or crediting an originator. Repetition here functioned less as a path to status than as the file&#8217;s mode of survival — and, as argued above, a slow erosion of its own internal structure.</p>
+
+  <p>What remains today is not quite an archive of absence, though it can look like one at first glance. Many of the same forums, galleries, and archive sites are still online and still updating — but what they distribute now is no longer the same kind of templates. The old layer disappears gradually and unremarkably, the way it always did: dead links accumulate, preview thumbnails advertise files that no longer resolve, abandoned PSD files sit untouched since around 2011, author handles trail off with no further trace. What is replacing it, often on these very same platforms, is templates generated by <a href="https://0lik.ru/" target="_blank" rel="noopener">AI</a> rather than assembled by hand from pirated layers. The newer templates have no style in the sense the old ones did, and no author to dissolve in the first place, only the recognizable hand of the model itself, and a sameness that is no longer the visible, chosen sameness of a shared vernacular code but the default sameness of a generative system repeating its own statistical habits. Unlike Geocities or early Flash sites, this culture was never organized around a stable platform with a fixed address, and it now has no single aesthetic left to be nostalgic for, since the old one is being quietly overwritten by the new one on the same infrastructure that once hosted it. What survives of the earlier layer is not a place but evidence that a place once existed — a thumbnail standing in for an object that is gone, functioning, in effect, as an archaeological fragment, increasingly buried under a newer, authorless layer at the same address. What follows asks what, exactly, was lost in that overwriting, and what is different about a system, like generative AI, that never had layers to lose in the first place.</p>
+
+  <h2 class="section"><span class="num">4.</span> Freedom of Imagery, Freedom of Software</h2>
+
+  <p>What made this infrastructure possible was not automation in the sense the term carries today, but the free circulation of components — layers, masks, brushes, gradients, PNG cutouts, layer styles — together with the free, which is to say pirated, circulation of the software required to open them. Nicolas Bourriaud&#8217;s concept of postproduction names this process: an artistic practice organized around selecting, recombining, and reprocessing existing material rather than generating new material from nothing (<i class="italic">Postproduction</i>, 2002). The template user was a postproduction practitioner by default, whether or not the term was familiar, assembling a finished image from parts that belonged to someone else, in a workflow continuous with sampling or collage.</p>
+
+  <p>Manovich&#8217;s concept of database aesthetics offers the clearest frame for what the previous section&#8217;s erosion actually erodes (<i class="italic">The Language of New Media</i>, 2001). A Photoshop template is, structurally, a database: a fixed set of substitutable elements: background, frame, placeholder face, governed by a navigable interface, in this instance the layers panel. The user does not compose the image so much as query it, by inserting a file into the single open slot the template provides. Understood this way, a template is not a finished image but a potential one, existing in a state of becoming for exactly as long as its layered structure survives intact. The user typically encounters only a preview: a demonstration photograph standing in for a result that does not yet exist. The actual construction remains latent within layers and masks until activated by a face, a name, an occasion belonging to someone else. The template is, in this sense, performative (as it completes itself only at the moment of use), and what it offers the user is not strictly an image but a position inside one. A wedding-album preview already shows two strangers, already posed and <span class="hov" id="hov-lit" tabindex="0" role="button" aria-haspopup="true" aria-label="Show related photo">lit</span>; what the template sells is occupancy of a predesigned identity rather than the design itself.</p>
+
+  <p>This is also the clearest point of contrast with AI image generation. A generative model conceals its process behind a seamless output: the user receives a finished image, and the computational layers that produced it remain, by design, inaccessible. The Photoshop template did the reverse. Its economy depended on exposing the anatomy of the image — the PSD file structure, the editable text layer, the placeholder silhouette — because exposure was the precondition for letting a non-specialist complete the work. Template culture distributed the building blocks of image production and required the user to perform the assembly; generative culture automates the assembly itself and asks nothing of the user beyond a prompt.</p>
+
+  <p>This distinction has a temporal dimension worth making explicit in closing, and it returns the essay to where it began. Lialina&#8217;s history of the vernacular web traces a movement from radical individuation (the idiosyncratic personal homepage, wrong in its own particular way toward the templated uniformity of later platforms), where individual expression was gradually flattened into shared, branded design systems. Russian Photoshop template culture occupies an odd, transitional position inside that history: it is templated, but its templates were pirated, anonymous, and circulated outside any platform&#8217;s control, which is why their sameness could still be experienced as belonging rather than as branding. Generative AI marks a third and, for now, final stage, abandoning both of Lialina&#8217;s vernacular poles at once. It produces images instantly, on demand, with no further labor required of the user, collapsing the interval between request and result to nearly zero. An AI output is neither idiosyncratic, in the manner of the early homepage, nor recognizably repeated, in the manner of the template; it is merely, on each occasion, statistically plausible. The Photoshop template, sitting between these two histories, was never quite about the present it was made in. Built mostly for events that had not yet occurred — a graduation, a wedding, a memorial, a profile not yet attached to a person. It existed as a preformatted container on a pirated hard drive, manufacturing anticipation as a structural feature of the image itself. It was infrastructure for a memory that had not yet happened, assembled collectively by people who would never meet one another, and abandoned, eventually, not by a platform or a company but by the same slow erosion described throughout this essay — the erosion that left behind, in the end, only the preview: the promise of an image, never the image itself.</p>
+
+</article>
+</div>
+
+<script>
+(function(){
+  var BASE = 'https://dariaivans.neocities.org/shablony_article/';
+
+  var hoverData = {
+    'hov-preview':     { images:[{src:'dk_0213.jpg', side:'left'}] },
+    'hov-scene':       { images:[{src:'photo_5240115484630391909_y.jpg', side:'right', caption:'my friend Vera (naomimuno'}] },
+    'hov-kindergarten':{ images:[{src:'photo_5447494677687898865_y.jpg', side:'left', caption:'my younger sister Katya'}] },
+    'hov-school':      { images:[{src:'photo_5242260644701084748_y.jpg', side:'right', caption:'my friend Gleb (zenxiu'}] },
+    'hov-helmet':      { images:[{src:'photo_5310297638248847544_y.jpg', side:'left', caption:'my friend Katya (memesy)'}] },
+    'hov-gelendzhik':  { images:[{src:'photo_5316680706975015273.jpg', side:'right', caption:'me in Gelendzhik, 2002'}] },
+    'hov-holidays':    { images:[{src:'photo_5334739360827512186_y.jpg', side:'left', caption:'my parents in Gelendzhik, 2001, words in rus mean \u201CLove forever\u201D'}] },
+    'hov-it':          { images:[{src:'photo_5334739360827512187_y.jpg', side:'right', caption:'my father with his friends'}] },
+    'hov-prop':        { images:[
+                           {src:'dk_0257.jpg', side:'left'},
+                           {src:'fd_0408.jpg', side:'right'},
+                           {src:'fd_0427.jpg', side:'left'},
+                           {src:'fd_0440.jpg', side:'right'},
+                           {src:'dk_0231.jpg', side:'left'}
+                         ] },
+    'hov-files':       { images:[{src:'fd_0349.jpg', side:'right'}] },
+    'hov-lit':         { images:[{src:'1337089863_uizdw9nzgfe7gtx.jpeg', side:'right'}] }
+  };
+
+  var rotations = [-3,2,-1.5,2.5,-2,1.5];
+
+  // Build one popup element per hover trigger, holding a left-stack and right-stack
+  var popups = {};
+  Object.keys(hoverData).forEach(function(id){
+    var data = hoverData[id];
+    var leftImgs = data.images.filter(function(im){return im.side==='left';});
+    var rightImgs = data.images.filter(function(im){return im.side==='right';});
+
+    function buildStack(list){
+      if(!list.length) return null;
+      var wrap = document.createElement('div');
+      wrap.className = 'popup';
+      var inner = document.createElement('div');
+      inner.className = 'popup-imgs';
+      list.forEach(function(im, i){
+        var card = document.createElement('figure');
+        card.style.margin = '0';
+        var img = document.createElement('img');
+        img.src = BASE + im.src;
+        img.alt = im.caption || '';
+        img.style.transform = 'rotate(' + (rotations[i % rotations.length]) + 'deg)';
+        card.appendChild(img);
+        if(im.caption){
+          var cap = document.createElement('figcaption');
+          cap.textContent = im.caption;
+          card.appendChild(cap);
+        }
+        inner.appendChild(card);
+      });
+      wrap.appendChild(inner);
+      document.body.appendChild(wrap);
+      return wrap;
+    }
+
+    popups[id] = {
+      left: buildStack(leftImgs),
+      right: buildStack(rightImgs)
+    };
+  });
+
+  var GAP = 22;
+  var locked = null;
+
+  function position(popupEl, side, triggerRect){
+    if(!popupEl) return;
+    var w = popupEl.offsetWidth || 300;
+    var frameEl = document.querySelector('.frame');
+    var frameRect = frameEl.getBoundingClientRect();
+    var vw = window.innerWidth, vh = window.innerHeight;
+    var top, left;
+
+    var spaceLeft = frameRect.left;
+    var spaceRight = vw - frameRect.right;
+
+    if(side === 'left' && spaceLeft > w + GAP * 1.5){
+      left = frameRect.left - w - GAP;
+      top = triggerRect.top;
+    } else if(side === 'right' && spaceRight > w + GAP * 1.5){
+      left = frameRect.right + GAP;
+      top = triggerRect.top;
+    } else {
+      // fallback: float near the word itself
+      left = triggerRect.left;
+      top = triggerRect.bottom + 8;
+      if(left + w > vw - 10) left = vw - w - 10;
+      if(left < 10) left = 10;
+    }
+
+    var popupH = popupEl.offsetHeight || 100;
+    if(top + popupH > vh - 10) top = vh - popupH - 10;
+    if(top < 10) top = 10;
+
+    popupEl.style.left = left + 'px';
+    popupEl.style.top = top + 'px';
+  }
+
+  function show(id, triggerEl){
+    var p = popups[id];
+    if(!p) return;
+    var rect = triggerEl.getBoundingClientRect();
+    if(p.left){ position(p.left, 'left', rect); p.left.classList.add('show'); }
+    if(p.right){ position(p.right, 'right', rect); p.right.classList.add('show'); }
+  }
+  function hide(id){
+    var p = popups[id];
+    if(!p) return;
+    if(p.left) p.left.classList.remove('show');
+    if(p.right) p.right.classList.remove('show');
+  }
+  function hideAll(){
+    Object.keys(popups).forEach(hide);
+    document.querySelectorAll('.hov.is-locked').forEach(function(el){ el.classList.remove('is-locked'); });
+    locked = null;
+  }
+
+  document.querySelectorAll('.hov').forEach(function(el){
+    el.addEventListener('mouseenter', function(){ if(!locked) show(el.id, el); });
+    el.addEventListener('mouseleave', function(){ if(locked !== el.id) hide(el.id); });
+    el.addEventListener('focus', function(){ show(el.id, el); });
+    el.addEventListener('blur', function(){ if(locked !== el.id) hide(el.id); });
+    el.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(locked === el.id){
+        hideAll();
+      } else {
+        if(locked) hideAll();
+        locked = el.id;
+        el.classList.add('is-locked');
+        show(el.id, el);
+      }
+    });
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); el.click(); }
+    });
+  });
+
+  document.addEventListener('click', function(){ hideAll(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') hideAll(); });
+  window.addEventListener('resize', hideAll);
+  window.addEventListener('scroll', hideAll, {passive:true});
+})();
+</script>
+
+</body>
+</html>
